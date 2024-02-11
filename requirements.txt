@@ -51,4 +51,8 @@ cached_path
 dill
 base58
 more-itertools
+
+# dev
 pytest
+pylint
+black[jupyter]

@@ -370,6 +370,14 @@ python -m ovqa.metrics.bem.bem_query
 
 See `run_scripts/` for running the model evaluation and computing the metrics. See `assets/tables` for the numbers to expect.
 
+## Dev commands
+
+```bash
+python -m pytest
+black -l 100 ovqa tests *.py
+
+```
+
 ## Licenses
 
 This repository is heavily based on

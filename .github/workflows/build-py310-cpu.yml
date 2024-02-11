@@ -1,0 +1,143 @@
+name: build for python 3.10 on CPU
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash -el {0}  # required otherwise conda will not be activated for "run" steps
+    env:
+      W_ENV_NAME: buildenv
+      W_REQ_CONDA: .github/workflow-env-py310-cpu.yml
+      W_REQ_PIP: requirements.txt
+      W_CACHE_NUMBER: 0  # increase to reset cache
+      SEGMENT_DOWNLOAD_TIMEOUT_MINS: 2  # stuck cache download should stop after X minutes
+      W_CACHE_KILL: 3  # hard kill a stuck cache download after X minutes
+    steps:
+#
+    - name: Checkout code
+      uses: actions/checkout@v4
+#
+    - name: Setup conda
+      uses: conda-incubator/setup-miniconda@v3
+      with:
+        activate-environment: ${{ env.W_ENV_NAME }}
+        miniforge-variant: Mambaforge
+        miniforge-version: latest
+        use-mamba: true
+#
+    - name: Collect information
+      id: collect-info
+      run: |
+        conda info
+        echo "----------"
+        _now=$(date -u '+%s')
+        echo "today=$(date -u '+%Y%m%d' -d @${_now})" >> $GITHUB_OUTPUT
+        echo "thisweek=$(date -u '+%V' -d @${_now})" >> $GITHUB_OUTPUT
+        echo "env_conda=$CONDA" >> $GITHUB_OUTPUT
+        mkdir -p /tmp/dummydir1
+        echo "pipdummy written to tempdir" > /tmp/dummydir1/pipdummy.txt
+        cat /tmp/dummydir1/pipdummy.txt
+        echo "----------"
+        echo "saved output:"
+        cat $GITHUB_OUTPUT
+#
+    - name: Check if pip should update
+      uses: actions/cache/restore@v4
+      timeout-minutes: 1
+      continue-on-error: true
+      with:
+        path: /tmp/dummydir1
+        key: pipupdate-${{ runner.os }}--${{ runner.arch }}--${{ env.W_ENV_NAME }}--date-${{
+          steps.collect-info.outputs.today }}-conda-${{
+          hashFiles(env.W_REQ_CONDA) }}-pip-${{
+          hashFiles(env.W_REQ_PIP)}}-cachenum-${{
+          env.W_CACHE_NUMBER }}
+      id: cache-pipdummy-restore
+#
+    - name: Save that pip will update
+      uses: actions/cache/save@v4
+      timeout-minutes: 1
+      continue-on-error: true
+      with:
+        path: /tmp/dummydir1
+        key: ${{ steps.cache-pipdummy-restore.outputs.cache-primary-key }}
+      id: cache-pipdummy-save
+      if: steps.cache-pipdummy-restore.outputs.cache-hit != 'true'
+#
+    - name: Restore cache for conda env  # cannot see $CONDA here so use output from previous step
+      uses: actions/cache/restore@v4
+      timeout-minutes: ${{ fromJSON(env.W_CACHE_KILL) }}  # fromJSON is required to convert to int
+      continue-on-error: true
+      with:
+        path: ${{ steps.collect-info.outputs.env_conda }}/envs/${{ env.W_ENV_NAME }}
+        key: conda-${{ runner.os }}--${{ runner.arch }}--${{ env.W_ENV_NAME }}--calweek-${{
+          steps.collect-info.outputs.thisweek }}--conda-${{
+          hashFiles(env.W_REQ_CONDA) }}--cachenum-${{
+          env.W_CACHE_NUMBER }}--commit-${{ github.sha }}
+        restore-keys: conda-${{ runner.os }}--${{ runner.arch }}--${{ env.W_ENV_NAME }}--calweek-${{
+          steps.collect-info.outputs.thisweek }}--conda-${{
+          hashFiles(env.W_REQ_CONDA) }}--cachenum-${{
+          env.W_CACHE_NUMBER }}
+      id: cache-conda-restore
+#
+    - name: Conda install packages
+      run: |
+        mamba env update -q -n ${{ env.W_ENV_NAME }} -f ${{ env.W_REQ_CONDA }}
+      if: steps.cache-conda-restore.outputs.cache-matched-key == ''
+      id: conda-install
+#
+    - name: Pip install packages
+      run: |
+        python -m pip install --progress-bar off -U pip
+        pip install --progress-bar off -U -r ${{ env.W_REQ_PIP }}
+        pip install --progress-bar off -U pytest pytest-cov pylint
+      if: |
+        steps.cache-conda-restore.outputs.cache-matched-key == '' ||
+        steps.cache-pipdummy-restore.outputs.cache-hit != 'true'
+      id: pip-install
+#
+    - name: Conda list
+      run: conda list
+#
+    - name: Pip list
+      run: pip list
+#
+    - name: Save cache for conda env
+      uses: actions/cache/save@v4
+      timeout-minutes: ${{ fromJSON(env.W_CACHE_KILL) }}  # fromJSON is required to convert to int
+      continue-on-error: true
+      with:
+        path: ${{ steps.collect-info.outputs.env_conda }}/envs/${{ env.W_ENV_NAME }}
+        key: ${{ steps.cache-conda-restore.outputs.cache-primary-key }}
+      id: cache-conda-save
+      if: |
+        steps.cache-conda-restore.outputs.cache-matched-key == '' ||
+        steps.cache-pipdummy-restore.outputs.cache-hit != 'true'
+#
+    - name: Install code
+      run: |
+        python -m pip install -U -e .
+#
+    - name: Run pytest
+      run: |
+        python -m pytest tests --cov
+#
+    - name: Run pylint
+      continue-on-error: true
+      run: |
+        pylint ovqa
+        pylint tests
+#
