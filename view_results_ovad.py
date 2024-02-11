@@ -1,6 +1,7 @@
 """
 Show OVAD-oVQA results.
 """
+
 from collections import defaultdict
 
 import os

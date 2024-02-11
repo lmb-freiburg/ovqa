@@ -61,7 +61,7 @@ class VqaTextComparison(MetricExt):
         return torch.tensor(scores_per_datapoint, device=self.device)
 
     def aggregate_vqa_scores(self, scores_per_answer):
-        """"Turn per-answer scores into per-datapoint scores"""
+        """ "Turn per-answer scores into per-datapoint scores"""
         return aggregate_vqa_scores(scores_per_answer, hit_value=self.hit_value)
 
     def format(self, value: float):

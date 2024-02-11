@@ -5,7 +5,6 @@ Example:
     source <(python -m ovqa.bash_paths)
 """
 
-
 from ovqa.paths import print_all_environment_variables
 
 

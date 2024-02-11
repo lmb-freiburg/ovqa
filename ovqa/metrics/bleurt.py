@@ -17,8 +17,13 @@ Normalization of values:
     BLEURT (v1) outputs values around -2 to 1
     BLEURT-20 (v2) outputs values around 0 to 1
 """
+
 import torch
-from ovqa.metrics.bleurt_pytorch import BleurtConfig, BleurtTokenizer, BleurtForSequenceClassification
+from ovqa.metrics.bleurt_pytorch import (
+    BleurtConfig,
+    BleurtTokenizer,
+    BleurtForSequenceClassification,
+)
 from math import ceil
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 

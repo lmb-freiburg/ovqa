@@ -1,6 +1,7 @@
 """
 Examples for Contains, ExactMatch and F1 metrics for text.
 """
+
 from ovqa.metrics.preprocessing import PrepC
 from ovqa.metrics.simple import (
     get_metric_is_equal_vqa_prep,

@@ -6,6 +6,7 @@ Causal LM to convert it to a Prefix LM.
 Prefix LMs accepts a `bidirectional_mask` input in `forward`
 and treat the input prompt as the prefix in `generate`.
 """
+
 import math
 import torch
 import warnings

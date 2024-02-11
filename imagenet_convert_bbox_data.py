@@ -41,6 +41,7 @@ Boxes downloaded from:
     Validation bounding box annotations (all tasks) . 2.2MB. MD5: f4cd18b5ea29fe6bbea62ec9c20d80f0
     https://image-net.org/data/ILSVRC/2012/ILSVRC2012_bbox_val_v3.tgz
 """
+
 import os
 from PIL import Image
 from attr import define
@@ -67,7 +68,7 @@ class Args(VerboseQuietArgs):
     crop_min_size: int = add_argument(shortcut="-c", type=int, help="Crop min size", default=64)
     crop_rect: bool = add_argument(
         shortcut="-r", action="store_true", help="Crop rectangles instead of squares"
-            )
+    )
 
 
 def main():
@@ -118,9 +119,7 @@ def read_2012_boxes(data_dir):
     return data_out
 
 
-def crop_images(
-    data_out, data_dir, crop_min_size: int = 64, crop_rect: bool = False, split="val"
-):
+def crop_images(data_out, data_dir, crop_min_size: int = 64, crop_rect: bool = False, split="val"):
     # crop images
     meta: ClsMetadataInterface = meta_loader.load_metadata("imagenet1k", split)
     classes_data = meta.classes_data

@@ -1,4 +1,5 @@
 """A HuggingFace-style model configuration."""
+
 from transformers import PretrainedConfig
 from typing import Dict, Optional, Union
 

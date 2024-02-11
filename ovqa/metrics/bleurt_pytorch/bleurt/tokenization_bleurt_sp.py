@@ -7,7 +7,6 @@ PRETRAINED_VOCAB_FILES_MAP = {
         "lucadiliello/BLEURT-20-D6": "https://huggingface.co/lucadiliello/BLEURT-20-D6/resolve/main/spm.model",
         "lucadiliello/BLEURT-20-D12": "https://huggingface.co/lucadiliello/BLEURT-20-D12/resolve/main/spm.model",
         "lucadiliello/BLEURT-20": "https://huggingface.co/lucadiliello/BLEURT-20/resolve/main/spm.model",
-
     }
 }
 

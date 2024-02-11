@@ -8,6 +8,7 @@
  
 Wraps timm (https://github.com/rwightman/pytorch-image-models) models for use as a vision tower in CLIP model.
 """
+
 from collections import OrderedDict
 
 import math

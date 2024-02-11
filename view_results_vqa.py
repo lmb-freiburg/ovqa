@@ -1,6 +1,7 @@
 """
 Show classical VQA results.
 """
+
 from collections import defaultdict
 from pathlib import Path
 

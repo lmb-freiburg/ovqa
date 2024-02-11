@@ -3,6 +3,7 @@ Note: removed loguru logger here since it kept deadlocking for some reason
 
 sentence transformers https://huggingface.co/sentence-transformers
 """
+
 import h5py
 import math
 import numpy as np

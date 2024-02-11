@@ -399,9 +399,9 @@ class VisionTransformer(nn.Module):
             self.avgpool = nn.AdaptiveAvgPool1d(1)
 
         self.num_classes = num_classes
-        self.num_features = (
-            self.embed_dim
-        ) = embed_dim  # num_features for consistency with other models
+        self.num_features = self.embed_dim = (
+            embed_dim  # num_features for consistency with other models
+        )
 
         self.patch_embed = PatchEmbed(
             img_size=img_size, patch_size=patch_size, in_chans=in_chans, embed_dim=embed_dim
@@ -679,9 +679,9 @@ def load_pretrained_beit2(model, ckpt_rpath):
         num_layers = model.get_num_layers()
         rel_pos_bias = checkpoint_model["rel_pos_bias.relative_position_bias_table"]
         for i in range(num_layers):
-            checkpoint_model[
-                "blocks.%d.attn.relative_position_bias_table" % i
-            ] = rel_pos_bias.clone()
+            checkpoint_model["blocks.%d.attn.relative_position_bias_table" % i] = (
+                rel_pos_bias.clone()
+            )
 
         checkpoint_model.pop("rel_pos_bias.relative_position_bias_table")
 

@@ -2,6 +2,7 @@
 Given a file with a list of question_ids, create a new subset of vqa val set.
 
 """
+
 from copy import deepcopy
 from pathlib import Path
 

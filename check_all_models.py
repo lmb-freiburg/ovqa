@@ -3,6 +3,7 @@ Import and run inference on all models used in the oVQA paper for testing.
 
 python check_all_models.py -r
 """
+
 import argparse
 import gc
 import logging

@@ -70,12 +70,14 @@ class BleurtConfig(PretrainedConfig):
         classifier_dropout: bool = None,
         num_labels: int = 1,
         tie_word_embeddings: bool = False,
-        **kwargs
+        **kwargs,
     ):
         super().__init__(pad_token_id=pad_token_id, **kwargs)
 
         if tie_word_embeddings and (embedding_size != hidden_size):
-            raise ValueError("You can only tie weights if `embedding_size` is None or equal to `hidden_size`")
+            raise ValueError(
+                "You can only tie weights if `embedding_size` is None or equal to `hidden_size`"
+            )
 
         self.vocab_size = vocab_size
         self.embedding_size = embedding_size

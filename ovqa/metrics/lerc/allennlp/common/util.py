@@ -1,6 +1,7 @@
 """
 Various utilities that don't fit anywhere else.
 """
+
 import hashlib
 import io
 from datetime import timedelta

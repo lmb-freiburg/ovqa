@@ -334,7 +334,9 @@ def main():
 
     class_names = [
         d["clip_bench_label"]
-        for d in load_json(get_ovqa_annotations_dir() / "imagenet1k/class_hierarchy/labels_data.json")
+        for d in load_json(
+            get_ovqa_annotations_dir() / "imagenet1k/class_hierarchy/labels_data.json"
+        )
     ]
     follower = Followup(
         cfg=followup_cfg,

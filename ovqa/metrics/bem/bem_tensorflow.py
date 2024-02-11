@@ -23,6 +23,7 @@ python -c "from tensorflow.python.client import device_lib; print(device_lib.lis
 python -c 'import torch; print(f"torch.cuda.is_available()={torch.cuda.is_available()}")'
 
 """
+
 import numpy as np
 import os
 

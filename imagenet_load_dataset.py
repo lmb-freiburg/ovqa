@@ -1,6 +1,7 @@
 """
 Example script to load imagenet.
 """
+
 from attr import define
 from loguru import logger
 

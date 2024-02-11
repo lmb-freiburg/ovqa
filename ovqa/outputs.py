@@ -12,6 +12,7 @@ class QAOutput(ModelOutput):
         top10_answers_and_probs: either list of top 10 answers and their probabilities
             or list of None
     """
+
     answer: List[str]
     answers: Optional[List[List[str]]] = None
     labels: Optional[List[List[str]]] = None

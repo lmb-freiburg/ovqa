@@ -1,6 +1,7 @@
 """
 Show retrieval results. This simply loads and combines the evaluate.txt files.
 """
+
 from collections import defaultdict
 
 import os
@@ -96,7 +97,7 @@ def main():
         args.dataset_split,
         open_browser=not args.no_browser,
         width_terminal=args.width_terminal,
-        prefix="retrieval~"
+        prefix="retrieval~",
     )
 
 

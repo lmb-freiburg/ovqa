@@ -1,6 +1,7 @@
 """
 Components reused by the view_results_* scripts
 """
+
 from collections import defaultdict
 
 import hashlib
@@ -216,7 +217,9 @@ def visualize_data_dict(
     display_df(df_formatted, width=width_terminal)
 
     random_name = f"{get_timestamp_for_filename()}"
-    html_file = Path(f"{result_dir}/../tmphtmloutput/{prefix}{dataset_name}/{random_name}.html").resolve()
+    html_file = Path(
+        f"{result_dir}/../tmphtmloutput/{prefix}{dataset_name}/{random_name}.html"
+    ).resolve()
 
     save_df_to_html(
         df_formatted,
@@ -227,7 +230,9 @@ def visualize_data_dict(
     logger.info(f"Saved HTML output to {html_file}")
 
     # save csv
-    csv_file = Path(f"{result_dir}/../tmphtmloutput/{prefix}{dataset_name}/{random_name}.csv").resolve()
+    csv_file = Path(
+        f"{result_dir}/../tmphtmloutput/{prefix}{dataset_name}/{random_name}.csv"
+    ).resolve()
     csv_file.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(csv_file)
     logger.info(f"Saved CSV as {csv_file}")

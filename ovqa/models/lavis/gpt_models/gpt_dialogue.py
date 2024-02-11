@@ -17,7 +17,9 @@ from ovqa.models.lavis.base_model import BaseModel
 
 @registry.register_model("gpt_dialogue")
 class GPTDialogue(BaseModel, GPT2LMHeadModel):
-    PRETRAINED_MODEL_CONFIG_DICT = {"base": "ovqa/configs/lavis_models/other/gpt_dialogue_base.yaml"}
+    PRETRAINED_MODEL_CONFIG_DICT = {
+        "base": "ovqa/configs/lavis_models/other/gpt_dialogue_base.yaml"
+    }
 
     def __init__(self, config, len_video_ft=4224):
         super().__init__(config)

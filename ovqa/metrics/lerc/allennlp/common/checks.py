@@ -2,6 +2,7 @@
 Functions and exceptions for checking that
 AllenNLP and its models are configured correctly.
 """
+
 import logging
 import re
 import subprocess

@@ -278,9 +278,11 @@ class RunnerIter(RunnerBase):
             is_trains = [split in self.train_splits for split in split_names]
 
             batch_sizes = [
-                self.config.run_cfg.batch_size_train
-                if split == "train"
-                else self.config.run_cfg.batch_size_eval
+                (
+                    self.config.run_cfg.batch_size_train
+                    if split == "train"
+                    else self.config.run_cfg.batch_size_eval
+                )
                 for split in split_names
             ]
 

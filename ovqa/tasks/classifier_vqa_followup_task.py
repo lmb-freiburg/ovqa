@@ -22,7 +22,6 @@ from ovqa.result_loader import read_single_result
 from packg.iotools.jsonext import load_json, dump_json
 
 
-
 @registry.register_task("classifier_vqa_followup")
 class ClassifierVQAFollowupTask(ClassifierVQATask):
     def __init__(self, cfg):

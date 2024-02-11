@@ -33,5 +33,3 @@ def count_params(parameters) -> int:
     for v in parameters:
         total += v.numel()
     return total
-
-

@@ -24,6 +24,10 @@ class BleurtTokenizer(PreTrainedTokenizerBase):
         cls, pretrained_model_name_or_path: Union[str, os.PathLike], *init_inputs, **kwargs
     ) -> Union[BleurtTokenizerFast, BleurtSPTokenizer]:
         try:
-            return BleurtTokenizerFast.from_pretrained(pretrained_model_name_or_path, *init_inputs, **kwargs)
+            return BleurtTokenizerFast.from_pretrained(
+                pretrained_model_name_or_path, *init_inputs, **kwargs
+            )
         except (OSError, TypeError):
-            return BleurtSPTokenizer.from_pretrained(pretrained_model_name_or_path, *init_inputs, **kwargs)
+            return BleurtSPTokenizer.from_pretrained(
+                pretrained_model_name_or_path, *init_inputs, **kwargs
+            )

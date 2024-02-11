@@ -14,7 +14,11 @@ from transformers.modeling_outputs import (
     SequenceClassifierOutput,
 )
 from transformers.modeling_utils import PreTrainedModel
-from transformers.pytorch_utils import apply_chunking_to_forward, find_pruneable_heads_and_indices, prune_linear_layer
+from transformers.pytorch_utils import (
+    apply_chunking_to_forward,
+    find_pruneable_heads_and_indices,
+    prune_linear_layer,
+)
 from transformers.utils import (
     ModelOutput,
     add_code_sample_docstrings,
@@ -49,14 +53,18 @@ BERT_PRETRAINED_MODEL_ARCHIVE_LIST = [
 
 # mostly copied from https://github.com/huggingface/transformers/blob/00ba7cadd812437708b380ab078a3cfe8cfaff31/src/transformers/models/bert/modeling_bert.py#L180  # noqa: E501
 class BleurtEmbeddings(nn.Module):
-    r""" Construct the embeddings from word, position and token_type embeddings. """
+    r"""Construct the embeddings from word, position and token_type embeddings."""
 
     def __init__(self, config: BleurtConfig):
         super().__init__()
 
-        target_size = config.embedding_size if config.embedding_size is not None else config.hidden_size
+        target_size = (
+            config.embedding_size if config.embedding_size is not None else config.hidden_size
+        )
 
-        self.word_embeddings = nn.Embedding(config.vocab_size, target_size, padding_idx=config.pad_token_id)
+        self.word_embeddings = nn.Embedding(
+            config.vocab_size, target_size, padding_idx=config.pad_token_id
+        )
         self.position_embeddings = nn.Embedding(config.max_position_embeddings, target_size)
         self.token_type_embeddings = nn.Embedding(config.type_vocab_size, target_size)
 
@@ -66,9 +74,13 @@ class BleurtEmbeddings(nn.Module):
         self.dropout = nn.Dropout(config.hidden_dropout_prob)
         # position_ids (1, len position emb) is contiguous in memory and exported when serialized
         self.position_embedding_type = getattr(config, "position_embedding_type", "absolute")
-        self.register_buffer("position_ids", torch.arange(config.max_position_embeddings).expand((1, -1)))
         self.register_buffer(
-            "token_type_ids", torch.zeros(self.position_ids.size(), dtype=torch.long), persistent=False
+            "position_ids", torch.arange(config.max_position_embeddings).expand((1, -1))
+        )
+        self.register_buffer(
+            "token_type_ids",
+            torch.zeros(self.position_ids.size(), dtype=torch.long),
+            persistent=False,
         )
 
     def forward(
@@ -88,7 +100,9 @@ class BleurtEmbeddings(nn.Module):
         seq_length = input_shape[1]
 
         if position_ids is None:
-            position_ids = self.position_ids[:, past_key_values_length : seq_length + past_key_values_length]
+            position_ids = self.position_ids[
+                :, past_key_values_length : seq_length + past_key_values_length
+            ]
 
         # Setting the token_type_ids to the registered buffer in constructor where it is all zeros, which usually
         # occurs when its auto-generated, registered buffer helps users when tracing the model without passing
@@ -96,10 +110,14 @@ class BleurtEmbeddings(nn.Module):
         if token_type_ids is None:
             if hasattr(self, "token_type_ids"):
                 buffered_token_type_ids = self.token_type_ids[:, :seq_length]
-                buffered_token_type_ids_expanded = buffered_token_type_ids.expand(input_shape[0], seq_length)
+                buffered_token_type_ids_expanded = buffered_token_type_ids.expand(
+                    input_shape[0], seq_length
+                )
                 token_type_ids = buffered_token_type_ids_expanded
             else:
-                token_type_ids = torch.zeros(input_shape, dtype=torch.long, device=self.position_ids.device)
+                token_type_ids = torch.zeros(
+                    input_shape, dtype=torch.long, device=self.position_ids.device
+                )
 
         if inputs_embeds is None:
             inputs_embeds = self.word_embeddings(input_ids)
@@ -313,7 +331,10 @@ class BleurtLayer(nn.Module):
         outputs = self_attention_outputs[1:]  # add self attentions if we output attention weights
 
         layer_output = apply_chunking_to_forward(
-            self.feed_forward_chunk, self.chunk_size_feed_forward, self.seq_len_dim, attention_output
+            self.feed_forward_chunk,
+            self.chunk_size_feed_forward,
+            self.seq_len_dim,
+            attention_output,
         )
 
         outputs = (layer_output,) + outputs
@@ -468,8 +489,8 @@ class BleurtOnlyMLMHead(nn.Module):
 
 # mostly copied from https://github.com/huggingface/transformers/blob/00ba7cadd812437708b380ab078a3cfe8cfaff31/src/transformers/models/bert/modeling_bert.py#L735  # noqa: E501
 class BleurtPreTrainedModel(PreTrainedModel):
-    r""" An abstract class to handle weights initialization and a simple interface for downloading and
-    loading pretrained models. """
+    r"""An abstract class to handle weights initialization and a simple interface for downloading and
+    loading pretrained models."""
 
     config_class = BleurtConfig
     base_model_prefix = "bleurt"
@@ -477,7 +498,7 @@ class BleurtPreTrainedModel(PreTrainedModel):
     _keys_to_ignore_on_load_missing = [r"position_ids"]
 
     def _init_weights(self, module):
-        r""" Initialize the weights. """
+        r"""Initialize the weights."""
 
         if isinstance(module, nn.Linear):
             # Slightly different from the TF version which uses truncated_normal for initialization
@@ -598,7 +619,7 @@ BLEURT_INPUTS_DOCSTRING = r"""
     BLEURT_START_DOCSTRING,
 )
 class BleurtModel(BleurtPreTrainedModel):
-    r""" The model can behave only as an encoder. """
+    r"""The model can behave only as an encoder."""
 
     def __init__(self, config: BleurtConfig, add_pooling_layer: bool = True):
         super().__init__(config)
@@ -626,7 +647,9 @@ class BleurtModel(BleurtPreTrainedModel):
         for layer, heads in heads_to_prune.items():
             self.encoder.layer[layer].attention.prune_heads(heads)
 
-    @add_start_docstrings_to_model_forward(BLEURT_INPUTS_DOCSTRING.format("batch_size, sequence_length"))
+    @add_start_docstrings_to_model_forward(
+        BLEURT_INPUTS_DOCSTRING.format("batch_size, sequence_length")
+    )
     @add_code_sample_docstrings(
         processor_class=_TOKENIZER_FOR_DOC,
         checkpoint=_CHECKPOINT_FOR_DOC,
@@ -645,9 +668,13 @@ class BleurtModel(BleurtPreTrainedModel):
         output_hidden_states: Optional[bool] = None,
     ) -> BaseModelOutputWithPooling:
 
-        output_attentions = output_attentions if output_attentions is not None else self.config.output_attentions
+        output_attentions = (
+            output_attentions if output_attentions is not None else self.config.output_attentions
+        )
         output_hidden_states = (
-            output_hidden_states if output_hidden_states is not None else self.config.output_hidden_states
+            output_hidden_states
+            if output_hidden_states is not None
+            else self.config.output_hidden_states
         )
 
         if input_ids is not None and inputs_embeds is not None:
@@ -668,14 +695,18 @@ class BleurtModel(BleurtPreTrainedModel):
         if token_type_ids is None:
             if hasattr(self.embeddings, "token_type_ids"):
                 buffered_token_type_ids = self.embeddings.token_type_ids[:, :seq_length]
-                buffered_token_type_ids_expanded = buffered_token_type_ids.expand(batch_size, seq_length)
+                buffered_token_type_ids_expanded = buffered_token_type_ids.expand(
+                    batch_size, seq_length
+                )
                 token_type_ids = buffered_token_type_ids_expanded
             else:
                 token_type_ids = torch.zeros(input_shape, dtype=torch.long, device=device)
 
         # We can provide a self-attention mask of dimensions [batch_size, from_seq_length, to_seq_length]
         # ourselves in which case we just need to make it broadcastable to all heads.
-        extended_attention_mask: torch.Tensor = self.get_extended_attention_mask(attention_mask, input_shape)
+        extended_attention_mask: torch.Tensor = self.get_extended_attention_mask(
+            attention_mask, input_shape
+        )
 
         # Prepare head mask if needed
         # 1.0 in head_mask indicate we keep the head
@@ -711,11 +742,17 @@ class BleurtModel(BleurtPreTrainedModel):
 
 
 # mostly copied from https://github.com/huggingface/transformers/blob/00ba7cadd812437708b380ab078a3cfe8cfaff31/src/transformers/models/bert/modeling_bert.py#L1301  # noqa: E501
-@add_start_docstrings("""Bert Model with a `language modeling` head on top.""", BLEURT_START_DOCSTRING)
+@add_start_docstrings(
+    """Bert Model with a `language modeling` head on top.""", BLEURT_START_DOCSTRING
+)
 class BleurtForMaskedLM(BleurtPreTrainedModel):
 
     _keys_to_ignore_on_load_unexpected = [r"pooler"]
-    _keys_to_ignore_on_load_missing = [r"position_ids", r"predictions.decoder.bias", r"cls.predictions.decoder.weight"]
+    _keys_to_ignore_on_load_missing = [
+        r"position_ids",
+        r"predictions.decoder.bias",
+        r"cls.predictions.decoder.weight",
+    ]
 
     def __init__(self, config: BleurtConfig):
         super().__init__(config)
@@ -732,7 +769,9 @@ class BleurtForMaskedLM(BleurtPreTrainedModel):
     def set_output_embeddings(self, new_embeddings):
         self.cls.predictions.decoder = new_embeddings
 
-    @add_start_docstrings_to_model_forward(BLEURT_INPUTS_DOCSTRING.format("batch_size, sequence_length"))
+    @add_start_docstrings_to_model_forward(
+        BLEURT_INPUTS_DOCSTRING.format("batch_size, sequence_length")
+    )
     @add_code_sample_docstrings(
         processor_class=_TOKENIZER_FOR_DOC,
         checkpoint=_CHECKPOINT_FOR_DOC,
@@ -775,7 +814,9 @@ class BleurtForMaskedLM(BleurtPreTrainedModel):
         masked_lm_loss = None
         if labels is not None:
             loss_fct = CrossEntropyLoss()  # -100 index = padding token
-            masked_lm_loss = loss_fct(prediction_scores.view(-1, self.config.vocab_size), labels.view(-1))
+            masked_lm_loss = loss_fct(
+                prediction_scores.view(-1, self.config.vocab_size), labels.view(-1)
+            )
 
         return MaskedLMOutput(
             loss=masked_lm_loss,
@@ -804,7 +845,9 @@ class BleurtForSequenceClassification(BleurtPreTrainedModel):
         self.bleurt = BleurtModel(config)
 
         classifier_dropout = (
-            config.classifier_dropout if config.classifier_dropout is not None else config.hidden_dropout_prob
+            config.classifier_dropout
+            if config.classifier_dropout is not None
+            else config.hidden_dropout_prob
         )
 
         self.dropout = nn.Dropout(classifier_dropout)
@@ -813,7 +856,9 @@ class BleurtForSequenceClassification(BleurtPreTrainedModel):
         # Initialize weights and apply final processing
         self.post_init()
 
-    @add_start_docstrings_to_model_forward(BLEURT_INPUTS_DOCSTRING.format("batch_size, sequence_length"))
+    @add_start_docstrings_to_model_forward(
+        BLEURT_INPUTS_DOCSTRING.format("batch_size, sequence_length")
+    )
     @add_code_sample_docstrings(
         processor_class=_TOKENIZER_FOR_DOC,
         output_type=SequenceClassifierOutput,
@@ -857,7 +902,9 @@ class BleurtForSequenceClassification(BleurtPreTrainedModel):
             if self.config.problem_type is None:
                 if self.num_labels == 1:
                     self.config.problem_type = "regression"
-                elif self.num_labels > 1 and (labels.dtype == torch.long or labels.dtype == torch.int):
+                elif self.num_labels > 1 and (
+                    labels.dtype == torch.long or labels.dtype == torch.int
+                ):
                     self.config.problem_type = "single_label_classification"
                 else:
                     self.config.problem_type = "multi_label_classification"

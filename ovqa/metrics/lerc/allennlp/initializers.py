@@ -22,6 +22,7 @@ The available initialization functions are
 * ["uniform_unit_scaling"](./initializers.md#uniform_unit_scaling)
 * ["pretrained"](./initializers.md#pretrainedmodelinitializer)
 """  # noqa: E501
+
 import itertools
 import logging
 import math

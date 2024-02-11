@@ -236,6 +236,7 @@ class CLIPEncoder(nn.Module):
     Transformer encoder consisting of :obj:`config.num_hidden_layers` self attention layers. Each layer is a
     :class:`~transformers.CLIPEncoderLayer`.
     """
+
     def __init__(
         self,
         hidden_size,

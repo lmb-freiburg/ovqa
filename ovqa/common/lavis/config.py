@@ -4,6 +4,7 @@
  SPDX-License-Identifier: BSD-3-Clause
  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
 """
+
 import json
 import logging
 from argparse import Namespace
@@ -91,9 +92,9 @@ class Config:
             old_batch_size = runner_config["run"].get("batch_size", 2)
             updates["run"].update(
                 {
-                    "batch_size_eval_itm": 2
-                    if old_batch_size_eval_itm > 2
-                    else old_batch_size_eval_itm,
+                    "batch_size_eval_itm": (
+                        2 if old_batch_size_eval_itm > 2 else old_batch_size_eval_itm
+                    ),
                     "batch_size_eval": 2 if old_batch_size_eval > 2 else old_batch_size_eval,
                     "batch_size": 2 if old_batch_size > 2 else old_batch_size,
                     "output_dir": (Path(out_dir).parent / f"DEBUG_{Path(out_dir).name}").as_posix(),

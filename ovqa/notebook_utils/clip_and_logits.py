@@ -23,6 +23,7 @@ clip_acc, clip_logits = load_clip_result(
 print(f"Clip acc: {clip_acc.mean().item():.1%}")
 
 """
+
 from pathlib import Path
 from typing import Dict
 

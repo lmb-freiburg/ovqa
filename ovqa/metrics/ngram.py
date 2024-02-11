@@ -4,6 +4,7 @@ Implementation of various ngram based metrics.
 Code adapted from https://github.com/salaniz/pycocoevalcap
 Original code license: https://github.com/salaniz/pycocoevalcap/blob/master/license.txt
 """
+
 from __future__ import annotations
 
 import os

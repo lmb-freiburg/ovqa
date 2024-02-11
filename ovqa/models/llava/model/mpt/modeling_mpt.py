@@ -2,6 +2,7 @@
 
 Inspired by https://github.com/karpathy/minGPT/blob/master/mingpt/model.py
 """
+
 import math
 import torch
 import torch.nn as nn

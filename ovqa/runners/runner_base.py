@@ -4,6 +4,7 @@
  SPDX-License-Identifier: BSD-3-Clause
  For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
 """
+
 import datetime
 import json
 import logging
@@ -338,9 +339,11 @@ class RunnerBase:
             is_trains = [split in self.train_splits for split in split_names]
 
             batch_sizes = [
-                self.config.run_cfg.batch_size_train
-                if split == "train"
-                else self.config.run_cfg.batch_size_eval
+                (
+                    self.config.run_cfg.batch_size_train
+                    if split == "train"
+                    else self.config.run_cfg.batch_size_eval
+                )
                 for split in split_names
             ]
 
