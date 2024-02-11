@@ -203,6 +203,26 @@ unzip images.zip
 
 ### Setup model outputs
 
+We provide all model outputs for all datasets here. Extract them to the `output` folder and run the evaluation script `run_scripts/eval_results.sh` to compute the metrics.
+
+```bash
+mkdir -p output
+cd output
+wget https://lmb.informatik.uni-freiburg.de/projects/ovqa/results/activitynet~val.tar.gz
+wget https://lmb.informatik.uni-freiburg.de/projects/ovqa/results/coco~val.tar.gz
+wget https://lmb.informatik.uni-freiburg.de/projects/ovqa/results/gqa~balanced_testdev.tar.gz
+wget https://lmb.informatik.uni-freiburg.de/projects/ovqa/results/imagenet1k-square~val.tar.gz
+wget https://lmb.informatik.uni-freiburg.de/projects/ovqa/results/imagenet1k~val.tar.gz
+wget https://lmb.informatik.uni-freiburg.de/projects/ovqa/results/retrieval~activitynet~val.tar.gz
+wget https://lmb.informatik.uni-freiburg.de/projects/ovqa/results/retrieval~coco~val.tar.gz
+wget https://lmb.informatik.uni-freiburg.de/projects/ovqa/results/retrieval~imagenet1k-square~val.tar.gz
+wget https://lmb.informatik.uni-freiburg.de/projects/ovqa/results/retrieval~imagenet1k~val.tar.gz
+wget https://lmb.informatik.uni-freiburg.de/projects/ovqa/results/vqav2~val.tar.gz
+for f in $(ls); do echo $f; tar -xzf $f; done
+cd ..
+
+```
+
 
 
 ### Setup model checkpoints
@@ -326,7 +346,7 @@ python -m ovqa.metrics.bem.bem_query
 
 ## Running
 
-See `run_scripts/` for running the model evaluation and computing the metrics. See `assets/results` for the numbers to expect.
+See `run_scripts/` for running the model evaluation and computing the metrics. See `assets/tables` for the numbers to expect.
 
 ## Licenses
 
