@@ -125,14 +125,6 @@ class ActivityNet(ClsMetadataInterface):
                     print(f"Frame {framefile} not found in {video_frames_dir}")
                     continue
 
-                # # TODO remove this skip and run experiments again
-                # if video_frames_dir in {
-                #     "data/activitynet/frames/v_0dkIbKXXFzI",
-                #     "data/activitynet/frames/v_e6J_ygZ779A",
-                # }:
-                #     print(f"Skipping Frame {framefile} in {video_frames_dir}")
-                #     continue
-
                 # assert framefile in video_frames, f"Frame {framefile} not found in {video_frames_dir}"
                 ann_id = len(annotations)
                 ann = {

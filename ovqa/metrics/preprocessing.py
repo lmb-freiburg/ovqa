@@ -39,7 +39,7 @@ def get_preprocessing_fn(preprocessing_name: str | list[str]):
     if preprocessing_name == PrepC.NONE:
         return noop
     if preprocessing_name == PrepC.LEMMATIZE:
-        # todo batch lemmatization might be faster
+        # batch lemmatization might be faster than this
         lemmatizer = get_lemmatizer()
         return lemmatizer.lemmatize
 

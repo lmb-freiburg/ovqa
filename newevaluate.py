@@ -8,17 +8,18 @@ from deepdiff import DeepDiff
 from omegaconf import OmegaConf
 from pathlib import Path
 from pprint import pformat
+from torch.utils.data import get_worker_info
 
 import ovqa.tasks as tasks
 from ovqa.common.lavis.config import Config
-from ovqa.common.lavis.dist_utils import get_rank, init_distributed_mode
+from ovqa.common.lavis.dist_utils import get_rank, init_distributed_mode, is_main_process
 from ovqa.common.lavis.logger import setup_logger, add_file_handler_to_logger
 from ovqa.common.lavis.utils import now
 from ovqa.common.update_registry import update_registry
 from ovqa.paths import (
     get_ovqa_output_dir,
     setup_ovqa_environ,
-    get_ovqa_repo_root,
+    print_all_environment_variables,
 )
 from ovqa.runners.runner_base import RunnerBase, setup_lavis_output_dir, get_lavis_output_dir
 from ovqa.torchutils import count_params
@@ -61,7 +62,7 @@ def parse_args(parser):
 def main():
     parser = argparse.ArgumentParser(description="Evaluation")
     args = parse_args(parser)
-    # print(args)  # todo uncomment
+    print(args)
     job_id = now()  # set before init_distributed_mode() to ensure same job_id across all ranks.
     if args.trace is not None:
         connect_to_pycharm_debug_server(args.trace, args.trace_port)
@@ -72,15 +73,14 @@ def main():
     cfg = Config(args, debug_mode=args.debug)
     init_distributed_mode(cfg.run_cfg)
 
-    # if is_main_process() and get_worker_info() is None:  # todo uncomment
-    #     print_all_environment_variables()
+    if is_main_process() and get_worker_info() is None:
+        print_all_environment_variables()
     setup_seeds(cfg)
     setup_logger()  # set after init_distributed_mode() to only log on master.
 
     # update the output dir to add some more infos
     assert len(cfg.run_cfg.test_splits) == 1
     options_dict = cfg.return_opts_dict(args.options)
-    print(options_dict)  # todo remove
     if "suffix_output_dir" in options_dict.keys():
         suffix_output_dir = options_dict["suffix_output_dir"]
     else:
@@ -121,10 +121,6 @@ def main():
     )
     logging.debug(f"Checking dirs: {dirs_to_check}")
 
-    # todo remove this
-    with Path(get_ovqa_repo_root() / "errors.txt").open("at") as fh:
-        fh.write(f"\n**************** checking {p_output_dir}\n")
-
     if args.skip_existing:
         for check_dir in dirs_to_check:
             logging.debug(f"Checking {check_dir}")
@@ -162,10 +158,6 @@ def main():
                 logging.warning(f"{pformat(values_changed)}")
                 logging.warning("====================")
 
-                with Path(get_ovqa_repo_root() / "errors.txt").open("at") as fh:
-                    fh.write(f"Old experiment found with different config: {check_dir}\n")
-                    fh.write(f"{pformat(values_changed)}\n")
-
             logging.warning("====================")
             logging.warning(f"Skip existing output dir {check_dir}")
             logging.warning("====================")
@@ -189,7 +181,7 @@ def main():
     n_params = count_params(model)
     logging.info(f"Total params in model: {n_params / 10 ** 9:.3f}B")
 
-    logging.warning(f"Start eval on rank {get_rank()}")  # todo num datapoints
+    logging.warning(f"Start eval on rank {get_rank()}")
 
     runner = RunnerBase(cfg=cfg, job_id=job_id, task=task, model=model, datasets=datasets)
     runner.evaluate(skip_reload=True)

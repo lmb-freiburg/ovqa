@@ -152,7 +152,6 @@ class LlamaMetricKV(MetricExt):
         self.kv_cache_file = (
             cache_dir / "incontext_kvs" / f"{llama_name}~{mode}~{n_incontext}~{seed}.lmdb"
         )
-        # todo autodetected batch size maybe
 
     def actually_load_model(self):
         self._model, self._tokenizer = load_llm(self.llama_name, buffer_size=self.buffer_size)

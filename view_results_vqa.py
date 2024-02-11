@@ -103,7 +103,7 @@ def main():
     for result_name, result in results.items():
         logger.debug(f"Processing {result_name}")
         data_dict["models"].append(result_name)
-        preds: Dict[str, str] = result.load_output()  # todo num2key=meta.get_num2key())
+        preds: Dict[str, str] = result.load_output()  # num2key=meta.get_num2key())
         pred_keys = list(preds.keys())
         pred_values = list(preds.values())
         if not args.dont_cut_long_text:

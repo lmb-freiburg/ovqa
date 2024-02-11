@@ -163,10 +163,9 @@ class Followup:
                 return_pred_embeddings=True
             )
         if pred_synonym_ids is not None:
-            # todo
             raise NotImplementedError(
                 "pred_synonym_ids should be None "
-                "(followup with predictions averaged over sentences not implemented yet.)"
+                "(followup with predictions averaged over sentences not implemented.)"
             )
 
         labels = torch.tensor(target_list, dtype=torch.long, device=sim2leaves.device)
