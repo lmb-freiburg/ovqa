@@ -201,6 +201,10 @@ wget https://downloads.cs.stanford.edu/nlp/data/gqa/images.zip
 unzip images.zip
 ```
 
+### Setup model outputs
+
+
+
 ### Setup model checkpoints
 
 Model checkpoints from salesforce-lavis and huggingface will download automatically
@@ -322,9 +326,7 @@ python -m ovqa.metrics.bem.bem_query
 
 ## Running
 
-See `run_scripts/` for running the model evaluation and computing the metrics.
-
-Due to updated packages, fixed bugs and code modifications, some results have slightly changed since the rebuttal version in Nov 2023.
+See `run_scripts/` for running the model evaluation and computing the metrics. See `assets/results` for the numbers to expect.
 
 ## Licenses
 
