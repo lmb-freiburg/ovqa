@@ -1,0 +1,38 @@
+ # Copyright (c) 2022, salesforce.com, inc.
+ # All rights reserved.
+ # SPDX-License-Identifier: BSD-3-Clause
+ # For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+
+model:
+    arch: blip2
+    model_type: coco
+    use_grad_checkpoint: False
+
+datasets:
+    activitynet:
+        type: "eval"
+        vis_processor:
+            eval:
+                name: "blip_image_eval"
+                image_size: 364
+        text_processor:
+            eval:
+                name: "blip_caption"
+
+run:
+  task: multimodal_classification
+
+  num_workers: 4
+  batch_size_train: 32
+  batch_size_eval: 128
+
+  seed: 42
+  output_dir_add_job_id: False
+  evaluate: True
+  test_splits: ["val"]
+
+  device: "cuda"
+  world_size: 1
+  dist_url: "env://"
+  distributed: True
+

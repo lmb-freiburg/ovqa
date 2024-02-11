@@ -1,0 +1,17 @@
+# Copyright (c) 2022, salesforce.com, inc.
+# All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause
+# For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+
+datasets:
+    imagenet1k:
+        data_type: images
+        class_name_key: "clip_bench_label"
+        build_info:
+            annotations:
+                val:
+                    storage:
+                        - ovqa/annotations/imagenet1k/generated/val.json
+                        - ovqa/annotations/imagenet1k/generated/classes_data.json
+            images:
+                storage: ${oc.env:ENV_DATA_DIR}/imagenet1k

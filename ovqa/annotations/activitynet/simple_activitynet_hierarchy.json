@@ -1,0 +1,4146 @@
+{
+  "389": {
+    "parentName": "Health-related self care",
+    "nodeName": "Applying sunscreen",
+    "nodeId": 389,
+    "parentId": 269,
+    "node_type": "leaf",
+    "id": 199,
+    "definition": "The act of applying a special cream that protects from the UV light from the sun.",
+    "synonyms": [
+      "Applying sunscreen",
+      "Using sunprotection",
+      "applying sunscream"
+    ]
+  },
+  "269": {
+    "parentName": "Health-related Self Care",
+    "nodeName": "Health-related self care",
+    "nodeId": 269,
+    "parentId": 270,
+    "children": [
+      389
+    ],
+    "node_type": "internal",
+    "definition": "Activities focused on maintaining and improving personal health and well-being.",
+    "synonyms": [
+      "Maintaining personal health",
+      "Self-care for health",
+      "Health maintenance"
+    ]
+  },
+  "270": {
+    "parentName": "Personal Care",
+    "nodeName": "Health-related Self Care",
+    "nodeId": 270,
+    "parentId": 2,
+    "children": [
+      269
+    ],
+    "node_type": "internal",
+    "definition": "Activities focused on maintaining and improving personal health and well-being.",
+    "synonyms": [
+      "Health-related Self Care"
+    ]
+  },
+  "271": {
+    "parentName": "Wrestling",
+    "nodeName": "Arm wrestling",
+    "nodeId": 271,
+    "parentId": 272,
+    "node_type": "leaf",
+    "id": 100,
+    "definition": "A physical contest of strength and technique in which two people attempt to force each other's arm down to a surface.",
+    "synonyms": [
+      "Arm wrestling"
+    ]
+  },
+  "272": {
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Wrestling",
+    "nodeId": 272,
+    "parentId": 17,
+    "children": [
+      271,
+      375
+    ],
+    "node_type": "internal",
+    "definition": "A sport in which two opponents grapple with each other in an attempt to pin down or throw their opponent to the ground.",
+    "synonyms": [
+      "Wrestling"
+    ]
+  },
+  "273": {
+    "parentName": "Vehicle repair and maintenance (by self)",
+    "nodeName": "Assembling bicycle",
+    "nodeId": 273,
+    "parentId": 56,
+    "node_type": "leaf",
+    "id": 101,
+    "definition": "The process of putting together different parts to create a functional bicycle.",
+    "synonyms": [
+      "Assembling bicycle"
+    ]
+  },
+  "274": {
+    "parentName": "Biking",
+    "nodeName": "BMX",
+    "nodeId": 274,
+    "parentId": 275,
+    "node_type": "leaf",
+    "id": 102,
+    "definition": "A type of bicycle racing on a dirt track with obstacles and steep hills.",
+    "synonyms": [
+      "BMX",
+      "Bicycle Motocross",
+      "off-road bicycle racing"
+    ]
+  },
+  "275": {
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Biking",
+    "nodeId": 275,
+    "parentId": 17,
+    "children": [
+      274
+    ],
+    "node_type": "internal",
+    "definition": "The act of riding a bicycle for recreation, transportation, or sport.",
+    "synonyms": [
+      "Biking",
+      "cycling"
+    ]
+  },
+  "276": {
+    "parentName": "Food and drink preparation ",
+    "nodeName": "Baking cookies",
+    "nodeId": 276,
+    "parentId": 31,
+    "node_type": "leaf",
+    "id": 103,
+    "definition": "The process of preparing and cooking dough to create sweet treats, usually small and flat, called cookies.",
+    "synonyms": [
+      "Baking cookies",
+      "Making cookies"
+    ]
+  },
+  "277": {
+    "parentName": "Playing sports",
+    "nodeName": "Baton twirling",
+    "nodeId": 277,
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 104,
+    "definition": "A performance art involving the manipulation of a baton while dancing or performing routines.",
+    "synonyms": [
+      "Baton twirling"
+    ]
+  },
+  "278": {
+    "parentName": "Playing soccer",
+    "nodeName": "Beach soccer",
+    "nodeId": 278,
+    "parentId": 279,
+    "node_type": "leaf",
+    "id": 105,
+    "definition": "A variant of soccer played on a sandy beach, often with modified rules to suit the playing surface.",
+    "synonyms": [
+      "Beach soccer",
+      "Playing soccer on a beach"
+    ]
+  },
+  "279": {
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Playing soccer",
+    "nodeId": 279,
+    "parentId": 17,
+    "children": [
+      278,
+      315
+    ],
+    "node_type": "internal",
+    "definition": "A team sport in which players use their feet to kick a ball into the opposing team's goal to score points.",
+    "synonyms": [
+      "Playing soccer",
+      "soccer"
+    ]
+  },
+  "280": {
+    "parentName": "Playing games",
+    "nodeName": "Beer pong",
+    "nodeId": 280,
+    "parentId": 48,
+    "node_type": "leaf",
+    "id": 106,
+    "definition": "A drinking game in which players throw a ping pong ball across a table with the intent of landing the ball in one of several cups of beer.",
+    "synonyms": [
+      "Beer pong"
+    ]
+  },
+  "281": {
+    "parentName": "Washing, dressing and grooming oneself",
+    "nodeName": "Blow-drying hair",
+    "nodeId": 281,
+    "parentId": 62,
+    "node_type": "leaf",
+    "id": 107,
+    "definition": "The process of using a hair dryer to dry and style wet hair.",
+    "synonyms": [
+      "Blow-drying hair",
+      "Hair drying",
+      "Using a blow dryer"
+    ]
+  },
+  "282": {
+    "parentName": "Lawn, garden, and houseplant care",
+    "nodeName": "Blowing leaves",
+    "nodeId": 282,
+    "parentId": 66,
+    "node_type": "leaf",
+    "id": 108,
+    "definition": "The act of using a leaf blower to gather and remove fallen leaves from a yard or outdoor area.",
+    "synonyms": [
+      "Blowing leaves",
+      "Leaf blowing",
+      "Clearing leaves"
+    ]
+  },
+  "283": {
+    "parentName": "Bowling",
+    "nodeName": "Playing ten pins",
+    "nodeId": 283,
+    "parentId": 284,
+    "node_type": "leaf",
+    "id": 109,
+    "definition": "A form of bowling in which a player rolls a heavy ball to knock down a set of ten pins arranged in a triangular formation.",
+    "synonyms": [
+      "Playing ten pins",
+      "Ten-pin bowling",
+      "Bowling with ten pins"
+    ]
+  },
+  "284": {
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Bowling",
+    "nodeId": 284,
+    "parentId": 17,
+    "children": [
+      283
+    ],
+    "node_type": "internal",
+    "definition": "A sport in which players roll a heavy ball down a lane to knock down a set of pins arranged in a triangular formation.",
+    "synonyms": [
+      "Bowling"
+    ]
+  },
+  "285": {
+    "parentName": "Washing, dressing and grooming oneself",
+    "nodeName": "Braiding hair",
+    "nodeId": 285,
+    "parentId": 62,
+    "node_type": "leaf",
+    "id": 110,
+    "definition": "The process of interweaving three or more strands of hair to create intricate patterns and styles.",
+    "synonyms": [
+      "Braiding hair",
+      "Hair braiding",
+      "Weaving hair"
+    ]
+  },
+  "286": {
+    "parentName": "Beach activities",
+    "nodeName": "Building sandcastles",
+    "nodeId": 286,
+    "parentId": 287,
+    "node_type": "leaf",
+    "id": 111,
+    "definition": "The act of using wet sand to create decorative structures, often resembling castles, on the beach.",
+    "synonyms": [
+      "Building sandcastles",
+      "Sandcastle construction",
+      "Sculpting sand"
+    ]
+  },
+  "287": {
+    "parentName": "Arts and Entertainment",
+    "nodeName": "Beach activities",
+    "nodeId": 287,
+    "parentId": 21,
+    "children": [
+      286
+    ],
+    "node_type": "internal",
+    "definition": "Various leisure and recreational activities that take place on a beach, such as swimming, sunbathing, and beach sports.",
+    "synonyms": [
+      "Beach activities",
+      "Engaging in beach fun",
+      "Shoreline recreation"
+    ]
+  },
+  "288": {
+    "parentName": "Participating in rodeo competitions",
+    "nodeName": "Bullfighting",
+    "nodeId": 288,
+    "parentId": 289,
+    "node_type": "leaf",
+    "id": 112,
+    "definition": "A traditional spectacle involving a matador facing and taunting a bull in an arena.",
+    "synonyms": [
+      "Bullfighting",
+      "Toreo",
+      "Tauromachia"
+    ]
+  },
+  "289": {
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Participating in rodeo competitions",
+    "nodeId": 289,
+    "parentId": 17,
+    "children": [
+      288,
+      290
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in a series of events or contests that showcase skills related to cattle herding, riding, and roping.",
+    "synonyms": [
+      "Participating in rodeo competitions",
+      "Rodeo events",
+      "Rodeo contests"
+    ]
+  },
+  "290": {
+    "parentName": "Participating in rodeo competitions",
+    "nodeName": "Calf roping",
+    "nodeId": 290,
+    "parentId": 289,
+    "node_type": "leaf",
+    "id": 113,
+    "definition": "A rodeo event in which a rider on horseback chases and ropes a calf, then dismounts and ties its legs together.",
+    "synonyms": [
+      "Calf roping",
+      "Roping calves",
+      "Steer roping"
+    ]
+  },
+  "291": {
+    "parentName": "Playing sports",
+    "nodeName": "Camel ride",
+    "nodeId": 291,
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 114,
+    "definition": "The act of riding on the back of a camel for leisure or transportation purposes.",
+    "synonyms": [
+      "Camel ride",
+      "Riding camels",
+      "Camelback excursion"
+    ]
+  },
+  "292": {
+    "parentName": "Boating",
+    "nodeName": "Canoeing",
+    "nodeId": 292,
+    "parentId": 293,
+    "node_type": "leaf",
+    "id": 115,
+    "definition": "The activity of propelling a canoe through water using paddles, often enjoyed as a recreational and sporting activity.",
+    "synonyms": [
+      "Canoeing",
+      "Paddling a canoe",
+      "Canoe trip"
+    ]
+  },
+  "293": {
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Boating",
+    "nodeId": 293,
+    "parentId": 17,
+    "children": [
+      292,
+      353,
+      357
+    ],
+    "node_type": "internal",
+    "definition": "The use of boats or other watercraft for various purposes, including transportation, leisure, and water-based sports.",
+    "synonyms": [
+      "Boating",
+      "Navigating watercraft"
+    ]
+  },
+  "294": {
+    "parentName": "Participating in martial arts",
+    "nodeName": "Capoeira",
+    "nodeId": 294,
+    "parentId": 27,
+    "node_type": "leaf",
+    "id": 116,
+    "definition": "An Afro-Brazilian martial art that combines elements of dance, acrobatics, and music, often performed in a rhythmic and fluid manner.",
+    "synonyms": [
+      "Capoeira",
+      "Brazilian martial art",
+      "Afro-Brazilian dance"
+    ]
+  },
+  "295": {
+    "parentName": "Interior arrangement, decoration, & repairs",
+    "nodeName": "Carving jack-o-lanterns",
+    "nodeId": 295,
+    "parentId": 33,
+    "node_type": "leaf",
+    "id": 117,
+    "definition": "The process of hollowing out and carving designs into pumpkins, often illuminated from within to create decorative lanterns.",
+    "synonyms": [
+      "Carving jack-o-lanterns",
+      "Pumpkin carving",
+      "Creating jack-o-lanterns"
+    ]
+  },
+  "296": {
+    "parentName": "Vehicle repair and maintenance (by self)",
+    "nodeName": "Changing car wheel",
+    "nodeId": 296,
+    "parentId": 56,
+    "node_type": "leaf",
+    "id": 118,
+    "definition": "The act of removing a damaged or flat tire from a vehicle and replacing it with a spare or repaired tire.",
+    "synonyms": [
+      "Changing car wheel",
+      "Replacing a car tire",
+      "Swapping out a wheel"
+    ]
+  },
+  "297": {
+    "parentName": "Interior arrangement, decoration, & repairs",
+    "nodeName": "Cleaning sink",
+    "nodeId": 297,
+    "parentId": 33,
+    "node_type": "leaf",
+    "id": 119,
+    "definition": "The process of removing dirt, grime, and debris from a sink fixture to maintain cleanliness and hygiene.",
+    "synonyms": [
+      "Cleaning sink",
+      "Washing sink",
+      "Sanitizing sink"
+    ]
+  },
+  "298": {
+    "parentName": "Care for animals and pets (not veterinary care)",
+    "nodeName": "Clipping cat claws",
+    "nodeId": 298,
+    "parentId": 65,
+    "node_type": "leaf",
+    "id": 120,
+    "definition": "The practice of trimming a cat's claws to prevent them from becoming too long and causing discomfort or injury.",
+    "synonyms": [
+      "Clipping cat claws",
+      "Trimming cat nails",
+      "Grooming cat claws"
+    ]
+  },
+  "299": {
+    "parentName": "Playing sports",
+    "nodeName": "Croquet",
+    "nodeId": 299,
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 121,
+    "definition": "A lawn game in which players use mallets to hit wooden balls through a series of wickets, aiming to complete the course in the fewest strokes.",
+    "synonyms": [
+      "Croquet",
+      "Lawn croquet",
+      "Playing croquet"
+    ]
+  },
+  "300": {
+    "parentName": "Playing sports",
+    "nodeName": "Curling",
+    "nodeId": 300,
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 122,
+    "definition": "A team sport played on ice, where players slide stones towards a target area, and teammates use brooms to influence the stones' path.",
+    "synonyms": [
+      "Curling",
+      "Ice curling",
+      "Sweeping on ice"
+    ]
+  },
+  "301": {
+    "parentName": "Lawn, garden, and houseplant care",
+    "nodeName": "Cutting the grass",
+    "nodeId": 301,
+    "parentId": 66,
+    "node_type": "leaf",
+    "id": 123,
+    "definition": "The act of trimming and maintaining the height of grass in a yard or outdoor space using a lawnmower.",
+    "synonyms": [
+      "Cutting the grass",
+      "Mowing the lawn",
+      "Lawn maintenance"
+    ]
+  },
+  "302": {
+    "parentName": "Interior arrangement, decoration, & repairs",
+    "nodeName": "Decorating the Christmas tree",
+    "nodeId": 302,
+    "parentId": 33,
+    "node_type": "leaf",
+    "id": 124,
+    "definition": "The tradition of embellishing a Christmas tree with ornaments, lights, and other decorative items during the holiday season.",
+    "synonyms": [
+      "Decorating the Christmas tree",
+      "Trimming the holiday tree",
+      "Adorning the Xmas tree"
+    ]
+  },
+  "303": {
+    "parentName": "Walking / exercising / playing with animals",
+    "nodeName": "Disc dog",
+    "nodeId": 303,
+    "parentId": 26,
+    "node_type": "leaf",
+    "id": 125,
+    "definition": "A sport where dogs and their handlers participate in disc-catching routines, showcasing the dogs' agility, speed, and catching abilities.",
+    "synonyms": [
+      "Disc dog",
+      "Frisbee dog",
+      "Canine disc sport"
+    ]
+  },
+  "304": {
+    "parentName": "Playing sports",
+    "nodeName": "Doing a powerbomb",
+    "nodeId": 304,
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 126,
+    "definition": "A professional wrestling maneuver where one wrestler lifts another and forcefully slams them onto the mat.",
+    "synonyms": [
+      "Doing a powerbomb",
+      "Performing a wrestling powerbomb",
+      "Powerbomb wrestling move"
+    ]
+  },
+  "305": {
+    "parentName": "Working out",
+    "nodeName": "Doing crunches",
+    "nodeId": 305,
+    "parentId": 306,
+    "node_type": "leaf",
+    "id": 127,
+    "definition": "A type of exercise that involves curling the upper body towards the knees to work the abdominal muscles.",
+    "synonyms": [
+      "Doing crunches",
+      "Performing abdominal crunches",
+      "Ab exercises"
+    ]
+  },
+  "306": {
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Working out",
+    "nodeId": 306,
+    "parentId": 17,
+    "children": [
+      305,
+      328,
+      361
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in physical activities, exercises, or training routines to improve fitness, strength, and overall health.",
+    "synonyms": [
+      "Working out",
+      "Exercising",
+      "Physical training"
+    ]
+  },
+  "307": {
+    "parentName": "Playing musical instruments",
+    "nodeName": "Drum corps",
+    "nodeId": 307,
+    "parentId": 61,
+    "node_type": "leaf",
+    "id": 128,
+    "definition": "A musical performance group consisting of drummers and percussionists who play coordinated rhythms and patterns.",
+    "synonyms": [
+      "Drum corps",
+      "Drumming ensemble",
+      "Percussion group"
+    ]
+  },
+  "308": {
+    "parentName": "Using cardiovascular equipment",
+    "nodeName": "Elliptical trainer",
+    "nodeId": 308,
+    "parentId": 58,
+    "node_type": "leaf",
+    "id": 129,
+    "definition": "A stationary exercise machine that simulates walking, running, or stair climbing while reducing impact on the joints.",
+    "synonyms": [
+      "Elliptical trainer",
+      "Elliptical machine",
+      "Cross-trainer"
+    ]
+  },
+  "309": {
+    "parentName": "Fencing",
+    "nodeName": "Doing fencing",
+    "nodeId": 309,
+    "parentId": 310,
+    "node_type": "leaf",
+    "id": 130,
+    "definition": "The sport of competitive swordplay, involving two opponents using specialized swords to score points by making contact with their opponent.",
+    "synonyms": [
+      "Doing fencing",
+      "Participating in fencing",
+      "Fencing sport"
+    ]
+  },
+  "310": {
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Fencing",
+    "nodeId": 310,
+    "parentId": 17,
+    "children": [
+      309
+    ],
+    "node_type": "internal",
+    "definition": "A sport and martial art where participants engage in one-on-one combat using bladed weapons, often with the goal of scoring points through touches or strikes.",
+    "synonyms": [
+      "Fencing",
+      "Swordplay"
+    ]
+  },
+  "311": {
+    "parentName": "Exterior repair, improvements, & decoration",
+    "nodeName": "Fixing the roof",
+    "nodeId": 311,
+    "parentId": 312,
+    "node_type": "leaf",
+    "id": 131,
+    "definition": "The act of repairing or restoring a building's roof, often involving fixing leaks, replacing damaged materials, and ensuring its integrity.",
+    "synonyms": [
+      "Fixing the roof",
+      "Roof repair",
+      "Repairing roofing"
+    ]
+  },
+  "312": {
+    "parentName": "Exterior Maintenance, Repair, & Decoration",
+    "nodeName": "Exterior repair, improvements, & decoration",
+    "nodeId": 312,
+    "parentId": 12,
+    "children": [
+      311,
+      360
+    ],
+    "node_type": "internal",
+    "definition": "Activities related to maintaining, upgrading, and enhancing the exterior appearance of buildings and outdoor spaces.",
+    "synonyms": [
+      "Exterior repair, improvements, & decoration",
+      "Exterior repair",
+      "Exterior improvements",
+      "Exterior decoration",
+      "Exterior maintenance and beautification",
+      "Outdoor renovations"
+    ]
+  },
+  "313": {
+    "parentName": "Park activities",
+    "nodeName": "Fun sliding down",
+    "nodeId": 313,
+    "parentId": 314,
+    "node_type": "leaf",
+    "id": 132,
+    "definition": "The act of sliding down a surface, such as a hill or a slide, for amusement and recreation.",
+    "synonyms": [
+      "Fun sliding down",
+      "Sliding down for enjoyment",
+      "Recreational sliding"
+    ]
+  },
+  "314": {
+    "parentName": "Arts and Entertainment",
+    "nodeName": "Park activities",
+    "nodeId": 314,
+    "parentId": 21,
+    "children": [
+      313,
+      378,
+      383
+    ],
+    "node_type": "internal",
+    "definition": "Various recreational and leisure activities conducted in a park, often involving sports, games, picnicking, and relaxation.",
+    "synonyms": [
+      "Park activities",
+      "Recreational activities in a park",
+      "Outdoor leisure pursuits"
+    ]
+  },
+  "315": {
+    "parentName": "Playing soccer",
+    "nodeName": "Futsal",
+    "nodeId": 315,
+    "parentId": 279,
+    "node_type": "leaf",
+    "id": 133,
+    "definition": "A variant of soccer played indoors on a smaller pitch with teams of five players, emphasizing skill, quick passes, and close control.",
+    "synonyms": [
+      "Futsal",
+      "Indoor soccer",
+      "Five-a-side soccer"
+    ]
+  },
+  "316": {
+    "parentName": "Washing, dressing and grooming oneself",
+    "nodeName": "Gargling mouthwash",
+    "nodeId": 316,
+    "parentId": 62,
+    "node_type": "leaf",
+    "id": 134,
+    "definition": "The practice of swishing liquid mouthwash around the mouth and gargling to improve oral hygiene and refresh the breath.",
+    "synonyms": [
+      "Gargling mouthwash",
+      "Rinsing mouth with mouthwash",
+      "Oral gargling"
+    ]
+  },
+  "317": {
+    "parentName": "Care for animals and pets (not veterinary care)",
+    "nodeName": "Grooming dog",
+    "nodeId": 317,
+    "parentId": 65,
+    "node_type": "leaf",
+    "id": 135,
+    "definition": "The process of maintaining a dog's appearance and hygiene, including brushing, bathing, trimming nails, and cleaning ears.",
+    "synonyms": [
+      "Grooming dog",
+      "Dog care and grooming",
+      "Pet grooming"
+    ]
+  },
+  "318": {
+    "parentName": "Vehicle repair and maintenance (by self)",
+    "nodeName": "Hand car wash",
+    "nodeId": 318,
+    "parentId": 56,
+    "node_type": "leaf",
+    "id": 136,
+    "definition": "Cleaning and washing a car using hands, brushes, and cleaning agents to remove dirt, grime, and debris.",
+    "synonyms": [
+      "Hand car wash",
+      "Manual car cleaning",
+      "Cleaning vehicle by hand"
+    ]
+  },
+  "319": {
+    "parentName": "Interior arrangement, decoration, & repairs",
+    "nodeName": "Hanging wallpaper",
+    "nodeId": 319,
+    "parentId": 33,
+    "node_type": "leaf",
+    "id": 137,
+    "definition": "The task of attaching decorative wallpaper or wall coverings onto interior walls to enhance the visual appeal of a space.",
+    "synonyms": [
+      "Hanging wallpaper",
+      "Installing wall coverings",
+      "Decorating with wallpaper"
+    ]
+  },
+  "320": {
+    "parentName": "Eating and Drinking",
+    "nodeName": "Having an ice cream",
+    "nodeId": 320,
+    "parentId": 46,
+    "node_type": "leaf",
+    "id": 138,
+    "definition": "The act of consuming a frozen treat made from dairy or non-dairy ingredients, often enjoyed for its sweet and creamy flavor.",
+    "synonyms": [
+      "Having an ice cream",
+      "Eating ice cream",
+      "Enjoying frozen dessert"
+    ]
+  },
+  "321": {
+    "parentName": "Playing games",
+    "nodeName": "Hitting a pinata",
+    "nodeId": 321,
+    "parentId": 48,
+    "node_type": "leaf",
+    "id": 139,
+    "definition": "Participating in a festive activity where a suspended container filled with treats is hit with a stick or bat to release its contents.",
+    "synonyms": [
+      "Hitting a pinata",
+      "Striking a pinata",
+      "Breaking open a pinata"
+    ]
+  },
+  "322": {
+    "parentName": "Playing games",
+    "nodeName": "Hula hoop",
+    "nodeId": 322,
+    "parentId": 48,
+    "node_type": "leaf",
+    "id": 140,
+    "definition": "A recreational activity involving rotating a large hoop around the body's waist, limbs, or neck, often performed for fun and exercise.",
+    "synonyms": [
+      "Hula hoop",
+      "Hooping",
+      "Spinning a hoop"
+    ]
+  },
+  "323": {
+    "parentName": "Playing sports",
+    "nodeName": "Hurling",
+    "nodeId": 323,
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 141,
+    "definition": "A traditional Irish team sport resembling field hockey, played with a small ball and a curved stick, involving passing, hitting, and scoring goals.",
+    "synonyms": [
+      "Hurling",
+      "Hurling sport",
+      "Irish hurling"
+    ]
+  },
+  "324": {
+    "parentName": "Fishing",
+    "nodeName": "Ice fishing",
+    "nodeId": 324,
+    "parentId": 325,
+    "node_type": "leaf",
+    "id": 142,
+    "definition": "The practice of catching fish through a hole drilled in a frozen body of water, often using specialized equipment and techniques.",
+    "synonyms": [
+      "Ice fishing",
+      "Winter fishing",
+      "Fishing on ice"
+    ]
+  },
+  "325": {
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Fishing",
+    "nodeId": 325,
+    "parentId": 17,
+    "children": [
+      324
+    ],
+    "node_type": "internal",
+    "definition": "The activity of catching aquatic creatures such as fish, typically for sport, leisure, or sustenance.",
+    "synonyms": [
+      "Fishing",
+      "Angling",
+      "Catching fish"
+    ]
+  },
+  "326": {
+    "parentName": "Interior arrangement, decoration, & repairs",
+    "nodeName": "Installing carpet",
+    "nodeId": 326,
+    "parentId": 33,
+    "node_type": "leaf",
+    "id": 143,
+    "definition": "The process of fitting and securing carpeting materials to the floor, enhancing the comfort and aesthetics of indoor spaces.",
+    "synonyms": [
+      "Installing carpet",
+      "Carpet installation",
+      "Laying carpet"
+    ]
+  },
+  "327": {
+    "parentName": "Playing games",
+    "nodeName": "Kite flying",
+    "nodeId": 327,
+    "parentId": 48,
+    "node_type": "leaf",
+    "id": 144,
+    "definition": "The recreational activity of launching and controlling a kite in the air using strings, often enjoyed outdoors on windy days.",
+    "synonyms": [
+      "Kite flying",
+      "Flying kites",
+      "Kite-flying activity"
+    ]
+  },
+  "328": {
+    "parentName": "Working out",
+    "nodeName": "Kneeling",
+    "nodeId": 328,
+    "parentId": 306,
+    "node_type": "leaf",
+    "id": 145,
+    "definition": "The action of supporting one's body weight on the knees, often done as a sign of reverence, comfort, or practicality.",
+    "synonyms": [
+      "Kneeling",
+      "Bending knees",
+      "Being on one's knees"
+    ]
+  },
+  "329": {
+    "parentName": "Sewing, repairing, & maintaining textiles",
+    "nodeName": "Knitting",
+    "nodeId": 329,
+    "parentId": 45,
+    "node_type": "leaf",
+    "id": 146,
+    "definition": "A craft involving creating fabric by interlocking loops of yarn with needles, commonly used to make clothing, accessories, and more.",
+    "synonyms": [
+      "Knitting",
+      "Knitting fabric",
+      "Yarn crafting"
+    ]
+  },
+  "330": {
+    "parentName": "Interior arrangement, decoration, & repairs",
+    "nodeName": "Laying tile",
+    "nodeId": 330,
+    "parentId": 33,
+    "node_type": "leaf",
+    "id": 147,
+    "definition": "The process of placing and securing tiles onto surfaces, such as floors or walls, to create decorative and functional patterns.",
+    "synonyms": [
+      "Laying tile",
+      "Tile installation",
+      "Tiling"
+    ]
+  },
+  "331": {
+    "parentName": "Playing sports",
+    "nodeName": "Longboarding",
+    "nodeId": 331,
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 148,
+    "definition": "A type of skateboarding using longer and wider boards, often used for cruising, downhill racing, and freeriding.",
+    "synonyms": [
+      "Longboarding",
+      "Longboard riding",
+      "Skateboarding on a longboard"
+    ]
+  },
+  "332": {
+    "parentName": "Food and drink preparation ",
+    "nodeName": "Making a cake",
+    "nodeId": 332,
+    "parentId": 31,
+    "node_type": "leaf",
+    "id": 149,
+    "definition": "The process of mixing and baking ingredients to create a sweet baked dessert, often layered and decorated.",
+    "synonyms": [
+      "Making a cake",
+      "Baking a cake",
+      "Cake preparation"
+    ]
+  },
+  "333": {
+    "parentName": "Food and drink preparation ",
+    "nodeName": "Making a lemonade",
+    "nodeId": 333,
+    "parentId": 31,
+    "node_type": "leaf",
+    "id": 150,
+    "definition": "The act of mixing lemon juice, water, and sweeteners to create a refreshing and tart beverage, usually served chilled.",
+    "synonyms": [
+      "Making a lemonade",
+      "Preparing lemonade",
+      "Lemonade concoction"
+    ]
+  },
+  "334": {
+    "parentName": "Food and drink preparation ",
+    "nodeName": "Making an omelette",
+    "nodeId": 334,
+    "parentId": 31,
+    "node_type": "leaf",
+    "id": 151,
+    "definition": "The process of whisking eggs, cooking them in a pan, and folding them around fillings to create a folded, savory dish.",
+    "synonyms": [
+      "Making an omelette",
+      "Cooking an omelette",
+      "Omelette preparation"
+    ]
+  },
+  "335": {
+    "parentName": "Interior cleaning",
+    "nodeName": "Mooping floor",
+    "nodeId": 335,
+    "parentId": 37,
+    "node_type": "leaf",
+    "id": 152,
+    "definition": "The act of cleaning and sanitizing a floor surface by using a mop or similar tool to remove dirt, dust, and stains, and often applying cleaning agents or water.",
+    "synonyms": [
+      "Mooping floor",
+      "Mopping floor",
+      "Floor cleaning",
+      "Sweeping and mopping"
+    ]
+  },
+  "336": {
+    "parentName": "Exterior Maintenance, Repair, & Decoration",
+    "nodeName": "Painting fence",
+    "nodeId": 336,
+    "parentId": 12,
+    "node_type": "leaf",
+    "id": 153,
+    "definition": "The task of applying paint or protective coating to a fence, enhancing its appearance and providing weather resistance.",
+    "synonyms": [
+      "Painting fence",
+      "Fence painting",
+      "Applying paint to a fence"
+    ]
+  },
+  "337": {
+    "parentName": "Building and repairing furniture",
+    "nodeName": "Painting furniture",
+    "nodeId": 337,
+    "parentId": 338,
+    "node_type": "leaf",
+    "id": 154,
+    "definition": "The activity of applying paint or finish to furniture pieces, often to rejuvenate, personalize, or protect the furniture.",
+    "synonyms": [
+      "Painting furniture",
+      "Furniture painting",
+      "Decorating furniture with paint"
+    ]
+  },
+  "338": {
+    "parentName": "Interior Maintenance, Repair, & Decoration",
+    "nodeName": "Building and repairing furniture",
+    "nodeId": 338,
+    "parentId": 15,
+    "children": [
+      337
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in activities related to creating, assembling, and restoring furniture items, often involving carpentry and craftsmanship.",
+    "synonyms": [
+      "Building and repairing furniture",
+      "Building furniture",
+      "Repairing furniture",
+      "Furniture construction and restoration",
+      "Crafting and fixing furniture"
+    ]
+  },
+  "339": {
+    "parentName": "Food and drink preparation ",
+    "nodeName": "Peeling potatoes",
+    "nodeId": 339,
+    "parentId": 31,
+    "node_type": "leaf",
+    "id": 155,
+    "definition": "The process of removing the outer skin from potatoes using a knife or peeler, usually done before cooking or preparation.",
+    "synonyms": [
+      "Peeling potatoes",
+      "Potato peeling",
+      "Removing potato skin"
+    ]
+  },
+  "340": {
+    "parentName": "Interior arrangement, decoration, & repairs",
+    "nodeName": "Plastering",
+    "nodeId": 340,
+    "parentId": 33,
+    "node_type": "leaf",
+    "id": 156,
+    "definition": "The practice of applying plaster or similar materials to walls, ceilings, or surfaces to create a smooth and even finish.",
+    "synonyms": [
+      "Plastering",
+      "Applying plaster",
+      "Plaster work"
+    ]
+  },
+  "341": {
+    "parentName": "Playing volleyball",
+    "nodeName": "Playing beach volleyball",
+    "nodeId": 341,
+    "parentId": 342,
+    "node_type": "leaf",
+    "id": 157,
+    "definition": "Engaging in the team sport of volleyball played on a sandy beach, involving hitting a ball over a net without letting it touch the ground.",
+    "synonyms": [
+      "Playing beach volleyball",
+      "Beach volleyball activity",
+      "Volleyball on the beach"
+    ]
+  },
+  "342": {
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Playing volleyball",
+    "nodeId": 342,
+    "parentId": 17,
+    "children": [
+      341,
+      123
+    ],
+    "node_type": "internal",
+    "definition": "A team sport where two teams hit a ball back and forth over a net, aiming to score points by grounding the ball in the opposing team's court.",
+    "synonyms": [
+      "Playing volleyball",
+      "Engaging in a volleyball match"
+    ]
+  },
+  "343": {
+    "parentName": "Attending gambling establishments",
+    "nodeName": "Playing blackjack",
+    "nodeId": 343,
+    "parentId": 344,
+    "node_type": "leaf",
+    "id": 158,
+    "definition": "Engaging in the popular card game of blackjack, where players aim to beat the dealer by achieving a hand value closest to 21.",
+    "synonyms": [
+      "Playing blackjack",
+      "Blackjack gambling",
+      "Participating in blackjack"
+    ]
+  },
+  "344": {
+    "parentName": "Arts and Entertainment",
+    "nodeName": "Attending gambling establishments",
+    "nodeId": 344,
+    "parentId": 21,
+    "children": [
+      343
+    ],
+    "node_type": "internal",
+    "definition": "The act of going to venues, such as casinos, where various forms of gambling, gaming, and entertainment activities take place.",
+    "synonyms": [
+      "Attending gambling establishments",
+      "Visiting casinos",
+      "Gambling venue visit"
+    ]
+  },
+  "345": {
+    "parentName": "Playing musical instruments",
+    "nodeName": "Playing congas",
+    "nodeId": 345,
+    "parentId": 61,
+    "node_type": "leaf",
+    "id": 159,
+    "definition": "The activity of playing conga drums, typically performed as part of musical performances, rhythms, or social gatherings.",
+    "synonyms": [
+      "Playing congas",
+      "Conga drumming",
+      "Conga playing"
+    ]
+  },
+  "346": {
+    "parentName": "Playing musical instruments",
+    "nodeName": "Playing drums",
+    "nodeId": 346,
+    "parentId": 61,
+    "node_type": "leaf",
+    "id": 160,
+    "definition": "The act of playing percussion instruments, known as drums, to create rhythmic patterns, beats, and musical sounds.",
+    "synonyms": [
+      "Playing drums",
+      "Drumming",
+      "Engaging in drum play"
+    ]
+  },
+  "347": {
+    "parentName": "Playing hockey",
+    "nodeName": "Playing ice hockey",
+    "nodeId": 347,
+    "parentId": 60,
+    "node_type": "leaf",
+    "id": 161,
+    "definition": "Participating in the fast-paced team sport of ice hockey, played on an ice rink using sticks to maneuver a puck and score goals.",
+    "synonyms": [
+      "Playing ice hockey",
+      "Ice hockey activity",
+      "Engaging in ice hockey"
+    ]
+  },
+  "348": {
+    "parentName": "Playing games",
+    "nodeName": "Playing pool",
+    "nodeId": 348,
+    "parentId": 48,
+    "node_type": "leaf",
+    "id": 162,
+    "definition": "The activity of playing pool, a cue sport where players use a cue stick to hit balls into pockets on a pool table.",
+    "synonyms": [
+      "Playing pool",
+      "Billiards",
+      "Engaging in pool game"
+    ]
+  },
+  "349": {
+    "parentName": "Playing games",
+    "nodeName": "Playing rubik cube",
+    "nodeId": 349,
+    "parentId": 48,
+    "node_type": "leaf",
+    "id": 163,
+    "definition": "The practice of manipulating a Rubik's Cube puzzle, aiming to arrange its colors to match on all sides.",
+    "synonyms": [
+      "Playing rubik cube",
+      "Solving rubik cube",
+      "Rubik's cube manipulation"
+    ]
+  },
+  "350": {
+    "parentName": "Playing sports",
+    "nodeName": "Powerbocking",
+    "nodeId": 350,
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 164,
+    "definition": "Engaging in the sport of powerbocking, using specialized jumping stilts to perform high jumps and acrobatic movements.",
+    "synonyms": [
+      "Powerbocking",
+      "Jumping stilts activity",
+      "Bocksticking"
+    ]
+  },
+  "351": {
+    "parentName": "Washing, dressing and grooming oneself",
+    "nodeName": "Putting in contact lenses",
+    "nodeId": 351,
+    "parentId": 62,
+    "node_type": "leaf",
+    "id": 165,
+    "definition": "The action of placing thin, corrective lenses directly onto the eyes' surface, often used to improve vision without glasses.",
+    "synonyms": [
+      "Putting in contact lenses",
+      "Inserting contact lenses",
+      "Wearing contacts"
+    ]
+  },
+  "352": {
+    "parentName": "Washing, dressing and grooming oneself",
+    "nodeName": "Putting on shoes",
+    "nodeId": 352,
+    "parentId": 62,
+    "node_type": "leaf",
+    "id": 166,
+    "definition": "The act of wearing footwear by placing shoes onto one's feet, often done for protection, comfort, or fashion.",
+    "synonyms": [
+      "Putting on shoes",
+      "Wearing shoes",
+      "Shoe application"
+    ]
+  },
+  "353": {
+    "parentName": "Boating",
+    "nodeName": "Rafting",
+    "nodeId": 353,
+    "parentId": 293,
+    "node_type": "leaf",
+    "id": 167,
+    "definition": "Participating in the recreational activity of navigating rough waters in an inflatable raft, often done on rivers or rapids.",
+    "synonyms": [
+      "Rafting",
+      "White-water rafting",
+      "River rafting"
+    ]
+  },
+  "354": {
+    "parentName": "Lawn, garden, and houseplant care",
+    "nodeName": "Raking leaves",
+    "nodeId": 354,
+    "parentId": 66,
+    "node_type": "leaf",
+    "id": 168,
+    "definition": "The task of using a rake to collect and gather fallen leaves from outdoor areas, often done as part of yard maintenance.",
+    "synonyms": [
+      "Raking leaves",
+      "Leaf raking",
+      "Removing fallen leaves"
+    ]
+  },
+  "355": {
+    "parentName": "Vehicle repair and maintenance (by self)",
+    "nodeName": "Removing ice from car",
+    "nodeId": 355,
+    "parentId": 56,
+    "node_type": "leaf",
+    "id": 169,
+    "definition": "The process of clearing and melting ice from a vehicle's windows, windshield, and surfaces to ensure safe driving.",
+    "synonyms": [
+      "Removing ice from car",
+      "Ice removal from vehicle",
+      "De-icing car"
+    ]
+  },
+  "356": {
+    "parentName": "Playing games",
+    "nodeName": "Riding bumper cars",
+    "nodeId": 356,
+    "parentId": 48,
+    "node_type": "leaf",
+    "id": 170,
+    "definition": "Engaging in the amusement park ride where participants drive small electric cars, trying to collide with other cars for fun.",
+    "synonyms": [
+      "Riding bumper cars",
+      "Bumper car activity",
+      "Driving bumper cars"
+    ]
+  },
+  "357": {
+    "parentName": "Boating",
+    "nodeName": "River tubing",
+    "nodeId": 357,
+    "parentId": 293,
+    "node_type": "leaf",
+    "id": 171,
+    "definition": "The recreational activity of floating down a river on an inflatable tube or raft, often enjoyed as a leisurely water adventure.",
+    "synonyms": [
+      "River tubing",
+      "Tubing down a river",
+      "Floating on a river"
+    ]
+  },
+  "358": {
+    "parentName": "Playing games",
+    "nodeName": "Rock-paper-scissors",
+    "nodeId": 358,
+    "parentId": 48,
+    "node_type": "leaf",
+    "id": 172,
+    "definition": "A simple hand game typically played between two people, where each player simultaneously forms one of three shapes: rock, paper, or scissors.",
+    "synonyms": [
+      "Rock-paper-scissors",
+      "Hand game",
+      "Roshambo"
+    ]
+  },
+  "359": {
+    "parentName": "Playing sports",
+    "nodeName": "Rollerblading",
+    "nodeId": 359,
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 173,
+    "definition": "The activity of moving on inline skates, which have wheels in a line, by propelling oneself with a gliding motion.",
+    "synonyms": [
+      "Rollerblading",
+      "Inline skating",
+      "Roller skating"
+    ]
+  },
+  "360": {
+    "parentName": "Exterior repair, improvements, & decoration",
+    "nodeName": "Roof shingle removal",
+    "nodeId": 360,
+    "parentId": 312,
+    "node_type": "leaf",
+    "id": 174,
+    "definition": "The process of detaching and removing shingles or tiles from a roof, often done as part of repair or replacement.",
+    "synonyms": [
+      "Roof shingle removal",
+      "Removing roof shingles",
+      "Taking off roofing tiles"
+    ]
+  },
+  "361": {
+    "parentName": "Working out",
+    "nodeName": "Rope skipping",
+    "nodeId": 361,
+    "parentId": 306,
+    "node_type": "leaf",
+    "id": 175,
+    "definition": "The action of repeatedly jumping over a rope swung over one's body and under one's feet, often done for fun, exercise, or coordination.",
+    "synonyms": [
+      "Rope skipping",
+      "Jump rope",
+      "Skipping rope"
+    ]
+  },
+  "362": {
+    "parentName": "Running",
+    "nodeName": "Running a marathon",
+    "nodeId": 362,
+    "parentId": 363,
+    "node_type": "leaf",
+    "id": 176,
+    "definition": "Participating in a long-distance foot race, usually covering a distance of 26.2 miles (42.195 kilometers), known as a marathon.",
+    "synonyms": [
+      "Running a marathon",
+      "Marathon running",
+      "Participating in a marathon"
+    ]
+  },
+  "363": {
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Running",
+    "nodeId": 363,
+    "parentId": 17,
+    "children": [
+      362
+    ],
+    "node_type": "internal",
+    "definition": "The physical activity of moving rapidly on foot at a pace faster than walking, often for exercise, sport, or recreation.",
+    "synonyms": [
+      "Running",
+      "Jogging",
+      "Sprinting"
+    ]
+  },
+  "364": {
+    "parentName": "Participating in water sports",
+    "nodeName": "Scuba diving",
+    "nodeId": 364,
+    "parentId": 42,
+    "node_type": "leaf",
+    "id": 177,
+    "definition": "The sport or activity of exploring underwater environments using self-contained underwater breathing apparatus (scuba) for extended periods.",
+    "synonyms": [
+      "Scuba diving",
+      "Underwater diving",
+      "Diving with scuba gear"
+    ]
+  },
+  "365": {
+    "parentName": "Appliance, tool, and toy set-up, repair, & maintenance (by self)",
+    "nodeName": "Sharpening knives",
+    "nodeId": 365,
+    "parentId": 366,
+    "node_type": "leaf",
+    "id": 178,
+    "definition": "The practice of refining the edge of a knife or blade using sharpening tools to improve its cutting effectiveness.",
+    "synonyms": [
+      "Sharpening knives",
+      "Knife sharpening",
+      "Honing blades"
+    ]
+  },
+  "366": {
+    "parentName": "Appliances, Tools, and Toys",
+    "nodeName": "Appliance, tool, and toy set-up, repair, & maintenance (by self)",
+    "nodeId": 366,
+    "parentId": 367,
+    "children": [
+      365,
+      387,
+      388
+    ],
+    "node_type": "internal",
+    "definition": "The practice of independently assembling, fixing, and maintaining various appliances, tools, and toys in a do-it-yourself manner.",
+    "synonyms": [
+      "Appliance, tool, and toy set-up, repair, & maintenance (by self)",
+      "Setting up, repairing, and maintaining appliances, tools, and toys",
+      "Self-service for appliances, tools, and toys"
+    ]
+  },
+  "367": {
+    "parentName": "Household Activities",
+    "nodeName": "Appliances, Tools, and Toys",
+    "nodeId": 367,
+    "parentId": 1,
+    "children": [
+      366
+    ],
+    "node_type": "internal",
+    "definition": "Refers to a variety of items commonly found in households, including appliances, tools, and toys, used for different purposes.",
+    "synonyms": [
+      "Appliances, Tools, and Toys",
+      "Household items and equipment",
+      "Domestic equipment and gadgets"
+    ]
+  },
+  "368": {
+    "parentName": "Playing games",
+    "nodeName": "Shuffleboard",
+    "nodeId": 368,
+    "parentId": 48,
+    "node_type": "leaf",
+    "id": 179,
+    "definition": "A tabletop game in which players use cues to push weighted discs or pucks along a long, narrow playing surface, aiming to land them in designated scoring areas.",
+    "synonyms": [
+      "Shuffleboard",
+      "Shuffling disks",
+      "Table shuffleboard"
+    ]
+  },
+  "369": {
+    "parentName": "Skiing, ice skating, snowboarding",
+    "nodeName": "Skiing",
+    "nodeId": 369,
+    "parentId": 370,
+    "node_type": "leaf",
+    "id": 180,
+    "definition": "Engaging in the sport of gliding down snow-covered slopes using skis, often performed at ski resorts and involving various styles and techniques.",
+    "synonyms": [
+      "Skiing",
+      "Downhill skiing",
+      "Ski sports"
+    ]
+  },
+  "370": {
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Skiing, ice skating, snowboarding",
+    "nodeId": 370,
+    "parentId": 17,
+    "children": [
+      369,
+      372,
+      373
+    ],
+    "node_type": "internal",
+    "definition": "Participating in various activities such as skiing, ice skating, and snowboarding, commonly enjoyed during the winter months on snowy or icy surfaces.",
+    "synonyms": [
+      "Skiing, ice skating, snowboarding",
+      "Winter sports on ice and snow",
+      "Cold weather recreational activities"
+    ]
+  },
+  "371": {
+    "parentName": "Playing games",
+    "nodeName": "Slacklining",
+    "nodeId": 371,
+    "parentId": 48,
+    "node_type": "leaf",
+    "id": 181,
+    "definition": "The practice of balancing and walking on a flat, narrow webbing tensioned between two anchor points, often done for fun and physical exercise.",
+    "synonyms": [
+      "Slacklining",
+      "Walking on a slackline",
+      "Balance training on a narrow strap"
+    ]
+  },
+  "372": {
+    "parentName": "Skiing, ice skating, snowboarding",
+    "nodeName": "Snow tubing",
+    "nodeId": 372,
+    "parentId": 370,
+    "node_type": "leaf",
+    "id": 182,
+    "definition": "The recreational activity of riding on an inflatable tube down snowy hills or slopes, providing an enjoyable winter experience.",
+    "synonyms": [
+      "Snow tubing",
+      "Tubing in the snow",
+      "Sliding on snow tubes"
+    ]
+  },
+  "373": {
+    "parentName": "Skiing, ice skating, snowboarding",
+    "nodeName": "Snowboarding",
+    "nodeId": 373,
+    "parentId": 370,
+    "node_type": "leaf",
+    "id": 183,
+    "definition": "Participating in the winter sport of descending snow-covered slopes on a single board known as a snowboard, often with freestyle tricks and jumps.",
+    "synonyms": [
+      "Snowboarding",
+      "Snowboard riding",
+      "Winter sports on a snowboard"
+    ]
+  },
+  "374": {
+    "parentName": "Lawn, garden, and houseplant care",
+    "nodeName": "Spread mulch",
+    "nodeId": 374,
+    "parentId": 66,
+    "node_type": "leaf",
+    "id": 184,
+    "definition": "The process of distributing a layer of mulch, such as wood chips or straw, onto soil surfaces to help retain moisture and suppress weeds.",
+    "synonyms": [
+      "Spread mulch",
+      "Mulching",
+      "Applying garden mulch"
+    ]
+  },
+  "375": {
+    "parentName": "Wrestling",
+    "nodeName": "Sumo",
+    "nodeId": 375,
+    "parentId": 272,
+    "node_type": "leaf",
+    "id": 185,
+    "definition": "Engaging in the traditional Japanese style of wrestling known as sumo, where two wrestlers compete to force each other out of a circular ring.",
+    "synonyms": [
+      "Sumo",
+      "Sumo wrestling",
+      "Japanese professional wrestling"
+    ]
+  },
+  "376": {
+    "parentName": "Participating in water sports",
+    "nodeName": "Surfing",
+    "nodeId": 376,
+    "parentId": 42,
+    "node_type": "leaf",
+    "id": 186,
+    "definition": "The sport of riding ocean waves using a surfboard, skillfully maneuvering through the waves while standing or lying prone.",
+    "synonyms": [
+      "Surfing",
+      "Wave riding",
+      "Riding waves on a board"
+    ]
+  },
+  "377": {
+    "parentName": "Participating in water sports",
+    "nodeName": "Swimming",
+    "nodeId": 377,
+    "parentId": 42,
+    "node_type": "leaf",
+    "id": 187,
+    "definition": "Engaging in the activity of moving through water by using bodily movements, typically performed in a pool, lake, river, or ocean.",
+    "synonyms": [
+      "Swimming",
+      "Swimming strokes",
+      "Pool activities"
+    ]
+  },
+  "378": {
+    "parentName": "Park activities",
+    "nodeName": "Swinging at the playground",
+    "nodeId": 378,
+    "parentId": 314,
+    "node_type": "leaf",
+    "id": 188,
+    "definition": "The act of using a playground swing, where a person sits on a suspended seat and uses their body to move back and forth.",
+    "synonyms": [
+      "Swinging at the playground",
+      "Playground swing activity",
+      "Using swings"
+    ]
+  },
+  "379": {
+    "parentName": "Playing games",
+    "nodeName": "Table soccer",
+    "nodeId": 379,
+    "parentId": 48,
+    "node_type": "leaf",
+    "id": 189,
+    "definition": "Participating in the tabletop game of foosball, where players manipulate small figures on rotating bars to strike a ball into the opponent's goal.",
+    "synonyms": [
+      "Table soccer",
+      "Foosball",
+      "Table football"
+    ]
+  },
+  "380": {
+    "parentName": "Playing games",
+    "nodeName": "Throwing darts",
+    "nodeId": 380,
+    "parentId": 48,
+    "node_type": "leaf",
+    "id": 190,
+    "definition": "The activity of throwing small, pointed missiles called darts at a circular target fixed to a wall or board, aiming for specific scoring areas.",
+    "synonyms": [
+      "Throwing darts",
+      "Dart throwing",
+      "Playing darts"
+    ]
+  },
+  "381": {
+    "parentName": "Lawn, garden, and houseplant care",
+    "nodeName": "Trimming branches or hedges",
+    "nodeId": 381,
+    "parentId": 66,
+    "node_type": "leaf",
+    "id": 191,
+    "definition": "The practice of cutting away excess or overgrown parts of plants, such as branches or hedges, to promote healthy growth and shape.",
+    "synonyms": [
+      "Trimming branches or hedges",
+      "Pruning plants",
+      "Gardening maintenance"
+    ]
+  },
+  "382": {
+    "parentName": "Playing games",
+    "nodeName": "Tug of war",
+    "nodeId": 382,
+    "parentId": 48,
+    "node_type": "leaf",
+    "id": 192,
+    "definition": "Participating in the competitive game where two teams pull on opposite ends of a rope, aiming to pull the opposing team a certain distance in their direction.",
+    "synonyms": [
+      "Tug of war",
+      "Pulling competition",
+      "Team rope pulling"
+    ]
+  },
+  "383": {
+    "parentName": "Park activities",
+    "nodeName": "Using the monkey bar",
+    "nodeId": 383,
+    "parentId": 314,
+    "node_type": "leaf",
+    "id": 193,
+    "definition": "Engaging in the activity of moving from one suspended bar to another in a swinging motion, often found on playground equipment.",
+    "synonyms": [
+      "Using the monkey bar",
+      "Swinging on monkey bars",
+      "Playground monkey bar activity"
+    ]
+  },
+  "384": {
+    "parentName": "Using cardiovascular equipment",
+    "nodeName": "Using the rowing machine",
+    "nodeId": 384,
+    "parentId": 58,
+    "node_type": "leaf",
+    "id": 194,
+    "definition": "The act of simulating the action of rowing a boat by using a rowing machine, often for fitness and cardiovascular exercise.",
+    "synonyms": [
+      "Using the rowing machine",
+      "Rowing on an ergometer",
+      "Indoor rowing"
+    ]
+  },
+  "385": {
+    "parentName": "Participating in water sports",
+    "nodeName": "Wakeboarding",
+    "nodeId": 385,
+    "parentId": 42,
+    "node_type": "leaf",
+    "id": 195,
+    "definition": "Participating in the water sport of riding on a wakeboard, a board similar to a snowboard, while being towed behind a boat.",
+    "synonyms": [
+      "Wakeboarding",
+      "Riding on a wakeboard",
+      "Water sports with a wakeboard"
+    ]
+  },
+  "386": {
+    "parentName": "Participating in water sports",
+    "nodeName": "Waterskiing",
+    "nodeId": 386,
+    "parentId": 42,
+    "node_type": "leaf",
+    "id": 196,
+    "definition": "The activity of being pulled behind a boat while standing on water skis, using the boat's motion to glide across the water's surface.",
+    "synonyms": [
+      "Waterskiing",
+      "Skiing on water",
+      "Water sports with skis"
+    ]
+  },
+  "387": {
+    "parentName": "Appliance, tool, and toy set-up, repair, & maintenance (by self)",
+    "nodeName": "Waxing skis",
+    "nodeId": 387,
+    "parentId": 366,
+    "node_type": "leaf",
+    "id": 197,
+    "definition": "The process of applying a layer of wax to the base of skis, enhancing their performance and glide on snow surfaces.",
+    "synonyms": [
+      "Waxing skis",
+      "Ski maintenance",
+      "Ski base treatment"
+    ]
+  },
+  "388": {
+    "parentName": "Appliance, tool, and toy set-up, repair, & maintenance (by self)",
+    "nodeName": "Welding",
+    "nodeId": 388,
+    "parentId": 366,
+    "node_type": "leaf",
+    "id": 198,
+    "definition": "The practice of joining materials, usually metals, together by melting and fusing their edges, often using heat and pressure.",
+    "synonyms": [
+      "Welding",
+      "Metal joining",
+      "Fusing metals"
+    ]
+  },
+  "68": {
+    "nodeId": 68,
+    "parentName": "Eating and Drinking",
+    "nodeName": "Drinking coffee",
+    "parentId": 46,
+    "node_type": "leaf",
+    "id": 0,
+    "definition": "The act of consuming the brewed beverage made from roasted coffee beans, often enjoyed for its stimulating and flavorful qualities.",
+    "synonyms": [
+      "Drinking coffee",
+      "Enjoying a cup of coffee",
+      "Sipping coffee"
+    ]
+  },
+  "46": {
+    "nodeId": 46,
+    "parentName": "Food & Drink Prep., Presentation, & Clean-up",
+    "nodeName": "Eating and Drinking",
+    "parentId": 18,
+    "children": [
+      320,
+      68,
+      135
+    ],
+    "node_type": "internal",
+    "definition": "The activities of consuming food and drinks for sustenance and enjoyment, encompassing a wide range of culinary experiences.",
+    "synonyms": [
+      "Eating and Drinking",
+      "Consuming food and beverages",
+      "Dining"
+    ]
+  },
+  "18": {
+    "nodeId": 18,
+    "parentName": "Eating and drinking Activities",
+    "nodeName": "Food & Drink Prep., Presentation, & Clean-up",
+    "parentId": 4,
+    "children": [
+      46,
+      31,
+      43
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in tasks related to preparing, presenting, and cleaning up after food and beverages, often involving cooking, serving, and tidying.",
+    "synonyms": [
+      "Food & Drink Prep., Presentation, & Clean-up",
+      "Food & Drink Preparation",
+      "Food & Drink Presentation",
+      "Food & Drink Clean-up",
+      "Food and beverage handling",
+      "Meal preparation and serving"
+    ]
+  },
+  "4": {
+    "nodeId": 4,
+    "parentName": "Root",
+    "nodeName": "Eating and drinking Activities",
+    "parentId": 0,
+    "children": [
+      18
+    ],
+    "node_type": "internal",
+    "definition": "Participating in various activities centered around the consumption of meals, snacks, and beverages, ranging from formal dining to casual snacking.",
+    "synonyms": [
+      "Eating and drinking Activities",
+      "Dining experiences",
+      "Consumption of meals and beverages"
+    ]
+  },
+  "0": {
+    "nodeId": 0,
+    "parentName": null,
+    "nodeName": "Root",
+    "parentId": null,
+    "children": [
+      4,
+      5,
+      7,
+      2,
+      1
+    ],
+    "node_type": "root",
+    "definition": "Activity",
+    "synonyms": [
+      "Root",
+      "Activity"
+    ]
+  },
+  "69": {
+    "nodeId": 69,
+    "parentName": "Doing aerobics",
+    "nodeName": "Zumba",
+    "parentId": 55,
+    "node_type": "leaf",
+    "id": 1,
+    "definition": "Participating in the dance fitness program that combines aerobic exercises with Latin and international music, aiming to improve cardiovascular fitness.",
+    "synonyms": [
+      "Zumba",
+      "Dance fitness",
+      "Latin-inspired dance workout"
+    ]
+  },
+  "55": {
+    "nodeId": 55,
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Doing aerobics",
+    "parentId": 17,
+    "children": [
+      69,
+      230
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in physical exercises that promote cardiovascular fitness by utilizing rhythmic and repetitive movements, often set to music.",
+    "synonyms": [
+      "Doing aerobics",
+      "Aerobic exercises",
+      "Cardio workouts"
+    ]
+  },
+  "17": {
+    "nodeId": 17,
+    "parentName": "Sports, Exercise, and Recreation",
+    "nodeName": "Participating in Sports, Exercise, or Recreation",
+    "parentId": 5,
+    "children": [
+      272,
+      275,
+      279,
+      284,
+      289,
+      293,
+      306,
+      310,
+      325,
+      342,
+      363,
+      370,
+      55,
+      27,
+      64,
+      35,
+      60,
+      24,
+      58,
+      54,
+      49,
+      52,
+      50,
+      42
+    ],
+    "node_type": "internal",
+    "definition": "Being involved in various physical activities, including sports, exercise routines, and recreational pursuits, for the purpose of staying active and healthy.",
+    "synonyms": [
+      "Participating in Sports, Exercise, or Recreation",
+      "Engaging in physical activities",
+      "Taking part in active pursuits"
+    ]
+  },
+  "5": {
+    "nodeId": 5,
+    "parentName": "Root",
+    "nodeName": "Sports, Exercise, and Recreation",
+    "parentId": 0,
+    "children": [
+      17
+    ],
+    "node_type": "internal",
+    "definition": "Refers to a wide range of physical pursuits, including sports, exercise routines, and leisure activities, aimed at promoting physical fitness and enjoyment.",
+    "synonyms": [
+      "Sports, Exercise, and Recreation",
+      "Physical activities and leisure pursuits",
+      "Active and recreational engagement"
+    ]
+  },
+  "70": {
+    "nodeId": 70,
+    "parentName": "Participating in martial arts",
+    "nodeName": "Doing kickboxing",
+    "parentId": 27,
+    "node_type": "leaf",
+    "id": 2,
+    "definition": "Participating in the high-intensity combat sport that combines elements of boxing and martial arts, involving both punches and kicks.",
+    "synonyms": [
+      "Doing kickboxing",
+      "Kickboxing training",
+      "Kickboxing workouts"
+    ]
+  },
+  "27": {
+    "nodeId": 27,
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Participating in martial arts",
+    "parentId": 17,
+    "children": [
+      294,
+      70,
+      99,
+      263
+    ],
+    "node_type": "internal",
+    "definition": "Taking part in various structured practices and disciplines that teach combat techniques, self-defense, and physical fitness.",
+    "synonyms": [
+      "Participating in martial arts",
+      "Engaging in martial disciplines",
+      "Practicing combat techniques"
+    ]
+  },
+  "99": {
+    "nodeId": 99,
+    "parentName": "Participating in martial arts",
+    "nodeName": "Doing karate",
+    "parentId": 27,
+    "node_type": "leaf",
+    "id": 17,
+    "definition": "Participating in the Japanese martial art of karate, characterized by its striking techniques, kicks, and punches.",
+    "synonyms": [
+      "Doing karate",
+      "Karate training",
+      "Karate practice"
+    ]
+  },
+  "73": {
+    "nodeId": 73,
+    "parentName": "Dancing",
+    "nodeName": "Tango",
+    "parentId": 23,
+    "node_type": "leaf",
+    "id": 3,
+    "definition": "Engaging in the partner dance that originated in Argentina, characterized by dramatic and passionate movements.",
+    "synonyms": [
+      "Tango",
+      "Argentine tango",
+      "Dance of passion"
+    ]
+  },
+  "23": {
+    "nodeId": 23,
+    "parentName": "Arts and Entertainment",
+    "nodeName": "Dancing",
+    "parentId": 21,
+    "children": [
+      73,
+      140,
+      211,
+      236,
+      247
+    ],
+    "node_type": "internal",
+    "definition": "The activity of moving one's body to music, often for social, artistic, or recreational purposes, and encompassing various dance styles and genres.",
+    "synonyms": [
+      "Dancing",
+      "Movement to music",
+      "Rhythmic body movements"
+    ]
+  },
+  "21": {
+    "nodeId": 21,
+    "parentName": "Socializing, Relaxing, and Leisure",
+    "nodeName": "Arts and Entertainment",
+    "parentId": 7,
+    "children": [
+      287,
+      314,
+      344,
+      23,
+      61,
+      39
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in activities related to the creation, performance, and enjoyment of art, music, literature, film, theater, and other forms of expression.",
+    "synonyms": [
+      "Arts and Entertainment",
+      "Cultural and creative activities",
+      "Entertainment and artistic pursuits"
+    ]
+  },
+  "7": {
+    "nodeId": 7,
+    "parentName": "Root",
+    "nodeName": "Socializing, Relaxing, and Leisure",
+    "parentId": 0,
+    "children": [
+      21,
+      11
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in activities that promote relaxation, social interaction, and personal enjoyment, often during one's free time.",
+    "synonyms": [
+      "Socializing, Relaxing, and Leisure",
+      "Leisure activities",
+      "Recreational pursuits"
+    ]
+  },
+  "76": {
+    "nodeId": 76,
+    "parentName": "Washing, dressing and grooming oneself",
+    "nodeName": "Putting on makeup",
+    "parentId": 62,
+    "node_type": "leaf",
+    "id": 5,
+    "definition": "The act of applying various cosmetic products to enhance one's appearance, often involving items like foundation, lipstick, and eye shadow.",
+    "synonyms": [
+      "Putting on makeup",
+      "Applying cosmetics",
+      "Makeup application"
+    ]
+  },
+  "62": {
+    "nodeId": 62,
+    "parentName": "Grooming",
+    "nodeName": "Washing, dressing and grooming oneself",
+    "parentId": 20,
+    "children": [
+      281,
+      285,
+      316,
+      351,
+      352,
+      76,
+      113,
+      125,
+      148,
+      167,
+      173,
+      190,
+      200,
+      248
+    ],
+    "node_type": "internal",
+    "definition": "The process of cleaning, dressing, and maintaining personal appearance through activities such as bathing, dressing, and grooming.",
+    "synonyms": [
+      "Washing, dressing and grooming oneself",
+      "Personal hygiene routines",
+      "Self-care practices"
+    ]
+  },
+  "20": {
+    "nodeId": 20,
+    "parentName": "Personal Care",
+    "nodeName": "Grooming",
+    "parentId": 2,
+    "children": [
+      62,
+      38
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in activities that involve maintaining personal hygiene and appearance, such as bathing, hair care, and skin care.",
+    "synonyms": [
+      "Grooming",
+      "Personal care",
+      "Self-care"
+    ]
+  },
+  "2": {
+    "nodeId": 2,
+    "parentName": "Root",
+    "nodeName": "Personal Care",
+    "parentId": 0,
+    "children": [
+      270,
+      20
+    ],
+    "node_type": "internal",
+    "definition": "Activities focused on maintaining personal hygiene, appearance, and overall well-being, contributing to one's health and self-esteem.",
+    "synonyms": [
+      "Personal Care",
+      "Self-care routines",
+      "Individual hygiene practices"
+    ]
+  },
+  "195": {
+    "nodeId": 195,
+    "parentName": "Playing sports",
+    "nodeName": "High jump",
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 64,
+    "definition": "Participating in the track and field event where athletes jump over a horizontal bar set at varying heights, showcasing their jumping ability.",
+    "synonyms": [
+      "High jump",
+      "Jumping over a high bar",
+      "Track and field high jump"
+    ]
+  },
+  "64": {
+    "nodeId": 64,
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Playing sports",
+    "parentId": 17,
+    "children": [
+      277,
+      291,
+      299,
+      300,
+      304,
+      323,
+      331,
+      350,
+      359,
+      195,
+      82,
+      92,
+      116,
+      141,
+      80,
+      154,
+      155,
+      169,
+      161,
+      224,
+      176,
+      243,
+      153,
+      250,
+      257,
+      106
+    ],
+    "node_type": "internal",
+    "definition": "Participating in various competitive physical activities, often involving teamwork and strategic gameplay, for enjoyment and fitness.",
+    "synonyms": [
+      "Playing sports",
+      "Engaging in athletic activities",
+      "Participating in physical games"
+    ]
+  },
+  "136": {
+    "nodeId": 136,
+    "parentName": "Playing musical instruments",
+    "nodeName": "Playing bagpipes",
+    "parentId": 61,
+    "node_type": "leaf",
+    "id": 33,
+    "definition": "Engaging in the musical practice of playing the bagpipes, a traditional Scottish instrument with a distinctive sound.",
+    "synonyms": [
+      "Playing bagpipes",
+      "Bagpipe playing",
+      "Scottish instrument performance"
+    ]
+  },
+  "61": {
+    "nodeId": 61,
+    "parentName": "Arts and Entertainment",
+    "nodeName": "Playing musical instruments",
+    "parentId": 21,
+    "children": [
+      307,
+      345,
+      346,
+      136,
+      100,
+      109,
+      251,
+      149,
+      197,
+      234,
+      267
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in the activity of playing various musical instruments, such as guitars, pianos, flutes, and drums, to create melodies and rhythms.",
+    "synonyms": [
+      "Playing musical instruments",
+      "Instrumental performance",
+      "Musical instrument practice"
+    ]
+  },
+  "140": {
+    "nodeId": 140,
+    "parentName": "Dancing",
+    "nodeName": "Cheerleading",
+    "parentId": 23,
+    "node_type": "leaf",
+    "id": 34,
+    "definition": "Participating in the activity of supporting sports teams and events through coordinated chants, dances, and energetic performances.",
+    "synonyms": [
+      "Cheerleading",
+      "Cheer squad activities",
+      "Supporting teams through cheers"
+    ]
+  },
+  "179": {
+    "nodeId": 179,
+    "parentName": "Household & personal organization and planning",
+    "nodeName": "Wrapping presents",
+    "parentId": 41,
+    "node_type": "leaf",
+    "id": 53,
+    "definition": "The act of enclosing gifts in decorative paper or packaging to enhance their appearance and create a sense of anticipation.",
+    "synonyms": [
+      "Wrapping presents",
+      "Gift wrapping",
+      "Present packaging"
+    ]
+  },
+  "41": {
+    "nodeId": 41,
+    "parentName": "Household Management",
+    "nodeName": "Household & personal organization and planning",
+    "parentId": 19,
+    "children": [
+      179
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in tasks related to managing and organizing one's home environment and personal life, including scheduling and planning activities.",
+    "synonyms": [
+      "Household & personal organization and planning",
+      "Home and personal management",
+      "Domestic planning and scheduling"
+    ]
+  },
+  "19": {
+    "nodeId": 19,
+    "parentName": "Household Activities",
+    "nodeName": "Household Management",
+    "parentId": 1,
+    "children": [
+      41
+    ],
+    "node_type": "internal",
+    "definition": "Activities focused on efficiently running and maintaining a household, including cleaning, budgeting, meal planning, and organization.",
+    "synonyms": [
+      "Household Management",
+      "Home management",
+      "Domestic administration"
+    ]
+  },
+  "1": {
+    "nodeId": 1,
+    "parentName": "Root",
+    "nodeName": "Household Activities",
+    "parentId": 0,
+    "children": [
+      367,
+      19,
+      22,
+      15,
+      16,
+      13,
+      12,
+      10
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in a variety of tasks and chores necessary for maintaining a clean, organized, and functional home environment.",
+    "synonyms": [
+      "Household Activities",
+      "Domestic tasks",
+      "Home-related chores"
+    ]
+  },
+  "82": {
+    "nodeId": 82,
+    "parentName": "Playing sports",
+    "nodeName": "Cricket",
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 8,
+    "definition": "Participating in the bat-and-ball sport of cricket, played with two teams taking turns to bat and field, aiming to score runs and dismiss opponents.",
+    "synonyms": [
+      "Cricket",
+      "Cricket game",
+      "Bat-and-ball sport",
+      "Playing cricket"
+    ]
+  },
+  "84": {
+    "nodeId": 84,
+    "parentName": "Weightlifting",
+    "nodeName": "Clean and jerk",
+    "parentId": 35,
+    "node_type": "leaf",
+    "id": 10,
+    "definition": "Engaging in the weightlifting exercise that involves lifting a barbell from the ground to shoulder height and then pushing it overhead in one fluid motion.",
+    "synonyms": [
+      "Clean and jerk",
+      "Weightlifting movement",
+      "Olympic weightlifting"
+    ]
+  },
+  "35": {
+    "nodeId": 35,
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Weightlifting",
+    "parentId": 17,
+    "children": [
+      84,
+      79
+    ],
+    "node_type": "internal",
+    "definition": "Participating in the sport or activity of lifting weights to increase strength and muscle mass, often involving exercises like bench press and squats.",
+    "synonyms": [
+      "Weightlifting",
+      "Strength training",
+      "Resistance exercise"
+    ]
+  },
+  "186": {
+    "nodeId": 186,
+    "parentName": "Food and drink preparation ",
+    "nodeName": "Preparing pasta",
+    "parentId": 31,
+    "node_type": "leaf",
+    "id": 56,
+    "definition": "The process of cooking pasta, often involving boiling the pasta in water and then mixing it with various sauces and ingredients.",
+    "synonyms": [
+      "Preparing pasta",
+      "Cooking pasta dishes",
+      "Pasta meal preparation"
+    ]
+  },
+  "31": {
+    "nodeId": 31,
+    "parentName": "Food & Drink Prep., Presentation, & Clean-up",
+    "nodeName": "Food and drink preparation ",
+    "parentId": 18,
+    "children": [
+      276,
+      332,
+      333,
+      334,
+      339,
+      186,
+      96,
+      129,
+      244
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in tasks related to preparing and cooking food and beverages, often involving a variety of ingredients and cooking techniques.",
+    "synonyms": [
+      "Food and drink preparation ",
+      "Food and drink preparation",
+      "Cooking and beverage making",
+      "Culinary preparation"
+    ]
+  },
+  "90": {
+    "nodeId": 90,
+    "parentName": "Care for animals and pets (not veterinary care)",
+    "nodeName": "Bathing dog",
+    "parentId": 65,
+    "node_type": "leaf",
+    "id": 12,
+    "definition": "The activity of washing and cleaning a dog's fur and skin to maintain hygiene, remove dirt, and keep the dog smelling fresh.",
+    "synonyms": [
+      "Bathing dog",
+      "Dog washing",
+      "Canine hygiene"
+    ]
+  },
+  "65": {
+    "nodeId": 65,
+    "parentName": "Animals and Pets",
+    "nodeName": "Care for animals and pets (not veterinary care)",
+    "parentId": 22,
+    "children": [
+      298,
+      317,
+      90
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in activities related to caring for and tending to pets and animals, including feeding, grooming, and providing companionship.",
+    "synonyms": [
+      "Care for animals and pets (not veterinary care)",
+      "Animal and pet care",
+      "Caring for companion animals"
+    ]
+  },
+  "22": {
+    "nodeId": 22,
+    "parentName": "Household Activities",
+    "nodeName": "Animals and Pets",
+    "parentId": 1,
+    "children": [
+      65,
+      26
+    ],
+    "node_type": "internal",
+    "definition": "Engaging with and caring for animals kept as pets or companions, contributing to emotional well-being and fostering connections.",
+    "synonyms": [
+      "Animals and Pets",
+      "Companion animals",
+      "Domesticated creatures"
+    ]
+  },
+  "92": {
+    "nodeId": 92,
+    "parentName": "Playing sports",
+    "nodeName": "Discus throw",
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 13,
+    "definition": "Participating in the track and field event where athletes throw a heavy discus in an attempt to achieve the longest distance.",
+    "synonyms": [
+      "Discus throw",
+      "Throwing the discus",
+      "Track and field discus event"
+    ]
+  },
+  "94": {
+    "nodeId": 94,
+    "parentName": "Playing hockey",
+    "nodeName": "Playing field hockey",
+    "parentId": 60,
+    "node_type": "leaf",
+    "id": 14,
+    "definition": "Participating in the team sport of field hockey, played on turf with a small ball and curved sticks, aiming to score goals by hitting the ball into the opponent's net.",
+    "synonyms": [
+      "Playing field hockey",
+      "Field hockey game",
+      "Hockey on turf"
+    ]
+  },
+  "60": {
+    "nodeId": 60,
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Playing hockey",
+    "parentId": 17,
+    "children": [
+      347,
+      94
+    ],
+    "node_type": "internal",
+    "definition": "Participating in the fast-paced sport of hockey, which can be played on ice or a field, involving hitting a puck or ball with sticks to score goals.",
+    "synonyms": [
+      "Playing hockey",
+      "Hockey game",
+      "Ice or field hockey"
+    ]
+  },
+  "95": {
+    "nodeId": 95,
+    "parentName": "Walking / exercising / playing with animals",
+    "nodeName": "Grooming horse",
+    "parentId": 26,
+    "node_type": "leaf",
+    "id": 15,
+    "definition": "Engaging in activities related to the care, cleaning, and maintenance of horses, including brushing, cleaning hooves, and grooming.",
+    "synonyms": [
+      "Grooming horse",
+      "Horse care and grooming",
+      "Equine maintenance"
+    ]
+  },
+  "26": {
+    "nodeId": 26,
+    "parentName": "Animals and Pets",
+    "nodeName": "Walking / exercising / playing with animals",
+    "parentId": 22,
+    "children": [
+      303,
+      95,
+      221
+    ],
+    "node_type": "internal",
+    "definition": "Participating in various physical activities with animals, such as walking dogs, playing with pets, and engaging in exercises that involve animals.",
+    "synonyms": [
+      "Walking / exercising / playing with animals",
+      "Walking with animals",
+      "Exercising with animals",
+      "Playing with animals",
+      "Engaging with animals physically",
+      "Animal interaction and movement"
+    ]
+  },
+  "96": {
+    "nodeId": 96,
+    "parentName": "Food and drink preparation ",
+    "nodeName": "Preparing salad",
+    "parentId": 31,
+    "node_type": "leaf",
+    "id": 16,
+    "definition": "The process of assembling and arranging various vegetables, fruits, and other ingredients to create a nutritious and flavorful salad dish.",
+    "synonyms": [
+      "Preparing salad",
+      "Salad making",
+      "Creating fresh salads"
+    ]
+  },
+  "100": {
+    "nodeId": 100,
+    "parentName": "Playing musical instruments",
+    "nodeName": "Playing harmonica",
+    "parentId": 61,
+    "node_type": "leaf",
+    "id": 18,
+    "definition": "Engaging in the musical activity of playing the harmonica, a small wind instrument with multiple holes that produce different musical notes.",
+    "synonyms": [
+      "Playing harmonica",
+      "Harmonica playing",
+      "Harmonica performance"
+    ]
+  },
+  "109": {
+    "nodeId": 109,
+    "parentName": "Playing musical instruments",
+    "nodeName": "Playing saxophone",
+    "parentId": 61,
+    "node_type": "leaf",
+    "id": 20,
+    "definition": "Engaging in the musical practice of playing the saxophone, a versatile woodwind instrument with a distinct sound and wide range of tones.",
+    "synonyms": [
+      "Playing saxophone",
+      "Saxophone performance",
+      "Sax playing"
+    ]
+  },
+  "110": {
+    "nodeId": 110,
+    "parentName": "Heating and cooling",
+    "nodeName": "Chopping wood",
+    "parentId": 34,
+    "node_type": "leaf",
+    "id": 21,
+    "definition": "The activity of cutting wood into smaller pieces using tools like axes or hatchets, often for purposes such as firewood or construction.",
+    "synonyms": [
+      "Chopping wood",
+      "Wood splitting",
+      "Timber cutting"
+    ]
+  },
+  "34": {
+    "nodeId": 34,
+    "parentName": "Interior Maintenance, Repair, & Decoration",
+    "nodeName": "Heating and cooling",
+    "parentId": 15,
+    "children": [
+      110
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in activities related to maintaining comfortable indoor temperatures, including heating in cold weather and cooling in hot weather.",
+    "synonyms": [
+      "Heating and cooling",
+      "Temperature control",
+      "Thermal regulation"
+    ]
+  },
+  "15": {
+    "nodeId": 15,
+    "parentName": "Household Activities",
+    "nodeName": "Interior Maintenance, Repair, & Decoration",
+    "parentId": 1,
+    "children": [
+      338,
+      34,
+      33
+    ],
+    "node_type": "internal",
+    "definition": "Tasks focused on maintaining, repairing, and enhancing the interior of a living space, encompassing repairs, decorations, and improvements.",
+    "synonyms": [
+      "Interior Maintenance, Repair, & Decoration",
+      "Interior maintenance",
+      "Interior repair",
+      "Interior decoration",
+      "Home interior upkeep",
+      "Indoor fixing and enhancement"
+    ]
+  },
+  "113": {
+    "nodeId": 113,
+    "parentName": "Washing, dressing and grooming oneself",
+    "nodeName": "Washing face",
+    "parentId": 62,
+    "node_type": "leaf",
+    "id": 22,
+    "definition": "The activity of cleaning and washing one's face using water, cleansers, and other skincare products to remove dirt and impurities.",
+    "synonyms": [
+      "Washing face",
+      "Facial cleansing",
+      "Face washing"
+    ]
+  },
+  "114": {
+    "nodeId": 114,
+    "parentName": "Doing gymnastics",
+    "nodeName": "Using the pommel horse",
+    "parentId": 24,
+    "node_type": "leaf",
+    "id": 23,
+    "definition": "Engaging in gymnastic exercises and routines using the pommel horse, a specialized piece of equipment designed for strength and balance exercises.",
+    "synonyms": [
+      "Using the pommel horse",
+      "Pommel horse exercises",
+      "Gymnastic pommel routine"
+    ]
+  },
+  "24": {
+    "nodeId": 24,
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Doing gymnastics",
+    "parentId": 17,
+    "children": [
+      114,
+      180,
+      258,
+      88,
+      192
+    ],
+    "node_type": "internal",
+    "definition": "Participating in the sport and art of gymnastics, involving a variety of physical exercises, performances, and routines that showcase strength, flexibility, and skill.",
+    "synonyms": [
+      "Doing gymnastics",
+      "Engaging in gymnastic activities",
+      "Gymnastics practice"
+    ]
+  },
+  "116": {
+    "nodeId": 116,
+    "parentName": "Playing sports",
+    "nodeName": "Javelin throw",
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 24,
+    "definition": "Participating in the track and field event where athletes throw a javelin, a spear-like object, to achieve the greatest possible distance.",
+    "synonyms": [
+      "Javelin throw",
+      "Throwing the javelin",
+      "Track and field javelin event"
+    ]
+  },
+  "117": {
+    "nodeId": 117,
+    "parentName": "Using cardiovascular equipment",
+    "nodeName": "Spinning",
+    "parentId": 58,
+    "node_type": "leaf",
+    "id": 25,
+    "definition": "Engaging in a cardiovascular exercise using stationary exercise bikes, often led by an instructor, involving varying intensities and pedal speeds.",
+    "synonyms": [
+      "Spinning",
+      "Indoor cycling",
+      "Stationary bike workout"
+    ]
+  },
+  "58": {
+    "nodeId": 58,
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Using cardiovascular equipment",
+    "parentId": 17,
+    "children": [
+      308,
+      384,
+      117
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in physical workouts using equipment designed to improve cardiovascular fitness, such as treadmills, elliptical trainers, and stationary bikes.",
+    "synonyms": [
+      "Using cardiovascular equipment",
+      "Cardio machine usage",
+      "Aerobic exercise equipment"
+    ]
+  },
+  "119": {
+    "nodeId": 119,
+    "parentName": "Playing racquet sports ",
+    "nodeName": "Ping-pong",
+    "parentId": 54,
+    "node_type": "leaf",
+    "id": 26,
+    "definition": "Participating in the fast-paced sport of table tennis, played on a small table with paddles and a lightweight ball, aiming to score points by hitting the ball over the net.",
+    "synonyms": [
+      "Ping-pong",
+      "Table tennis",
+      "Table tennis game"
+    ]
+  },
+  "54": {
+    "nodeId": 54,
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Playing racquet sports ",
+    "parentId": 17,
+    "children": [
+      119,
+      152,
+      194,
+      209,
+      253,
+      268
+    ],
+    "node_type": "internal",
+    "definition": "Participating in various sports that involve hitting a ball with a racquet, such as tennis, badminton, squash, and racquetball.",
+    "synonyms": [
+      "Playing racquet sports ",
+      "Playing racquet sports",
+      "Racquet games",
+      "Racket sports activities"
+    ]
+  },
+  "129": {
+    "nodeId": 129,
+    "parentName": "Food and drink preparation ",
+    "nodeName": "Making a sandwich",
+    "parentId": 31,
+    "node_type": "leaf",
+    "id": 29,
+    "definition": "The process of creating a sandwich by placing various ingredients, such as bread, meat, vegetables, and condiments, between slices of bread.",
+    "synonyms": [
+      "Making a sandwich",
+      "Sandwich preparation",
+      "Assembling a sandwich"
+    ]
+  },
+  "125": {
+    "nodeId": 125,
+    "parentName": "Washing, dressing and grooming oneself",
+    "nodeName": "Brushing hair",
+    "parentId": 62,
+    "node_type": "leaf",
+    "id": 28,
+    "definition": "The activity of using a brush or comb to detangle, style, and maintain hair by removing knots, debris, and distributing natural oils.",
+    "synonyms": [
+      "Brushing hair",
+      "Hair grooming",
+      "Hair brushing"
+    ]
+  },
+  "251": {
+    "nodeId": 251,
+    "parentName": "Playing musical instruments",
+    "nodeName": "Playing guitarra",
+    "parentId": 61,
+    "node_type": "leaf",
+    "id": 92,
+    "definition": "Engaging in the musical activity of playing the guitar, a stringed instrument, by plucking or strumming its strings to produce melodies and harmonies.",
+    "synonyms": [
+      "Playing guitarra",
+      "Guitar playing",
+      "Strumming the guitar"
+    ]
+  },
+  "230": {
+    "nodeId": 230,
+    "parentName": "Doing aerobics",
+    "nodeName": "Doing step aerobics",
+    "parentId": 55,
+    "node_type": "leaf",
+    "id": 79,
+    "definition": "Participating in aerobic exercises that involve stepping on and off a raised platform or step, often accompanied by rhythmic music and choreography.",
+    "synonyms": [
+      "Doing step aerobics",
+      "Step aerobics workout",
+      "Stepping exercises"
+    ]
+  },
+  "135": {
+    "nodeId": 135,
+    "parentName": "Eating and Drinking",
+    "nodeName": "Drinking beer",
+    "parentId": 46,
+    "node_type": "leaf",
+    "id": 32,
+    "definition": "The act of consuming beer, an alcoholic beverage made from fermented grains, usually barley, and hops, often enjoyed for relaxation or socializing.",
+    "synonyms": [
+      "Drinking beer",
+      "Beer consumption",
+      "Enjoying a brew"
+    ]
+  },
+  "75": {
+    "nodeId": 75,
+    "parentName": "Participating in equestrian sports",
+    "nodeName": "Playing polo",
+    "parentId": 49,
+    "node_type": "leaf",
+    "id": 4,
+    "definition": "Participating in the equestrian sport of polo, played on horseback with teams aiming to hit a ball through the opponent's goal using mallets.",
+    "synonyms": [
+      "Playing polo",
+      "Polo game",
+      "Equestrian sport"
+    ]
+  },
+  "49": {
+    "nodeId": 49,
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Participating in equestrian sports",
+    "parentId": 17,
+    "children": [
+      75,
+      175
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in various sports and activities involving horses, such as riding, jumping, racing, and performing maneuvers.",
+    "synonyms": [
+      "Participating in equestrian sports",
+      "Equestrian activities",
+      "Horseback riding pursuits"
+    ]
+  },
+  "79": {
+    "nodeId": 79,
+    "parentName": "Weightlifting",
+    "nodeName": "Snatch",
+    "parentId": 35,
+    "node_type": "leaf",
+    "id": 6,
+    "definition": "Participating in the weightlifting exercise known as the snatch, which involves lifting a barbell from the ground to overhead in one fluid motion.",
+    "synonyms": [
+      "Snatch",
+      "Olympic weightlifting snatch"
+    ]
+  },
+  "141": {
+    "nodeId": 141,
+    "parentName": "Playing sports",
+    "nodeName": "Paintball",
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 35,
+    "definition": "Participating in the outdoor sport of paintball, where players use air-powered markers to shoot gelatin capsules filled with colored paint at opponents.",
+    "synonyms": [
+      "Paintball",
+      "Paintball game",
+      "Outdoor combat sport"
+    ]
+  },
+  "80": {
+    "nodeId": 80,
+    "parentName": "Playing sports",
+    "nodeName": "Long jump",
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 7,
+    "definition": "Participating in the track and field event where athletes run and jump as far as possible from a takeoff point into a sand pit.",
+    "synonyms": [
+      "Long jump",
+      "Jumping for distance",
+      "Track and field long jump"
+    ]
+  },
+  "143": {
+    "nodeId": 143,
+    "parentName": "Interior cleaning",
+    "nodeName": "Cleaning windows",
+    "parentId": 37,
+    "node_type": "leaf",
+    "id": 36,
+    "definition": "The activity of removing dirt, dust, and grime from glass surfaces, such as windows, using cleaning solutions, tools, and techniques.",
+    "synonyms": [
+      "Cleaning windows",
+      "Window washing",
+      "Glass cleaning"
+    ]
+  },
+  "37": {
+    "nodeId": 37,
+    "parentName": "Housework",
+    "nodeName": "Interior cleaning",
+    "parentId": 16,
+    "children": [
+      335,
+      143,
+      160,
+      156
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in activities related to cleaning the interior of living spaces, including tidying up, dusting, vacuuming, and sanitizing.",
+    "synonyms": [
+      "Interior cleaning",
+      "Indoor cleaning",
+      "House cleaning"
+    ]
+  },
+  "16": {
+    "nodeId": 16,
+    "parentName": "Household Activities",
+    "nodeName": "Housework",
+    "parentId": 1,
+    "children": [
+      37,
+      45,
+      30
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in a variety of routine tasks necessary for maintaining a clean, organized, and functional living environment.",
+    "synonyms": [
+      "Housework",
+      "Domestic chores",
+      "Home tasks"
+    ]
+  },
+  "148": {
+    "nodeId": 148,
+    "parentName": "Washing, dressing and grooming oneself",
+    "nodeName": "Brushing teeth",
+    "parentId": 62,
+    "node_type": "leaf",
+    "id": 37,
+    "definition": "The act of using a toothbrush and toothpaste to clean and maintain oral hygiene by removing food particles, plaque, and preventing cavities.",
+    "synonyms": [
+      "Brushing teeth",
+      "Dental hygiene",
+      "Tooth brushing"
+    ]
+  },
+  "149": {
+    "nodeId": 149,
+    "parentName": "Playing musical instruments",
+    "nodeName": "Playing flauta",
+    "parentId": 61,
+    "node_type": "leaf",
+    "id": 38,
+    "definition": "Engaging in the musical activity of playing the flauta, a musical instrument from the flute family, by blowing air across the tone holes to produce sound.",
+    "synonyms": [
+      "Playing flauta",
+      "Flauta playing",
+      "Flute performance"
+    ]
+  },
+  "152": {
+    "nodeId": 152,
+    "parentName": "Playing racquet sports ",
+    "nodeName": "Tennis serve with ball bouncing",
+    "parentId": 54,
+    "node_type": "leaf",
+    "id": 39,
+    "definition": "The technique of serving a tennis ball by first bouncing it on the ground and then hitting it over the net to start a point.",
+    "synonyms": [
+      "Tennis serve with ball bouncing",
+      "Bounced serve in tennis",
+      "Serve technique"
+    ]
+  },
+  "154": {
+    "nodeId": 154,
+    "parentName": "Playing sports",
+    "nodeName": "Bungee jumping",
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 41,
+    "definition": "Engaging in the adventurous activity of jumping from a high point while attached to an elastic cord, experiencing a thrilling free fall and rebound.",
+    "synonyms": [
+      "Bungee jumping",
+      "Elastic cord jumping",
+      "Extreme jumping"
+    ]
+  },
+  "155": {
+    "nodeId": 155,
+    "parentName": "Playing sports",
+    "nodeName": "Triple jump",
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 42,
+    "definition": "Participating in the track and field event where athletes perform three consecutive jumps—a hop, step, and jump—in an attempt to cover the longest distance.",
+    "synonyms": [
+      "Triple jump",
+      "Track and field triple jump",
+      "Jumping event"
+    ]
+  },
+  "175": {
+    "nodeId": 175,
+    "parentName": "Participating in equestrian sports",
+    "nodeName": "Horseback riding",
+    "parentId": 49,
+    "node_type": "leaf",
+    "id": 51,
+    "definition": "Engaging in the activity of riding a horse, often for pleasure, sport, or transportation, while seated on its back.",
+    "synonyms": [
+      "Horseback riding",
+      "Equestrian activity",
+      "Mounted riding"
+    ]
+  },
+  "159": {
+    "nodeId": 159,
+    "parentName": "Playing basketball",
+    "nodeName": "Layup drill in basketball",
+    "parentId": 52,
+    "node_type": "leaf",
+    "id": 44,
+    "definition": "The practice of executing a layup shot in basketball, where a player dribbles and quickly lays the ball up onto the backboard and into the basket.",
+    "synonyms": [
+      "Layup drill in basketball",
+      "Basketball layup practice",
+      "Scoring technique"
+    ]
+  },
+  "52": {
+    "nodeId": 52,
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Playing basketball",
+    "parentId": 17,
+    "children": [
+      159
+    ],
+    "node_type": "internal",
+    "definition": "Participating in the team sport of basketball, involving two teams aiming to score points by shooting the ball into the opposing team's hoop.",
+    "synonyms": [
+      "Playing basketball",
+      "Basketball game",
+      "Hoops"
+    ]
+  },
+  "160": {
+    "nodeId": 160,
+    "parentName": "Interior cleaning",
+    "nodeName": "Vacuuming floor",
+    "parentId": 37,
+    "node_type": "leaf",
+    "id": 45,
+    "definition": "The activity of using a vacuum cleaner to remove dust, debris, and dirt from floors, carpets, and other surfaces.",
+    "synonyms": [
+      "Vacuuming floor",
+      "Floor cleaning with vacuum",
+      "Using a vacuum cleaner"
+    ]
+  },
+  "134": {
+    "nodeId": 134,
+    "parentName": "Sewing, repairing, & maintaining textiles",
+    "nodeName": "Cleaning shoes",
+    "parentId": 45,
+    "node_type": "leaf",
+    "id": 31,
+    "definition": "The act of removing dirt, stains, and grime from shoes using various cleaning methods and products to maintain their appearance and condition.",
+    "synonyms": [
+      "Cleaning shoes",
+      "Shoe care",
+      "Footwear cleaning"
+    ]
+  },
+  "45": {
+    "nodeId": 45,
+    "parentName": "Housework",
+    "nodeName": "Sewing, repairing, & maintaining textiles",
+    "parentId": 16,
+    "children": [
+      329,
+      134,
+      227
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in activities related to sewing, mending, and maintaining textiles and fabrics, including clothing, accessories, and household items.",
+    "synonyms": [
+      "Sewing, repairing, & maintaining textiles",
+      "Textile work",
+      "Fabric manipulation"
+    ]
+  },
+  "167": {
+    "nodeId": 167,
+    "parentName": "Washing, dressing and grooming oneself",
+    "nodeName": "Doing nails",
+    "parentId": 62,
+    "node_type": "leaf",
+    "id": 47,
+    "definition": "The practice of grooming and enhancing the appearance of nails on the fingers and toes through activities like filing, painting, and applying nail polish.",
+    "synonyms": [
+      "Doing nails",
+      "Nail care",
+      "Manicure and pedicure"
+    ]
+  },
+  "169": {
+    "nodeId": 169,
+    "parentName": "Playing sports",
+    "nodeName": "Shot put",
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 48,
+    "definition": "Participating in the track and field event where athletes throw a heavy spherical object known as a shot put as far as possible.",
+    "synonyms": [
+      "Shot put",
+      "Track and field shot put",
+      "Throwing event"
+    ]
+  },
+  "171": {
+    "nodeId": 171,
+    "parentName": "Vehicle repair and maintenance (by self)",
+    "nodeName": "Fixing bicycle",
+    "parentId": 56,
+    "node_type": "leaf",
+    "id": 49,
+    "definition": "Engaging in activities related to repairing and maintaining bicycles, such as fixing flat tires, adjusting brakes, and lubricating components.",
+    "synonyms": [
+      "Fixing bicycle",
+      "Bicycle repair",
+      "Bike maintenance"
+    ]
+  },
+  "56": {
+    "nodeId": 56,
+    "parentName": "Vehicles",
+    "nodeName": "Vehicle repair and maintenance (by self)",
+    "parentId": 13,
+    "children": [
+      273,
+      296,
+      318,
+      355,
+      171
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in do-it-yourself activities related to repairing and maintaining vehicles, including cars, motorcycles, and other forms of transportation.",
+    "synonyms": [
+      "Vehicle repair and maintenance (by self)",
+      "Do-It-Yourself vehicle care",
+      "Self vehicle care",
+      "Self-service automotive work"
+    ]
+  },
+  "13": {
+    "nodeId": 13,
+    "parentName": "Household Activities",
+    "nodeName": "Vehicles",
+    "parentId": 1,
+    "children": [
+      56
+    ],
+    "node_type": "internal",
+    "definition": "Activities related to using and maintaining various forms of transportation, including cars, motorcycles, bicycles, and other motorized vehicles.",
+    "synonyms": [
+      "Vehicles",
+      "Transportation",
+      "Vehicular means"
+    ]
+  },
+  "173": {
+    "nodeId": 173,
+    "parentName": "Washing, dressing and grooming oneself",
+    "nodeName": "Washing hands",
+    "parentId": 62,
+    "node_type": "leaf",
+    "id": 50,
+    "definition": "The act of cleaning hands with water, soap, or hand sanitizer to remove dirt, germs, and microorganisms, promoting personal hygiene and health.",
+    "synonyms": [
+      "Washing hands",
+      "Hand hygiene",
+      "Hand washing"
+    ]
+  },
+  "83": {
+    "nodeId": 83,
+    "parentName": "Laundry",
+    "nodeName": "Ironing clothes",
+    "parentId": 30,
+    "node_type": "leaf",
+    "id": 9,
+    "definition": "The activity of using a heated iron to remove wrinkles and creases from clothing, achieving a smooth and neat appearance.",
+    "synonyms": [
+      "Ironing clothes",
+      "Clothing ironing",
+      "Pressing garments"
+    ]
+  },
+  "30": {
+    "nodeId": 30,
+    "parentName": "Housework",
+    "nodeName": "Laundry",
+    "parentId": 16,
+    "children": [
+      83,
+      232
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in tasks related to cleaning and maintaining clothing and other textiles, including washing, drying, and folding.",
+    "synonyms": [
+      "Laundry",
+      "Clothing care",
+      "Washing and drying garments"
+    ]
+  },
+  "180": {
+    "nodeId": 180,
+    "parentName": "Doing gymnastics",
+    "nodeName": "Using the balance beam",
+    "parentId": 24,
+    "node_type": "leaf",
+    "id": 54,
+    "definition": "Participating in gymnastic exercises and routines using the balance beam, a narrow and elevated apparatus that requires balance, strength, and precision.",
+    "synonyms": [
+      "Using the balance beam",
+      "Balance beam exercises",
+      "Gymnastic beam routine"
+    ]
+  },
+  "183": {
+    "nodeId": 183,
+    "parentName": "Exterior cleaning",
+    "nodeName": "Shoveling snow",
+    "parentId": 51,
+    "node_type": "leaf",
+    "id": 55,
+    "definition": "The activity of removing snow from outdoor areas, such as sidewalks and driveways, using shovels or snow blowers.",
+    "synonyms": [
+      "Shoveling snow",
+      "Snow removal",
+      "Clearing snow"
+    ]
+  },
+  "51": {
+    "nodeId": 51,
+    "parentName": "Exterior Maintenance, Repair, & Decoration",
+    "nodeName": "Exterior cleaning",
+    "parentId": 12,
+    "children": [
+      183
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in activities related to cleaning and maintaining the exterior of buildings, structures, and outdoor spaces to enhance their appearance and functionality.",
+    "synonyms": [
+      "Exterior cleaning",
+      "Outdoor cleaning",
+      "Outside maintenance"
+    ]
+  },
+  "12": {
+    "nodeId": 12,
+    "parentName": "Household Activities",
+    "nodeName": "Exterior Maintenance, Repair, & Decoration",
+    "parentId": 1,
+    "children": [
+      312,
+      336,
+      51
+    ],
+    "node_type": "internal",
+    "definition": "Tasks focused on maintaining, repairing, and enhancing the exterior of buildings, structures, and outdoor spaces, often involving repairs, decorations, and improvements.",
+    "synonyms": [
+      "Exterior Maintenance, Repair, & Decoration",
+      "Outside upkeep",
+      "Outdoor fixing and enhancement"
+    ]
+  },
+  "258": {
+    "nodeId": 258,
+    "parentName": "Doing gymnastics",
+    "nodeName": "Tumbling",
+    "parentId": 24,
+    "node_type": "leaf",
+    "id": 96,
+    "definition": "Engaging in acrobatic movements, flips, and rolls as part of gymnastics, parkour, or freestyle sports, often performed on mats or soft surfaces.",
+    "synonyms": [
+      "Tumbling",
+      "Gymnastic tumbling",
+      "Acrobatic movements"
+    ]
+  },
+  "88": {
+    "nodeId": 88,
+    "parentName": "Doing gymnastics",
+    "nodeName": "Using parallel bars",
+    "parentId": 24,
+    "node_type": "leaf",
+    "id": 11,
+    "definition": "Participating in gymnastic exercises and routines using parallel bars, horizontal bars placed at different heights, requiring strength and coordination.",
+    "synonyms": [
+      "Using parallel bars",
+      "Parallel bar exercises",
+      "Gymnastic parallel bar routine"
+    ]
+  },
+  "187": {
+    "nodeId": 187,
+    "parentName": "Washing, dressing and grooming",
+    "nodeName": "Getting a tattoo",
+    "parentId": 38,
+    "node_type": "leaf",
+    "id": 57,
+    "definition": "The process of permanently marking the skin with ink or pigments, creating a design, image, or pattern as a form of body art.",
+    "synonyms": [
+      "Getting a tattoo",
+      "Tattoo application",
+      "Inking the skin"
+    ]
+  },
+  "38": {
+    "nodeId": 38,
+    "parentName": "Grooming",
+    "nodeName": "Washing, dressing and grooming",
+    "parentId": 20,
+    "children": [
+      187,
+      214,
+      208
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in activities related to maintaining personal hygiene, dressing, and grooming to ensure cleanliness, health, and a well-groomed appearance.",
+    "synonyms": [
+      "Washing, dressing and grooming",
+      "Personal care routine",
+      "Hygiene and appearance maintenance"
+    ]
+  },
+  "188": {
+    "nodeId": 188,
+    "parentName": "Climbing, spelunking, caving",
+    "nodeName": "Rock climbing",
+    "parentId": 50,
+    "node_type": "leaf",
+    "id": 58,
+    "definition": "Participating in the sport and recreational activity of climbing natural rock formations, indoor climbing walls, or artificial climbing structures.",
+    "synonyms": [
+      "Rock climbing",
+      "Climbing rocks",
+      "Vertical ascent"
+    ]
+  },
+  "50": {
+    "nodeId": 50,
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Climbing, spelunking, caving",
+    "parentId": 17,
+    "children": [
+      188
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in activities related to exploring natural caves, caverns, and underground passages, often requiring climbing, crawling, and navigating through tight spaces.",
+    "synonyms": [
+      "Climbing, spelunking, caving",
+      "Exploring caves",
+      "Cave diving"
+    ]
+  },
+  "189": {
+    "nodeId": 189,
+    "parentName": "Tobacco and drug use",
+    "nodeName": "Smoking hookah",
+    "parentId": 28,
+    "node_type": "leaf",
+    "id": 59,
+    "definition": "The act of smoking flavored tobacco through a hookah, a water pipe, often done socially and enjoyed for its flavors and relaxation.",
+    "synonyms": [
+      "Smoking hookah",
+      "Shisha smoking",
+      "Water pipe consumption"
+    ]
+  },
+  "28": {
+    "nodeId": 28,
+    "parentName": "Relaxing and Leisure",
+    "nodeName": "Tobacco and drug use",
+    "parentId": 11,
+    "children": [
+      189,
+      201
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in activities involving the consumption or use of substances, including tobacco, nicotine, recreational drugs, and other controlled substances.",
+    "synonyms": [
+      "Tobacco and drug use",
+      "Substance consumption",
+      "Smoking and drug intake"
+    ]
+  },
+  "11": {
+    "nodeId": 11,
+    "parentName": "Socializing, Relaxing, and Leisure",
+    "nodeName": "Relaxing and Leisure",
+    "parentId": 7,
+    "children": [
+      28,
+      48
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in various activities aimed at relaxation, pleasure, and leisure, often done during free time or to reduce stress.",
+    "synonyms": [
+      "Relaxing and Leisure",
+      "Unwinding and enjoyment"
+    ]
+  },
+  "190": {
+    "nodeId": 190,
+    "parentName": "Washing, dressing and grooming oneself",
+    "nodeName": "Shaving",
+    "parentId": 62,
+    "node_type": "leaf",
+    "id": 60,
+    "definition": "The act of removing unwanted hair from the face or body using a razor or other shaving tools to achieve a smooth and clean appearance.",
+    "synonyms": [
+      "Shaving",
+      "Hair removal",
+      "Grooming facial hair"
+    ]
+  },
+  "214": {
+    "nodeId": 214,
+    "parentName": "Washing, dressing and grooming",
+    "nodeName": "Getting a piercing",
+    "parentId": 38,
+    "node_type": "leaf",
+    "id": 72,
+    "definition": "The process of creating an opening in the skin or cartilage to insert jewelry or decorative accessories, often for self-expression or cultural reasons.",
+    "synonyms": [
+      "Getting a piercing",
+      "Body piercing",
+      "Piercing procedure"
+    ]
+  },
+  "193": {
+    "nodeId": 193,
+    "parentName": "Participating in water sports",
+    "nodeName": "Springboard diving",
+    "parentId": 42,
+    "node_type": "leaf",
+    "id": 62,
+    "definition": "Participating in the aquatic sport of diving into a pool from a springboard, performing various acrobatic maneuvers and twists during the descent.",
+    "synonyms": [
+      "Springboard diving",
+      "Springboard acrobatics",
+      "Diving from a springboard"
+    ]
+  },
+  "42": {
+    "nodeId": 42,
+    "parentName": "Participating in Sports, Exercise, or Recreation",
+    "nodeName": "Participating in water sports",
+    "parentId": 17,
+    "children": [
+      364,
+      376,
+      377,
+      385,
+      386,
+      193,
+      240,
+      233,
+      237,
+      130,
+      254
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in a variety of sports and recreational activities that take place in or on water, including swimming, diving, surfing, and water skiing.",
+    "synonyms": [
+      "Participating in water sports",
+      "Aquatic activities",
+      "Engaging in water-based sports"
+    ]
+  },
+  "194": {
+    "nodeId": 194,
+    "parentName": "Playing racquet sports ",
+    "nodeName": "Playing squash",
+    "parentId": 54,
+    "node_type": "leaf",
+    "id": 63,
+    "definition": "Participating in the racquet sport of squash, played in an enclosed court where players use rackets to hit a ball against the front wall.",
+    "synonyms": [
+      "Playing squash",
+      "Squash game",
+      "Racket sport"
+    ]
+  },
+  "197": {
+    "nodeId": 197,
+    "parentName": "Playing musical instruments",
+    "nodeName": "Playing piano",
+    "parentId": 61,
+    "node_type": "leaf",
+    "id": 65,
+    "definition": "Engaging in the musical activity of playing the piano, a keyboard instrument, by pressing keys to produce melodies, harmonies, and rhythms.",
+    "synonyms": [
+      "Playing piano",
+      "Piano playing",
+      "Keyboard performance"
+    ]
+  },
+  "161": {
+    "nodeId": 161,
+    "parentName": "Playing sports",
+    "nodeName": "Dodgeball",
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 46,
+    "definition": "Participating in the team sport of dodgeball, where players aim to hit opponents with thrown balls while avoiding being hit themselves.",
+    "synonyms": [
+      "Dodgeball",
+      "Ball dodging game",
+      "Dodge and hit"
+    ]
+  },
+  "201": {
+    "nodeId": 201,
+    "parentName": "Tobacco and drug use",
+    "nodeName": "Smoking a cigarette",
+    "parentId": 28,
+    "node_type": "leaf",
+    "id": 67,
+    "definition": "The act of inhaling smoke from a lit cigarette, a cylindrical roll of tobacco wrapped in paper, often done for relaxation or habit.",
+    "synonyms": [
+      "Smoking a cigarette",
+      "Cigarette smoking",
+      "Tobacco inhalation"
+    ]
+  },
+  "240": {
+    "nodeId": 240,
+    "parentName": "Participating in water sports",
+    "nodeName": "Sailing",
+    "parentId": 42,
+    "node_type": "leaf",
+    "id": 85,
+    "definition": "Engaging in the activity of navigating and controlling a sailboat or sailing vessel on water, often for leisure, sport, or transportation.",
+    "synonyms": [
+      "Sailing",
+      "Boat navigation",
+      "Marine travel"
+    ]
+  },
+  "208": {
+    "nodeId": 208,
+    "parentName": "Washing, dressing and grooming",
+    "nodeName": "Getting a haircut",
+    "parentId": 38,
+    "node_type": "leaf",
+    "id": 68,
+    "definition": "The process of having one's hair professionally cut, styled, or groomed by a hairdresser or barber to achieve a desired look.",
+    "synonyms": [
+      "Getting a haircut",
+      "Hair trimming",
+      "Hairstyling session"
+    ]
+  },
+  "209": {
+    "nodeId": 209,
+    "parentName": "Playing racquet sports ",
+    "nodeName": "Playing lacrosse",
+    "parentId": 54,
+    "node_type": "leaf",
+    "id": 69,
+    "definition": "Participating in the team sport of lacrosse, played with a small rubber ball and a long-handled stick, where players aim to score goals.",
+    "synonyms": [
+      "Playing lacrosse",
+      "Lacrosse game",
+      "Stick ball sport"
+    ]
+  },
+  "211": {
+    "nodeId": 211,
+    "parentName": "Dancing",
+    "nodeName": "Cumbia",
+    "parentId": 23,
+    "node_type": "leaf",
+    "id": 70,
+    "definition": "Engaging in the traditional dance and music style known as cumbia, originating in Latin America and characterized by its rhythmic patterns and energetic movements.",
+    "synonyms": [
+      "Cumbia",
+      "Latin American dance",
+      "Traditional music and dance"
+    ]
+  },
+  "263": {
+    "nodeId": 263,
+    "parentName": "Participating in martial arts",
+    "nodeName": "Tai chi",
+    "parentId": 27,
+    "node_type": "leaf",
+    "id": 97,
+    "definition": "Participating in the Chinese martial art of tai chi, characterized by slow, flowing movements and deep breathing techniques that promote balance and relaxation.",
+    "synonyms": [
+      "Tai chi",
+      "Tai chi chuan",
+      "Martial arts movement"
+    ]
+  },
+  "217": {
+    "nodeId": 217,
+    "parentName": "Interior arrangement, decoration, & repairs",
+    "nodeName": "Painting",
+    "parentId": 33,
+    "node_type": "leaf",
+    "id": 73,
+    "definition": "Engaging in the artistic activity of applying paint, pigments, or other mediums to a surface, often a canvas, to create visual representations or expressions.",
+    "synonyms": [
+      "Painting",
+      "Artistic painting",
+      "Creating visual art"
+    ]
+  },
+  "33": {
+    "nodeId": 33,
+    "parentName": "Interior Maintenance, Repair, & Decoration",
+    "nodeName": "Interior arrangement, decoration, & repairs",
+    "parentId": 15,
+    "children": [
+      295,
+      297,
+      302,
+      319,
+      326,
+      330,
+      340,
+      217
+    ],
+    "node_type": "internal",
+    "definition": "Activities related to organizing, beautifying, and fixing the interior of living spaces, including decorating, arranging furniture, and making repairs or improvements.",
+    "synonyms": [
+      "Interior arrangement, decoration, & repairs",
+      "Home interior enhancement",
+      "Decor and fixes"
+    ]
+  },
+  "218": {
+    "nodeId": 218,
+    "parentName": "Lawn, garden, and houseplant care",
+    "nodeName": "Mowing the lawn",
+    "parentId": 66,
+    "node_type": "leaf",
+    "id": 74,
+    "definition": "The activity of using a lawnmower or grass cutter to trim and maintain the height of grass on a lawn or outdoor area.",
+    "synonyms": [
+      "Mowing the lawn",
+      "Lawn cutting",
+      "Grass trimming"
+    ]
+  },
+  "66": {
+    "nodeId": 66,
+    "parentName": "Lawn, Garden, and Houseplants",
+    "nodeName": "Lawn, garden, and houseplant care",
+    "parentId": 10,
+    "children": [
+      282,
+      301,
+      354,
+      374,
+      381,
+      218
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in tasks focused on nurturing and maintaining outdoor spaces, lawns, gardens, and houseplants to ensure their health and growth.",
+    "synonyms": [
+      "Lawn, garden, and houseplant care",
+      "Plant and outdoor space maintenance",
+      "Green space nurturing"
+    ]
+  },
+  "10": {
+    "nodeId": 10,
+    "parentName": "Household Activities",
+    "nodeName": "Lawn, Garden, and Houseplants",
+    "parentId": 1,
+    "children": [
+      66
+    ],
+    "node_type": "internal",
+    "definition": "Activities related to caring for plants, flowers, and vegetation, both outdoors in lawns and gardens, and indoors as houseplants.",
+    "synonyms": [
+      "Lawn, Garden, and Houseplants",
+      "Outdoor and indoor plant care",
+      "Greenery maintenance"
+    ]
+  },
+  "200": {
+    "nodeId": 200,
+    "parentName": "Washing, dressing and grooming oneself",
+    "nodeName": "Shaving legs",
+    "parentId": 62,
+    "node_type": "leaf",
+    "id": 66,
+    "definition": "The act of removing unwanted hair from the legs using a razor or other shaving tools to achieve a smooth and clean appearance.",
+    "synonyms": [
+      "Shaving legs",
+      "Leg hair removal",
+      "Grooming lower limbs"
+    ]
+  },
+  "221": {
+    "nodeId": 221,
+    "parentName": "Walking / exercising / playing with animals",
+    "nodeName": "Walking the dog",
+    "parentId": 26,
+    "node_type": "leaf",
+    "id": 75,
+    "definition": "The activity of taking a pet dog for a walk outdoors to provide exercise, mental stimulation, and a change of scenery for the dog's well-being.",
+    "synonyms": [
+      "Walking the dog",
+      "Dog exercise",
+      "Canine stroll"
+    ]
+  },
+  "224": {
+    "nodeId": 224,
+    "parentName": "Playing sports",
+    "nodeName": "Hammer throw",
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 76,
+    "definition": "Participating in the track and field event of hammer throw, where athletes throw a heavy ball attached to a wire and handle as far as possible.",
+    "synonyms": [
+      "Hammer throw",
+      "Athletic hammer toss",
+      "Track and field event"
+    ]
+  },
+  "176": {
+    "nodeId": 176,
+    "parentName": "Playing sports",
+    "nodeName": "Skateboarding",
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 52,
+    "definition": "Engaging in the recreational and sport activity of riding and performing tricks on a skateboard, a wheeled platform with a wooden deck.",
+    "synonyms": [
+      "Skateboarding",
+      "Skating on a board",
+      "Extreme sport on wheels"
+    ]
+  },
+  "227": {
+    "nodeId": 227,
+    "parentName": "Sewing, repairing, & maintaining textiles",
+    "nodeName": "Polishing shoes",
+    "parentId": 45,
+    "node_type": "leaf",
+    "id": 77,
+    "definition": "The activity of cleaning, shining, and enhancing the appearance of shoes using polishing products to achieve a well-kept and glossy look.",
+    "synonyms": [
+      "Polishing shoes",
+      "Shoe shining",
+      "Footwear maintenance"
+    ]
+  },
+  "229": {
+    "nodeId": 229,
+    "parentName": "Attending arts and entertainment",
+    "nodeName": "Ballet",
+    "parentId": 39,
+    "node_type": "leaf",
+    "id": 78,
+    "definition": "Engaging in the graceful and disciplined dance form known as ballet, characterized by precise movements, fluidity, and expressive storytelling.",
+    "synonyms": [
+      "Ballet",
+      "Classical dance",
+      "Elegant movement art"
+    ]
+  },
+  "39": {
+    "nodeId": 39,
+    "parentName": "Arts and Entertainment",
+    "nodeName": "Attending arts and entertainment",
+    "parentId": 21,
+    "children": [
+      229
+    ],
+    "node_type": "internal",
+    "definition": "Participating in various cultural events, performances, exhibitions, and entertainment activities that showcase artistic and creative expressions.",
+    "synonyms": [
+      "Attending arts and entertainment",
+      "Cultural event participation",
+      "Enjoying creative performances"
+    ]
+  },
+  "232": {
+    "nodeId": 232,
+    "parentName": "Laundry",
+    "nodeName": "Hand washing clothes",
+    "parentId": 30,
+    "node_type": "leaf",
+    "id": 80,
+    "definition": "The process of cleaning clothes by hand using water, detergent, and manual scrubbing to remove dirt and stains.",
+    "synonyms": [
+      "Hand washing clothes",
+      "Manual laundry",
+      "Clothing scrubbing"
+    ]
+  },
+  "233": {
+    "nodeId": 233,
+    "parentName": "Participating in water sports",
+    "nodeName": "Plataform diving",
+    "parentId": 42,
+    "node_type": "leaf",
+    "id": 81,
+    "definition": "Participating in the diving sport from elevated platforms, such as diving boards or platforms, into a pool, executing complex twists and somersaults.",
+    "synonyms": [
+      "Plataform diving",
+      "High diving",
+      "Aerial aquatic plunge"
+    ]
+  },
+  "234": {
+    "nodeId": 234,
+    "parentName": "Playing musical instruments",
+    "nodeName": "Playing violin",
+    "parentId": 61,
+    "node_type": "leaf",
+    "id": 82,
+    "definition": "Engaging in the musical activity of playing the violin, a string instrument, by drawing a bow across the strings to produce melodies and harmonies.",
+    "synonyms": [
+      "Playing violin",
+      "Violin playing",
+      "String instrument performance"
+    ]
+  },
+  "236": {
+    "nodeId": 236,
+    "parentName": "Dancing",
+    "nodeName": "Breakdancing",
+    "parentId": 23,
+    "node_type": "leaf",
+    "id": 83,
+    "definition": "Participating in the energetic and acrobatic street dance style known as breakdancing, characterized by dynamic movements, spins, and floorwork.",
+    "synonyms": [
+      "Breakdancing",
+      "B-boying",
+      "Street dance"
+    ]
+  },
+  "237": {
+    "nodeId": 237,
+    "parentName": "Participating in water sports",
+    "nodeName": "Windsurfing",
+    "parentId": 42,
+    "node_type": "leaf",
+    "id": 84,
+    "definition": "Engaging in the water sport of windsurfing, where participants ride on a board with an attached sail, harnessing wind power to glide on the water.",
+    "synonyms": [
+      "Windsurfing",
+      "Wind riding",
+      "Sailboarding"
+    ]
+  },
+  "241": {
+    "nodeId": 241,
+    "parentName": "Playing games",
+    "nodeName": "Hopscotch",
+    "parentId": 48,
+    "node_type": "leaf",
+    "id": 86,
+    "definition": "Participating in the traditional children's game of hopscotch, where players hop on one or two feet through a series of numbered squares drawn on the ground.",
+    "synonyms": [
+      "Hopscotch",
+      "Sidewalk game",
+      "Children's jumping activity"
+    ]
+  },
+  "48": {
+    "nodeId": 48,
+    "parentName": "Relaxing and Leisure",
+    "nodeName": "Playing games",
+    "parentId": 11,
+    "children": [
+      280,
+      321,
+      322,
+      327,
+      348,
+      349,
+      356,
+      358,
+      368,
+      371,
+      379,
+      380,
+      382,
+      241
+    ],
+    "node_type": "internal",
+    "definition": "Participating in a variety of games and playful activities, often for entertainment, competition, skill development, or social interaction.",
+    "synonyms": [
+      "Playing games",
+      "Game playing",
+      "Engaging in playful activities"
+    ]
+  },
+  "243": {
+    "nodeId": 243,
+    "parentName": "Playing sports",
+    "nodeName": "Doing motocross",
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 87,
+    "definition": "Engaging in the sport of motocross, where participants race specialized motorcycles on off-road tracks with various obstacles, jumps, and challenging terrain.",
+    "synonyms": [
+      "Doing motocross",
+      "Motocross racing",
+      "Off-road motorcycle sport"
+    ]
+  },
+  "244": {
+    "nodeId": 244,
+    "parentName": "Food and drink preparation ",
+    "nodeName": "Mixing drinks",
+    "parentId": 31,
+    "node_type": "leaf",
+    "id": 88,
+    "definition": "The activity of creating and preparing various alcoholic and non-alcoholic beverages by combining different ingredients and flavors to achieve desired taste profiles.",
+    "synonyms": [
+      "Mixing drinks",
+      "Bartending",
+      "Cocktail preparation"
+    ]
+  },
+  "153": {
+    "nodeId": 153,
+    "parentName": "Playing sports",
+    "nodeName": "Starting a campfire",
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 40,
+    "definition": "The act of igniting and establishing a controlled fire in an outdoor setting, often for warmth, cooking, socializing, and camping purposes.",
+    "synonyms": [
+      "Starting a campfire",
+      "Campfire ignition",
+      "Kindling a fire"
+    ]
+  },
+  "247": {
+    "nodeId": 247,
+    "parentName": "Dancing",
+    "nodeName": "Belly dance",
+    "parentId": 23,
+    "node_type": "leaf",
+    "id": 89,
+    "definition": "Participating in the expressive dance style known as belly dance, characterized by fluid movements of the torso, hips, and arms.",
+    "synonyms": [
+      "Belly dance",
+      "Oriental dance",
+      "Midriff movement art"
+    ]
+  },
+  "248": {
+    "nodeId": 248,
+    "parentName": "Washing, dressing and grooming oneself",
+    "nodeName": "Removing curlers",
+    "parentId": 62,
+    "node_type": "leaf",
+    "id": 90,
+    "definition": "The process of removing hair curlers or rollers, cylindrical tools used to curl and shape hair, revealing the desired curled or wavy hairstyle.",
+    "synonyms": [
+      "Removing curlers",
+      "Taking out hair curlers",
+      "Curler removal"
+    ]
+  },
+  "250": {
+    "nodeId": 250,
+    "parentName": "Playing sports",
+    "nodeName": "Archery",
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 91,
+    "definition": "Engaging in the precision sport of archery, where participants use bows and arrows to shoot at targets from varying distances.",
+    "synonyms": [
+      "Archery",
+      "Bow and arrow sport",
+      "Marksmanship with bows"
+    ]
+  },
+  "123": {
+    "nodeId": 123,
+    "parentName": "Playing volleyball",
+    "nodeName": "Volleyball",
+    "parentId": 342,
+    "node_type": "leaf",
+    "id": 27,
+    "definition": "Participating in the team sport of volleyball, played with two teams separated by a net, where players aim to hit a ball over the net to score points.",
+    "synonyms": [
+      "Volleyball",
+      "Beach volleyball",
+      "Net sport"
+    ]
+  },
+  "130": {
+    "nodeId": 130,
+    "parentName": "Participating in water sports",
+    "nodeName": "Playing water polo",
+    "parentId": 42,
+    "node_type": "leaf",
+    "id": 30,
+    "definition": "Participating in the aquatic team sport of water polo, played in a pool with two teams aiming to score goals by throwing a ball into the opponent's net.",
+    "synonyms": [
+      "Playing water polo",
+      "Water polo match",
+      "Aquatic team sport"
+    ]
+  },
+  "253": {
+    "nodeId": 253,
+    "parentName": "Playing racquet sports ",
+    "nodeName": "Playing racquetball",
+    "parentId": 54,
+    "node_type": "leaf",
+    "id": 93,
+    "definition": "Engaging in the indoor racquet sport of racquetball, played in an enclosed court with players hitting a ball against the front wall using rackets.",
+    "synonyms": [
+      "Playing racquetball",
+      "Racquetball game",
+      "Indoor racquet sport"
+    ]
+  },
+  "254": {
+    "nodeId": 254,
+    "parentName": "Participating in water sports",
+    "nodeName": "Kayaking",
+    "parentId": 42,
+    "node_type": "leaf",
+    "id": 94,
+    "definition": "Engaging in the water activity of kayaking, where participants paddle in a small, narrow watercraft called a kayak, often in rivers, lakes, or the ocean.",
+    "synonyms": [
+      "Kayaking",
+      "Paddling in a kayak",
+      "Canoeing in a kayak"
+    ]
+  },
+  "156": {
+    "nodeId": 156,
+    "parentName": "Interior cleaning",
+    "nodeName": "Polishing forniture",
+    "parentId": 37,
+    "node_type": "leaf",
+    "id": 43,
+    "definition": "The activity of cleaning, buffing, and enhancing the appearance of furniture surfaces using polishing products to achieve a clean and polished look.",
+    "synonyms": [
+      "Polishing forniture",
+      "Furniture shining",
+      "Furniture surface care"
+    ]
+  },
+  "257": {
+    "nodeId": 257,
+    "parentName": "Playing sports",
+    "nodeName": "Playing kickball",
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 95,
+    "definition": "Participating in the playground game of kickball, played with a large rubber ball that participants kick to run bases and score runs, similar to baseball.",
+    "synonyms": [
+      "Playing kickball",
+      "Kickball game",
+      "Outdoor ball sport"
+    ]
+  },
+  "192": {
+    "nodeId": 192,
+    "parentName": "Doing gymnastics",
+    "nodeName": "Using uneven bars",
+    "parentId": 24,
+    "node_type": "leaf",
+    "id": 61,
+    "definition": "Engaging in gymnastic routines and exercises using uneven bars, a gymnastics apparatus consisting of two horizontal bars set at different heights.",
+    "synonyms": [
+      "Using uneven bars",
+      "Gymnastic bar routines",
+      "Bar apparatus exercises"
+    ]
+  },
+  "213": {
+    "nodeId": 213,
+    "parentName": "Kitchen and food clean-up",
+    "nodeName": "Washing dishes",
+    "parentId": 43,
+    "node_type": "leaf",
+    "id": 71,
+    "definition": "The activity of cleaning and washing eating utensils, plates, bowls, and kitchenware after a meal to remove food residues and maintain cleanliness.",
+    "synonyms": [
+      "Washing dishes",
+      "Dish cleaning",
+      "Utensil scrubbing"
+    ]
+  },
+  "43": {
+    "nodeId": 43,
+    "parentName": "Food & Drink Prep., Presentation, & Clean-up",
+    "nodeName": "Kitchen and food clean-up",
+    "parentId": 18,
+    "children": [
+      213
+    ],
+    "node_type": "internal",
+    "definition": "Engaging in activities related to cleaning and tidying the kitchen and food preparation areas after cooking and consuming meals.",
+    "synonyms": [
+      "Kitchen and food clean-up",
+      "Culinary space cleaning",
+      "Post-meal tidying"
+    ]
+  },
+  "106": {
+    "nodeId": 106,
+    "parentName": "Playing sports",
+    "nodeName": "Pole vault",
+    "parentId": 64,
+    "node_type": "leaf",
+    "id": 19,
+    "definition": "Participating in the track and field event of pole vault, where athletes use a flexible pole to propel themselves over a bar set at a certain height.",
+    "synonyms": [
+      "Pole vault",
+      "Athletic pole jump"
+    ]
+  },
+  "267": {
+    "nodeId": 267,
+    "parentName": "Playing musical instruments",
+    "nodeName": "Playing accordion",
+    "parentId": 61,
+    "node_type": "leaf",
+    "id": 98,
+    "definition": "Engaging in the musical activity of playing the accordion, a portable wind instrument with a keyboard and bellows, producing a distinct sound.",
+    "synonyms": [
+      "Playing accordion",
+      "Accordion performance",
+      "Squeezebox music"
+    ]
+  },
+  "268": {
+    "nodeId": 268,
+    "parentName": "Playing racquet sports ",
+    "nodeName": "Playing badminton",
+    "parentId": 54,
+    "node_type": "leaf",
+    "id": 99,
+    "definition": "Participating in the racket sport of badminton, played with two or four players hitting a shuttlecock over a net using rackets.",
+    "synonyms": [
+      "Playing badminton",
+      "Badminton match"
+    ]
+  }
+}

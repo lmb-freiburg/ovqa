@@ -1,0 +1,115 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovqa"
+description = "Open-ended Visual Question Answering (oVQA)"
+readme = "README.md"
+requires-python = ">= 3.8"
+dynamic = ["version"]
+dependencies = []
+authors = [{name = "Simon Ging"}, {name = "María A. Bravo"}]
+license = {file = "LICENSE"}
+keywords = ["Open-ended VQA", "benchmark", "Vision-Language", "VL", "Vision-Text", "VLM", "Vision-Language models", "Image classification", "Visual question answering", "Text-generating VLM"]
+
+[tool.setuptools]
+zip-safe = false
+platforms = ["any"]
+include-package-data = false
+
+[tool.setuptools.packages.find]
+# if things are non-standard i.e. packages are not in "src", explicitly tell setuptools where to find them
+include = ["ovqa"]
+
+[tool.setuptools.dynamic]
+version = { attr = "ovqa.__version__" }
+
+# ---------- black formatter
+
+[tool.black]
+line-length = 100
+
+# ---------- pytest
+
+[tool.pytest.ini_options]
+markers = ["slow", "local"]
+addopts = "--strict-markers"
+xfail_strict = true
+testpaths = ["tests"]
+
+# ignore some deprecations in 3rd party packages.
+filterwarnings = [
+    "ignore::DeprecationWarning:timm.models.*",
+    "ignore::DeprecationWarning:jupyter_client.connect.*",
+    "ignore::DeprecationWarning:lightning_utilities.core.imports",
+    "ignore::DeprecationWarning:huggingface_hub.inference.*",
+]
+
+[tool.coverage.run]
+source_pkgs = ["ovqa"]
+branch = true
+
+[tool.coverage.report]
+skip_empty = true
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:"]
+
+[tool.coverage.html]
+directory = ".covreport"
+
+[tool.coverage.xml]
+output = ".covreport/coverage.xml"
+
+# ---------- pylint
+
+[tool.pylint.main]
+# ignore files or directories. regex matches against base names, not paths.
+ignore = ["public/"]
+ignore-patterns = ["temp_*"]
+
+# multiprocessing breaks pylint output
+jobs = 1
+
+[tool.pylint.messages_control]
+enable = "all"
+disable = [
+    'suppressed-message', 'locally-disabled', 'file-ignored',
+    'line-too-long',
+    'missing-module-docstring', 'missing-class-docstring', 'missing-function-docstring',
+    'fixme',
+    'f-string-without-interpolation',
+    'invalid-name',
+    'logging-fstring-interpolation',
+    'consider-iterating-dictionary',
+    'disallowed-name',
+    'redefined-outer-name',
+    'use-implicit-booleaness-not-comparison',
+    'attribute-defined-outside-init', 'consider-using-with', 'global-statement',
+    'import-outside-toplevel', 'super-init-not-called', 'broad-exception-caught']
+
+[tool.pylint.format]
+max-line-length = 99999
+max-module-lines = 99999
+
+[tool.pylint.typecheck]
+# ignore some false positive import errors from external packages
+# occasionally this list could be cleaned up after updating the packages.
+ignored-modules = ["cv2", "pydantic", "gulpio2", "torch"]
+
+[tool.pylint.refactoring]
+max-nested-blocks = 9999
+
+[tool.pylint.design]
+max-args = 9999 # Maximum number of arguments for function / method
+max-attributes = 9999 # Maximum number of attributes for a class (see R0902).
+max-bool-expr = 9999 # Maximum number of boolean expressions in an if statement (see R0916).
+max-branches = 9999 # Maximum number of branch for function / method body.
+max-locals = 9999 # Maximum number of locals for function / method body.
+max-parents = 9999 # Maximum number of parents for a class (see R0901).
+max-public-methods = 9999 # Maximum number of public methods for a class (see R0904).
+max-returns = 9999 # Maximum number of return / yield for function / method body.
+max-statements = 9999 # Maximum number of statements in function / method body.
+min-public-methods = 0 # Minimum number of public methods for a class (see R0903).

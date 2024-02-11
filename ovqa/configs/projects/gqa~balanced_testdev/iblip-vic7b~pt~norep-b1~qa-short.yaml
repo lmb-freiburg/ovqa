@@ -1,0 +1,48 @@
+# Copyright (c) 2022, salesforce.com, inc.
+# All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause
+# For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+
+model:
+    arch: "blip2_vicuna_instruct"
+    model_type: "vicuna7b"
+    use_grad_checkpoint: False
+    qformer_text_input: True # default True
+    qformer_format_prompt: True # default True
+    # llm_model: "./llm/vicuna-7b"
+    llm_model: "eachadea/vicuna-7b-1.1"  # a github issue said to use this instead
+
+datasets:
+    gqa:
+        type: "eval"
+        vis_processor:
+            eval:
+                name: "blip_image_eval"
+                image_size: 224
+        text_processor:
+            eval:
+                name: "blip_question"
+
+run:
+    task: "gqa"
+    batch_size_train: 16
+    batch_size_eval: 16
+    num_workers: 4
+
+    max_new_tokens: 256
+    min_new_tokens: 1
+    length_penalty: 1.0  # 1.0: no penalty, -1.0: very short answers
+    num_beams: 1 
+    inference_method: "generate"
+    prompt: "Question: {} Short answer:"
+    repetition_penalty: 1.0
+
+    seed: 42
+    output_dir_add_job_id: False
+    evaluate: True
+    test_splits: [ "balanced_testdev" ]
+
+    device: "cuda"
+    world_size: 1
+    dist_url: "env://"
+    distributed: True

@@ -1,0 +1,43 @@
+model:
+    arch: x2vlm_large1b_pt
+    load_finetuned: False
+
+    pretrained: ""
+    finetuned: ""
+
+    ## Vision Encoder
+    use_beit_v2: True
+    vision_config: '${oc.env:ENV_DATA_DIR}/pretrained_models/x2vlm/config_beit2_large.json'
+    checkpoint: "${oc.env:ENV_DATA_DIR}/pretrained_models/x2vlm/xvlm_beit_1b_large_stage2_coco_rerun.th"
+    patch_size: 16
+    image_size: 384 #768 #
+
+    ## Text Encoder (& Cross Encoder)
+    text_encoder: 'bert-large-uncased'
+    text_num_hidden_layers: 18
+    text_fusion_start_at: 12
+
+    ## Retrieval params
+    embed_dim: 256
+    temp: 0.07
+    max_tokens: 40
+    
+    # Decoder params
+    num_dec_layers: 6
+    large_lr_for_dec: True
+    max_txt_len: 40
+    k_test: 128
+
+preprocess:
+    vis_processor:
+        train:
+            name: "x2vlm_image_eval"  # replace with a proper train processor if training
+            image_size: 768
+        eval:
+            name: "x2vlm_image_eval"
+            image_size: 768
+    text_processor:
+        train:
+            name: "x2vlm_text"
+        eval:
+            name: "x2vlm_text"

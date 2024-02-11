@@ -1,0 +1,31 @@
+# Copyright (c) 2022, salesforce.com, inc.
+# All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause
+# For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+
+model:
+    arch: "openflamingo"
+    load_finetuned: False
+    load_pretrained: True
+    model_name: "7b-fp16"  # see lavis/aext/models/open_flamingo_load.py
+    load_device: "cuda"  # its faster to directly load to cuda
+    pretrained: ""
+    finetuned: ""
+
+    # vit encoder
+    image_size: 224
+
+
+preprocess:
+    vis_processor:
+        train:
+            name: "openflamingo_image_eval"  # replace with a proper train processor if training
+            image_size: ${model.image_size}
+        eval:
+            name: "openflamingo_image_eval"
+            image_size: ${model.image_size}
+    text_processor:
+        train:
+            name: "openflamingo_text"
+        eval:
+            name: "openflamingo_text"

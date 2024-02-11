@@ -1,0 +1,20 @@
+# Copyright (c) 2022, salesforce.com, inc.
+# All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause
+# For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+
+datasets:
+    coco:
+        data_type: images
+        debug_dir: ${oc.env:OVQA_OUTPUT_DIR}/coco_debug
+        class_name_key: "object"
+        square_box: False
+        min_side: 40.0
+        margin_side: 2.0
+        build_info:
+            annotations:
+                val:
+                    storage:
+                        - ${oc.env:ENV_DATA_DIR}/coco/annotations/instances_val2017.json
+            images:
+                storage: ${oc.env:ENV_DATA_DIR}/coco/images/val2017

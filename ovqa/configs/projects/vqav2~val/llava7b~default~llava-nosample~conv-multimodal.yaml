@@ -1,0 +1,44 @@
+model:
+    arch: "llava"
+    model_type: "llava7b"
+    # working conv_modes for llava7b: multimodal, llava_custom_7b, none_7b
+    # working conv_modes for llava13b: llava_v1, llava_custom_13b, none_13b
+    # see lavis/aext/models/llava_model.py
+    conv_mode: "multimodal"
+
+datasets:
+    vqav2:
+        type: eval
+        vis_processor:
+            eval:
+                name: "llava_image_eval"
+                image_size: 224
+        text_processor:
+            eval:
+                name: "llava_text"
+
+run:
+    task: "vqa"
+    batch_size_train: 16
+    batch_size_eval: 4
+    num_workers: 4
+
+    max_new_tokens: 1024
+    min_new_tokens: 1
+    num_beams: 1
+    length_penalty: 1.0  # 1.0: no penalty, -1.0: very short answers
+    prompt: "{}"
+
+    use_nucleus_sampling: False
+    temperature: 0.2
+    top_p: 0.9
+
+    seed: 42
+    output_dir_add_job_id: False
+    evaluate: True
+    test_splits: [ "val" ]
+
+    device: "cuda"
+    world_size: 1
+    dist_url: "env://"
+    distributed: True

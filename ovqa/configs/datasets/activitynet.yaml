@@ -1,0 +1,18 @@
+# Copyright (c) 2022, salesforce.com, inc.
+# All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause
+# For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+
+datasets:
+    activitynet:
+        dataset_card: dataset_card/activitynet_vqa_classification.md
+        data_type: images
+        debug_dir: ${oc.env:OVQA_OUTPUT_DIR}/activitynet_debug
+        class_name_key: "activity"
+        build_info:
+            annotations:
+                val:
+                    storage:
+                        - ${oc.env:ENV_DATA_DIR}/activitynet/activity_net.v1-3.min.json
+            images:
+                storage: ${oc.env:ENV_DATA_DIR}/activitynet/frames_uncropped

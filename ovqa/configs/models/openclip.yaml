@@ -1,0 +1,24 @@
+# Copyright (c) 2022, salesforce.com, inc.
+# All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause
+# For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+
+model:
+    arch: "openclip"
+    model_type: "default"
+    model_name: "EVA01-g-14"
+    pretrained_name: "laion400m_s11b_b41k"
+    use_float16: True
+
+preprocess:
+    vis_processor:
+        eval:
+            name: "openclip_image_eval"
+            model_name: ${model.model_name}
+            pretrained_name: ${model.pretrained_name}
+            image_size: 224
+    text_processor:
+        eval:
+            name: "openclip_text"
+            model_name: ${model.model_name}
+            pretrained_name: ${model.pretrained_name}

@@ -1,0 +1,46 @@
+# Copyright (c) 2022, salesforce.com, inc.
+# All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause
+# For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+
+model:
+    arch: "openclip"
+    model_type: "default"
+    model_name: "EVA01-g-14"
+    pretrained_name: "laion400m_s11b_b41k"
+    use_grad_checkpoint: False
+    image_size: 224
+    use_float16: True
+
+datasets:
+    coco:
+        type: "eval"
+        vis_processor:
+            train:
+                name: "clip_image_train"
+                image_size: 224
+            eval:
+                name: "clip_image_eval"
+                image_size: 224
+        text_processor:
+            train:
+                name: "blip_caption"
+            eval:
+                name: "blip_caption"
+
+run:
+    task: "multimodal_classification"
+
+    batch_size_train: 16
+    batch_size_eval: 128
+    num_workers: 4
+    seed: 42
+    output_dir_add_job_id: False
+
+    evaluate: True
+    test_splits: [ "val" ]
+
+    device: "cuda"
+    world_size: 1
+    dist_url: "env://"
+    distributed: True

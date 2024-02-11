@@ -1,0 +1,40 @@
+model:
+    arch: "x2vlm"
+    model_type: "x2vlm_large1b_ftvqa"
+
+datasets:
+    coco:
+        type: "eval"
+        vis_processor:
+            eval:
+                name: "x2vlm_image_eval"
+                image_size: 768
+        text_processor:
+            eval:
+                name: "x2vlm_text"
+
+run:
+    task: "classifier_vqa"
+    batch_size_train: 16
+    batch_size_eval: 16
+    num_workers: 4
+
+    max_new_tokens: 20
+    min_new_tokens: 1
+    length_penalty: 1.0  # 1.0: no penalty, -1.0: very short answers
+    num_beams: 1
+    prompt: "{}"
+
+    use_nucleus_sampling: False
+    temperature: 0.2
+    top_p: 0.9
+
+    seed: 42
+    output_dir_add_job_id: False
+    evaluate: True
+    test_splits: [ "val" ]
+
+    device: "cuda"
+    world_size: 1
+    dist_url: "env://"
+    distributed: True

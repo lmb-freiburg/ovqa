@@ -1,0 +1,24 @@
+run:
+    task: "classifier_vqa_followup"
+
+    # old result folder with result/val_vqa_result.json must be set by model config
+    followup_prev_dir: none
+    followup_cfg:
+        model_name: "EVA01-g-14/laion400m_s11b_b41k"
+        package_name: "open-clip"
+
+        # matching predictions to accuracy, to find wrong answers
+        use_synonyms_leaves: false
+        templates_name_leaves: "openai_imagenet_template"
+        arg_max_or_average_syn_leaves: "arg_max_syn"
+
+        # matching predictions to parents, to find next question object
+        use_synonyms_parents: true
+        templates_name_parents: "openai_imagenet_template"
+        arg_max_or_average_syn_parents: "arg_max_syn"
+
+        threshold: 0.37
+        # followup_prompt: none  # will be set by model config
+        default_followup_object: "object"
+        cut_long_text: true
+        exclude_parents: [ "n00001740" ]  # entity

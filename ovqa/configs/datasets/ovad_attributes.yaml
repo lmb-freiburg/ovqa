@@ -1,0 +1,23 @@
+# Copyright (c) 2022, salesforce.com, inc.
+# All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause
+# For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+
+datasets:
+    ovad_attributes:
+        dataset_card: dataset_card/ovad_vqa_classification.md
+        data_type: images # [images|videos|features] 
+        debug_dir: ${oc.env:OVQA_OUTPUT_DIR}/ovad_attributes_debug
+        class_name_key: "attribute"
+        square_box: False
+        min_side: 40.0
+        margin_side: 2.0
+        build_info:
+            # Be careful not to append minus sign (-) before split to avoid itemizing
+            annotations:
+                val:
+                    storage:
+                        - ovqa/annotations/ovad/ovad2000.json
+                        - ovqa/annotations/ovad/ovad_attribute_prompts.json
+            images:
+                storage: ${oc.env:ENV_DATA_DIR}/coco/images/val2017

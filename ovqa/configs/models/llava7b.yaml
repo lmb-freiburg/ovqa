@@ -1,0 +1,33 @@
+# Copyright (c) 2022, salesforce.com, inc.
+# All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause
+# For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+
+model:
+    arch: llava7b
+    load_finetuned: False
+    load_pretrained: True
+
+    pretrained: ""
+    finetuned: ""
+
+    image_size: 224
+    llm_model: "${oc.env:ENV_DATA_DIR}/pretrained_models/LLaVA/LLaVA-7B-v0"
+
+    conv_mode: "multimodal"  # multimodal for llava7b and llava_v1 for llava13b
+    num_gpus: 1  # 13B model requires 2x24GB GPU to run
+
+
+preprocess:
+    vis_processor:
+        train:
+            name: "llava_image_eval"  # replace with a proper train processor if training
+            image_size: 224
+        eval:
+            name: "llava_image_eval"
+            image_size: 224
+    text_processor:
+        train:
+            name: "llava_text"
+        eval:
+            name: "llava_text"
