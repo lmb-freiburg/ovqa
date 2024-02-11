@@ -132,7 +132,29 @@ Note: In the label space we renamed two classes to avoid duplicate labels:
 
 [Homepage](http://activity-net.org/index.html)
 
-Setup: TBD
+```bash
+mkdir -p data/activitynet
+cd data/activitynet
+# download the activitynet annotations
+wget http://ec2-52-25-205-214.us-west-2.compute.amazonaws.com/files/activity_net.v1-3.min.json
+
+mkdir -p frames_uncropped
+cd frames_uncropped
+# TBD wget ...middleframes_val.tar
+tar -xf middleframes_val.tar
+
+cd ../../..
+
+# # final structure should be
+# data/activitynet
+#     activity_net.v1-3.min.json
+#     frames_uncropped/
+#         middleframes_val/
+#             ...
+#             v_-zZJmRT9udU/frame_0000001394.jpg
+```
+
+
 
 #### COCO
 
