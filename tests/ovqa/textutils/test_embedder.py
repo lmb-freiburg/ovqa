@@ -21,6 +21,7 @@ def test_embedder_simple():
     ember = get_sentence_embedder(
         model_name="all-MiniLM-L6-v2",
         package_name=EmbeddingsPackageConst.SENTENCE_TRANSFORMERS,
+        device="cpu",
     )
     outputs = ember.encode(sentences)
     outputs = normalize_embeddings(outputs)
@@ -39,6 +40,7 @@ def test_embedder_db():
         model_name="all-MiniLM-L6-v2",
         package_name=EmbeddingsPackageConst.SENTENCE_TRANSFORMERS,
         use_db=True,
+        device="cpu",
     )
     outputs = ember.encode(sentences)
     outputs = normalize_embeddings(outputs)
