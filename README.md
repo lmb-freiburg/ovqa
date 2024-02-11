@@ -1,5 +1,11 @@
 ![Computer Vision, University of Freiburg](assets/cv_logo.png)
 
+<p align="center">
+<a href="https://github.com/lmb-freiburg/ovqa/actions/workflows/build-py310-cpu.yml">
+  <img alt="build 3.10 status" title="build 3.10 status" src="https://img.shields.io/github/actions/workflow/status/lmb-freiburg/ovqa/build-py310-cpu.yml?branch=main&label=build%203.10%20cpu" />
+</a>
+</p>
+
 # oVQA: Open-ended Visual Question Answering
 
 This repository contains the official implementation of our [paper]()
