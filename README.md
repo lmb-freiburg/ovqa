@@ -14,11 +14,10 @@ accepted to ICLR 2024.
 
 ## News
 
-February 2024: Camera-ready code and paper release.
+February 2024: Code release.
 
 - Reproduce oVQA, classical VQA and Retrieval results from our paper.
 - Compute metrics: BEM, BLEURT, BertScore, LERC, Llama2-based metric, ExactMatch and Contains (substring matching) with and without synonyms, ngram-based metrics BLEU, METEOR, ROUGE, CIDEr, SPICE, Token-F1.
-- Camera-ready version of our paper is released on arXiv.
 
 ## Setup
 
