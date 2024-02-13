@@ -8,14 +8,17 @@
 
 # oVQA: Open-ended Visual Question Answering
 
-This repository contains the official implementation of our [paper]()
+This repository contains the official implementation of our [paper](https://arxiv.org/abs/2402.07270)
 **"Open-ended VQA benchmarking of Vision-Language models by exploiting Classification datasets and their semantic hierarchy"**
 accepted to ICLR 2024.
 
-## Features
+## News
 
-- Reproduce oVQA, classical VQA and Retrieval results from the paper.
-- Compute metrics: BEM, BLEURT, BertScore, LERC, Llama2-based metric, ExactMatch and Contains (substring matching) with and without synonyms, ngram-based metrics BLEU, METEOR, ROUGE, CIDEr, SPICE, Token-F1.
+**February 2024: code relased**
+
+- **Reproduce oVQA, classical VQA and Retrieval results** from our paper.
+- **Compute metrics:** BEM, BLEURT, BertScore, LERC, Llama2-based metric, ExactMatch and Contains (substring matching) with and without synonyms, ngram-based metrics BLEU, METEOR, ROUGE, CIDEr, SPICE, Token-F1.
+- Camera-ready version of our paper is released on arXiv.
 
 ## Setup
 
