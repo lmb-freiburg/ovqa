@@ -9,7 +9,7 @@ from ovqa.paths import print_all_environment_variables
 
 
 def main():
-    print_all_environment_variables(prefix="export ")
+    print_all_environment_variables(prefix="export ", verbose=False)
 
 
 if __name__ == "__main__":

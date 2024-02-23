@@ -47,7 +47,7 @@ def setup_ovqa_environ(
                 print(f"from ovqa.paths defaults write: {env_k}={v}")
             os.environ[env_k] = v
     if verbose:
-        print(f"Done setting up ovqa environment.")
+        print(f"# Done setting up ovqa environment.")
 
 
 def get_ovqa_repo_root():
@@ -69,8 +69,8 @@ def get_ovqa_cache_dir():
     return get_cache_dir() / "ovqa"
 
 
-def print_all_environment_variables(print_fn=print, prefix="    "):
-    setup_ovqa_environ(verbose=True)
+def print_all_environment_variables(print_fn=print, prefix="    ", verbose=True):
+    setup_ovqa_environ(verbose=verbose)
     print_fn(f"# path definitions:")
     for env_k in list(EnvKeys.values()) + list(OvqaEnvKeys.values()):
         print_fn(f"{prefix}{env_k}={os.environ[env_k]}")
