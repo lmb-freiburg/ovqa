@@ -30,7 +30,7 @@ def main():
         if i % 100 == 0:
             logger.info(f"Downloading video {i + 1}/{len(video_ids)}")
         yt = YouTube(f"http://youtube.com/watch?v={video_id}")
-        download_highest_resolution_progressive(youtube=yt, resolution="highest", target=".")
+        download_highest_resolution_progressive(youtube=yt, resolution="highest", target=target_dir)
 
 
 if __name__ == "__main__":
