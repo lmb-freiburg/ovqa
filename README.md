@@ -12,6 +12,36 @@ This repository contains the official implementation of our [paper](https://arxi
 **"Open-ended VQA benchmarking of Vision-Language models by exploiting Classification datasets and their semantic hierarchy"**
 accepted to ICLR 2024.
 
+<!--TOC-->
+
+- [oVQA: Open-ended Visual Question Answering](#ovqa-open-ended-visual-question-answering)
+  - [News](#news)
+  - [Setup](#setup)
+    - [Python environment](#python-environment)
+    - [Notes](#notes)
+    - [Setup the paths](#setup-the-paths)
+    - [Setup datasets](#setup-datasets)
+      - [Imagenet](#imagenet)
+      - [ActivityNet](#activitynet)
+      - [COCO](#coco)
+      - [OVAD](#ovad)
+      - [VQAv2](#vqav2)
+      - [GQA](#gqa)
+    - [Setup model outputs](#setup-model-outputs)
+    - [Setup model checkpoints](#setup-model-checkpoints)
+      - [LLaVA-7B-v0](#llava-7b-v0)
+      - [X2VLM](#x2vlm)
+      - [Test model setup](#test-model-setup)
+    - [Setup metrics](#setup-metrics)
+      - [Installing and running BEM metric](#installing-and-running-bem-metric)
+  - [Running](#running)
+  - [Dev commands](#dev-commands)
+  - [Licenses](#licenses)
+  - [Acknowledgements](#acknowledgements)
+  - [Citation](#citation)
+
+<!--TOC-->
+
 ## News
 
 February 2024: Code release.
