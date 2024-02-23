@@ -14,21 +14,20 @@ accepted to ICLR 2024.
 
 <!--TOC-->
 
-- [oVQA: Open-ended Visual Question Answering](#ovqa-open-ended-visual-question-answering)
-  - [News](#news)
-  - [Setup](#setup)
-    - [Python environment](#python-environment)
-    - [Notes](#notes)
-    - [Setup the paths](#setup-the-paths)
-    - [Setup datasets](#setup-datasets)
-    - [Setup model outputs](#setup-model-outputs)
-    - [Setup model checkpoints](#setup-model-checkpoints)
-    - [Setup metrics](#setup-metrics)
-  - [Running](#running)
-  - [Dev commands](#dev-commands)
-  - [Licenses](#licenses)
-  - [Acknowledgements](#acknowledgements)
-  - [Citation](#citation)
+- [News](#news)
+- [Setup](#setup)
+  - [Python environment](#python-environment)
+  - [Notes](#notes)
+  - [Setup the paths](#setup-the-paths)
+  - [Setup datasets](#setup-datasets)
+  - [Setup model outputs](#setup-model-outputs)
+  - [Setup model checkpoints](#setup-model-checkpoints)
+  - [Setup metrics](#setup-metrics)
+- [Running](#running)
+- [Dev commands](#dev-commands)
+- [Licenses](#licenses)
+- [Acknowledgements](#acknowledgements)
+- [Citation](#citation)
 
 <!--TOC-->
 
