@@ -166,15 +166,20 @@ cd data/activitynet
 # download the activitynet annotations
 wget http://ec2-52-25-205-214.us-west-2.compute.amazonaws.com/files/activity_net.v1-3.min.json
 
-pip install fiftyone pytube
-python -c 'import fiftyone; fiftyone.zoo.load_zoo_dataset("activitynet-200", split="validation", dataset_dir=".", progress=True, max_samples=4926)'
+# download existing videos from youtube
+pip install pytube
+python -m ovqa.cli.download_activitynet
+
+# request missing videos, see author homepage
+
 
 # mkdir -p frames_uncropped
 # cd frames_uncropped
 # # TBD wget ...middleframes_val.tar
 # tar -xf middleframes_val.tar
+# cd ..
 
-cd ../../..
+cd ../..
 
 # # final structure should be
 # data/activitynet
