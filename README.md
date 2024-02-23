@@ -165,21 +165,26 @@ mkdir -p data/activitynet
 cd data/activitynet
 # download the activitynet annotations
 wget http://ec2-52-25-205-214.us-west-2.compute.amazonaws.com/files/activity_net.v1-3.min.json
+cd ../..
 
 # download existing videos from youtube
 pip install pytube
 python -m ovqa.cli.download_activitynet
+# afterwards request the missing videos, see author homepage
+# TBD compute_missing_videos.py script
+# now all videos should be setup in data/activitynet/videos
 
-# request missing videos, see author homepage
+# install ffmpeg system-wide or via conda-forge
+# install ffmpeg python helper
+pip install ffmpeg-python
 
+# extract the frames
+python -m ovqa.cli.extract_activitynet_frames
+# TBD copy required frames, and delete frames that are not needed
 
 # mkdir -p frames_uncropped
 # cd frames_uncropped
-# # TBD wget ...middleframes_val.tar
 # tar -xf middleframes_val.tar
-# cd ..
-
-cd ../..
 
 # # final structure should be
 # data/activitynet
@@ -452,4 +457,12 @@ Additionally we would like to acknowledge:
 
 ## Citation
 
-TBD
+```bibtex
+@inproceedings{gingbravo2024ovqa,
+title={Open-ended {VQA} benchmarking of Vision-Language models by exploiting Classification datasets and their semantic hierarchy},
+author={Simon Ging and Maria Alejandra Bravo and Thomas Brox},
+booktitle={The Twelfth International Conference on Learning Representations},
+year={2024},
+url={https://arxiv.org/abs/2402.07270}
+}
+```
