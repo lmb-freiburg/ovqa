@@ -1,20 +1,20 @@
 """
-python -m vislan.run.data_videos_to_frames -x 480 -y 480 --crop_method scale_shorter_side \
-    -i /misc/lmbssd/gings/datasets/activitynet/raw/videos \
-    /misc/lmbssd/gings/datasets/activitynet/raw/frames_uncropped \
-    -l /misc/lmbssd/gings/datasets/activitynet/raw/video_list_subset_validation.txt
+Extract frames from videos.
+
+Requires ffmpeg-python and system ffmpeg.
 """
 
-import argparse
+from collections import OrderedDict
+
 import json
+import numpy as np
 import os
 import shutil
-from collections import OrderedDict
+from attrs import define
 from fractions import Fraction
+from loguru import logger
 from pathlib import Path
 from typing import Optional
-
-import numpy as np
 
 from ovqa.videos_to_frames_utils import (
     systemcall,
@@ -26,6 +26,8 @@ from ovqa.videos_to_frames_utils import (
     get_scaled_crop,
     get_smart_crop_resize_actions,
 )
+from packg.log import SHORTEST_FORMAT, configure_logger, get_logger_level_from_args
+from typedparser import add_argument, TypedParser, VerboseQuietArgs
 
 FRAME_FILE = "frame_%010d.jpg"
 FILETYPES = ["mp4", "mkv", "webm"]
@@ -33,70 +35,60 @@ FFPROBE_INFO_FILE = "ffprobe_videos.json"
 FFPROBE_ANALYSIS_FILE = "ffprobe_results.txt"
 
 
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "-i", "--input_path", type=str, help="input path to videos", default=None, required=True
+@define(slots=False)
+class Args(VerboseQuietArgs):
+    input_path: str = add_argument(shortcut="-i", help="input path to videos", required=True)
+    input_list: Optional[str] = add_argument(
+        shortcut="-l", help="list of video file names to process less"
     )
-    parser.add_argument(
-        "-l",
-        "--input_list",
-        type=str,
-        help="list of video file names to process less",
-        default=None,
+    output_path: str = add_argument("output_path", help="output path")
+    write: bool = add_argument("--write", action="store_true", help="Start the crop.")
+    fps: float = add_argument("--fps", type=float, default=16, help="Frames per second.")
+    num_frames: Optional[int] = add_argument(
+        "--num_frames", type=int, help="Overwrite FPS and fix number of frames per video."
     )
-    parser.add_argument("output_path", type=str, help="output path")
-    parser.add_argument("--write", action="store_true", help="Start the crop.")
-    parser.add_argument("--fps", type=float, default=16, help="Frames per second.")
-    parser.add_argument(
-        "--num_frames",
-        type=int,
-        default=None,
-        help="Overwrite FPS and fix number of frames per video.",
-    )
-    parser.add_argument(
+    reload: bool = add_argument(
         "--reload",
         action="store_true",
         help="reload all video information from the files using ffmpeg",
     )
-    parser.add_argument(
-        "-x", "--width", type=int, default=256, help="target width of extracted frames"
+    width: int = add_argument(
+        shortcut="-x", type=int, default=256, help="target width of extracted frames"
     )
-    parser.add_argument(
-        "-y", "--height", type=int, default=256, help="target height of extracted frames"
+    height: int = add_argument(
+        shortcut="-y", type=int, default=256, help="target height of extracted frames"
     )
-    parser.add_argument(
-        "-q", "--quality", type=int, default=2, help="frame jpeg quality (2=best, 31=worst)"
+    quality: int = add_argument(type=int, default=2, help="frame jpeg quality (2=best, 31=worst)")
+    num_workers: int = add_argument(
+        type=int, default=0, help="how many processes to spawn, 0 means use cpu_count, "
     )
-    parser.add_argument(
-        "--num_workers",
-        type=int,
-        default=0,
-        help="how many processes to spawn, 0 means use cpu_count, ",
+    max_videos: int = add_argument(
+        type=int, default=-1, help="how many videos to process in one run, default -1 = all"
     )
-    parser.add_argument(
-        "--max_videos",
-        type=int,
-        default=-1,
-        help="how many videos to process in one run, default -1 = all",
+    disable_progressbar: bool = add_argument(
+        action="store_true", help="multiprocessing without progressbar"
     )
-    parser.add_argument(
-        "--disable_progressbar", action="store_true", help="multiprocessing without progressbar"
-    )
-    parser.add_argument(
-        "--crop_method",
+    crop_method: str = add_argument(
         type=str,
         default="scaled_crop",
         help="1) center_crop for a simple center crop or "
         "2) scaled_crop to crop the longer edge first and then resize the "
         "image to target size or 3) smart_crop 4) scale_shorter_side for no cropping",
     )
-    parser.add_argument("--smart_crop_ratio", type=float, default=0.5)
-    parser.add_argument("--smart_resize_min", type=float, default=1.1)
-    parser.add_argument("--smart_resize_max", type=float, default=1.25)
-    parser.add_argument("--verbose", action="store_true", help="more output")
-    args = parser.parse_args()
+    smart_crop_ratio: float = add_argument("--smart_crop_ratio", type=float, default=0.5)
+    smart_resize_min: float = add_argument("--smart_resize_min", type=float, default=1.1)
+    smart_resize_max: float = add_argument("--smart_resize_max", type=float, default=1.25)
 
+
+def main():
+    parser = TypedParser.create_parser(Args, description=__doc__)
+    args: Args = parser.parse_args()
+    configure_logger(level=get_logger_level_from_args(args), format=SHORTEST_FORMAT)
+    logger.info(f"{args}")
+    extract_frames(args)
+
+
+def extract_frames(args: Args):
     if args.crop_method == "scale_shorter_side":
         assert args.width == args.height, (
             f"For scale_shorter_side, x and y must be the same but are "
