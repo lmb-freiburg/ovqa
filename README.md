@@ -166,10 +166,13 @@ cd data/activitynet
 # download the activitynet annotations
 wget http://ec2-52-25-205-214.us-west-2.compute.amazonaws.com/files/activity_net.v1-3.min.json
 
-mkdir -p frames_uncropped
-cd frames_uncropped
-# TBD wget ...middleframes_val.tar
-tar -xf middleframes_val.tar
+pip install fiftyone pytube
+python -c 'import fiftyone; fiftyone.zoo.load_zoo_dataset("activitynet-200", split="validation", dataset_dir=".", progress=True, max_samples=4926)'
+
+# mkdir -p frames_uncropped
+# cd frames_uncropped
+# # TBD wget ...middleframes_val.tar
+# tar -xf middleframes_val.tar
 
 cd ../../..
 
@@ -401,8 +404,10 @@ See `run_scripts/` for running the model evaluation and computing the metrics. S
 ## Dev commands
 
 ```bash
+pip install -U pytest black[jupyter] md-toc
 python -m pytest
 black -l 100 ovqa tests *.py
+python update_toc.py
 
 ```
 

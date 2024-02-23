@@ -17,11 +17,11 @@ class ActivityNet(ClsMetadataInterface):
     @classmethod
     def load_split(
         cls,
-        dataset_split: str = "validation",
+        dataset_split: str = "val",
         label_field_name: str = "nodeName",
         frame_selection: str = "middle",
         fps: int = 16,
-        **kwargs,
+        **_kwargs,
     ):
         assert frame_selection == "middle", f"Frame selection {frame_selection} not implemented"
         available_splits = ["val"]
@@ -165,9 +165,8 @@ class ActivityNet(ClsMetadataInterface):
 
 
 def main():
-    for split in "val", "validation":
-        dx = ActivityNet.load_split("val")
-        print(len(dx.annotations), f"for {split}")
+    dx = ActivityNet.load_split("val")
+    print(len(dx.annotations))
     print(f"Done")
 
 
