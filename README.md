@@ -21,19 +21,9 @@ accepted to ICLR 2024.
     - [Notes](#notes)
     - [Setup the paths](#setup-the-paths)
     - [Setup datasets](#setup-datasets)
-      - [Imagenet](#imagenet)
-      - [ActivityNet](#activitynet)
-      - [COCO](#coco)
-      - [OVAD](#ovad)
-      - [VQAv2](#vqav2)
-      - [GQA](#gqa)
     - [Setup model outputs](#setup-model-outputs)
     - [Setup model checkpoints](#setup-model-checkpoints)
-      - [LLaVA-7B-v0](#llava-7b-v0)
-      - [X2VLM](#x2vlm)
-      - [Test model setup](#test-model-setup)
     - [Setup metrics](#setup-metrics)
-      - [Installing and running BEM metric](#installing-and-running-bem-metric)
   - [Running](#running)
   - [Dev commands](#dev-commands)
   - [Licenses](#licenses)
@@ -41,6 +31,7 @@ accepted to ICLR 2024.
   - [Citation](#citation)
 
 <!--TOC-->
+
 
 ## News
 
