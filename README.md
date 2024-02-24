@@ -167,21 +167,33 @@ cd data/activitynet
 wget http://ec2-52-25-205-214.us-west-2.compute.amazonaws.com/files/activity_net.v1-3.min.json
 cd ../..
 
+# install ffmpeg system-wide or via conda-forge
+# install ffmpeg python helper and pytube:
+pip install ffmpeg-python pytube
+
+
 # download existing videos from youtube
 pip install pytube
 python -m ovqa.cli.download_activitynet
-# afterwards request the missing videos, see author homepage
-# TBD compute_missing_videos.py script
-# now all videos should be setup in data/activitynet/videos
+# they will be downloaded to
+# data/activitynet/videos/
+# some videos will be missing.
 
-# install ffmpeg system-wide or via conda-forge
-# install ffmpeg python helper
-pip install ffmpeg-python
+# next, run the frame extraction script. if there are corrupt videos, delete them.
+python -m ovqa.cli.extract_activitynet_frames --num_workers 4
 
-# extract the frames
-python -m ovqa.cli.extract_activitynet_frames
+# compute the list of missing videos. this creates data/activitynet/missing_video_ids.txt
+python -m ovqa.cli.check_missing_activitynet
+
+# request the missing videos from the author's (see homepage)
+# and copy them to data/activitynet/videos
+# now the folder should contain 4926 videos.
+# run the frame extraction again, to extract the frames for the missing videos.
+python -m ovqa.cli.extract_activitynet_frames --num_workers 4
+
 # TBD copy required frames, and delete frames that are not needed
 
+# # TBD frames as tar
 # mkdir -p frames_uncropped
 # cd frames_uncropped
 # tar -xf middleframes_val.tar
