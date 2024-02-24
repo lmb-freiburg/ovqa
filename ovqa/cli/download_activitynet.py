@@ -68,7 +68,7 @@ def _download(
     filesize_megabytes = stream.filesize // 1048576
     filename_orig = stream.default_filename
     ending = filename_orig.split(".")[-1]
-    filename = f"{video_id}.{ending}"
+    filename = f"v_{video_id}.{ending}"
     print(f"{filename} | {filesize_megabytes} MB | {filename_orig[:-len(ending)-1]}")
     file_path = stream.get_file_path(filename=filename, output_path=target)
     if stream.exists_at_path(file_path):

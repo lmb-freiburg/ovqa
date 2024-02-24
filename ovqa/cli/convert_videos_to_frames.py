@@ -27,6 +27,7 @@ from ovqa.videos_to_frames_utils import (
     get_smart_crop_resize_actions,
 )
 from packg.log import SHORTEST_FORMAT, configure_logger, get_logger_level_from_args
+from packg.multiproc import FnMultiProcessor
 from typedparser import add_argument, TypedParser, VerboseQuietArgs
 
 FRAME_FILE = "frame_%010d.jpg"
@@ -123,8 +124,8 @@ def extract_frames(args: Args):
             else:
                 print(f"WARN: {file} not found in {all_files[:min(10, len(all_files))]} ...")
                 fail += 1
-        if fail:
-            raise ValueError(f"Missing {fail} videos out of {len(files)}")
+        if fail > 0:
+            print(f"WARN: Missing {fail} videos out of {len(files)}")
         files = new_files
         print(f"Got files: {files[:min(10, len(files))]} etc")
     file_keys = []
@@ -186,23 +187,31 @@ def extract_frames(args: Args):
         #     # num_tasks -= 1
 
         # setup multiprocessing
-        mp = MultiProcessor(num_workers=args.num_workers, progressbar=not args.disable_progressbar)
+        num_tasks = len(file_keys)
+        mp = FnMultiProcessor(
+            workers=args.num_workers,
+            target_fn=run_ffprobe_fn,
+            ignore_errors=True,
+            verbose=not args.disable_progressbar,
+            with_output=True,
+            total=num_tasks,
+            desc="Running ffprobe",
+        )
 
         # enqueue tasks and run them
-        num_tasks = len(file_keys)
         for file_key, file_format in zip(file_keys, file_formats):
             file_video = input_path / f"{file_key}.{file_format}"
-            mp.add_task(TaskFfprobe(file_key, file_video))
-        results = mp.run()
-        mp.close()
-
-        # read results
+            mp.put(file_key, file_video)
+        mp.run()
         ffprobe_infos = OrderedDict()
-        for r in results:
+        print(f"\nStart reading output...")
+        for _ in range(num_tasks):
+            r = mp.get()
+            if r is None:
+                continue
             vid_id, ffprobe_info = r
             ffprobe_infos[vid_id] = ffprobe_info
-            num_tasks -= 1
-
+        mp.close()
         # store to file
         with ffprobe_file.open("wt", encoding="utf8") as fh:
             json.dump(ffprobe_infos, fh, indent=4, sort_keys=True)
@@ -213,9 +222,18 @@ def extract_frames(args: Args):
             ffprobe_infos = json.load(fh)
             print(f"Reloaded {len(ffprobe_infos)} videos from ffprobe results")
     print(f"{len(ffprobe_infos)} videos in ffprobe infos. {len(file_keys)} files to process.")
-    assert all(
-        file in ffprobe_infos for file in file_keys
-    ), f"{ffprobe_infos.keys()}, {file_keys}. FFPROBE info seems incorrect, try reloading with --reload"
+    ffprobe_infos_keys = set(ffprobe_infos.keys())
+    missing_ffprobe_files = []
+    for file in file_keys:
+        if file not in ffprobe_infos_keys:
+            missing_ffprobe_files.append(file)
+    if len(missing_ffprobe_files) > 0:
+        missing_files_str = "\n".join(missing_ffprobe_files)
+        raise RuntimeError(
+            f"Found {len(ffprobe_infos_keys)} files in ffprobe infos. Missing "
+            f"{len(missing_ffprobe_files)} files:\n\n{missing_files_str}\n\n"
+            f"Delete corrupt videos and re-run this script with --reload"
+        )
 
     # analyze ffprobe info
     format_list, ratio_list, fps_list, duration_list = [], [], [], []
@@ -283,13 +301,20 @@ def extract_frames(args: Args):
         return
 
     # start multiprocessing
-    mp = MultiProcessor(num_workers=args.num_workers, progressbar=not args.disable_progressbar)
+    num_tasks = len(file_keys_process)
+    mp = FnMultiProcessor(
+        workers=args.num_workers,
+        target_fn=extract_frames_fn,
+        ignore_errors=True,
+        verbose=not args.disable_progressbar,
+        with_output=True,
+        total=num_tasks,
+        desc="Extracting frames",
+    )
 
     # enqueue tasks and run
-    num_tasks = len(file_keys_process)
     for file_key, file_format in zip(file_keys_process, file_formats_process):
         # determine video file path and frame folder
-
         file_video_full = input_path / f"{file_key}.{file_format}"
         path_frames_full = output_path / file_key
 
@@ -300,7 +325,7 @@ def extract_frames(args: Args):
         frames_per_video = None
         if isinstance(args.num_frames, int) and args.num_frames > 0:
             frames_per_video = args.num_frames
-        task = TaskExtractFrames(
+        mp.put(
             file_key,
             str(file_video_full),
             path_frames_full,
@@ -309,25 +334,25 @@ def extract_frames(args: Args):
             args.height,
             args.fps,
             args.quality,
-            crop_method=args.crop_method,
-            verbose=args.verbose,
-            frames_per_video=frames_per_video,
+            args.crop_method,
+            args.smart_crop_ratio,
+            args.smart_resize_min,
+            args.smart_resize_max,
+            args.verbose,
+            frames_per_video,
         )
-        mp.add_task(task)
-    results = mp.run()
-    # mp.close()
+    mp.run()
 
     # read results
     done_fh = done_file.open("wt")
     done_fh.write("\n".join(done_keys))
     print("analyzing results")
-    for result in results:
+    for _ in range(num_tasks):
+        result = mp.get()
         if result is None:
             # do not update data for failed videos
-            num_tasks -= 1
             continue
         else:
-            num_tasks -= 1
             vid_id, retcode, w, h, fps, num_frames = result
             done_fh.write(f"{vid_id}\n")
 
@@ -335,167 +360,110 @@ def extract_frames(args: Args):
     os.system("stty sane")
 
 
-class TaskFfprobe(object):
-    """
-    Video analysis with ffprobe
-    """
-
-    def __init__(self, vid_id, file_video):
-        self.vid_id = vid_id
-        self.file_video = file_video
-
-    def __call__(self):
-        probe_info = get_video_ffprobe_info(self.file_video)
-        # DEBUG PRINT
-        # print(f"Duration is {probe_info['duration']}")
-        return self.vid_id, probe_info
-
-    def __str__(self):
-        return "ffmpeg.probe on video {:s}".format(self.vid_id)
+def run_ffprobe_fn(vid_id, file_video):
+    probe_info = get_video_ffprobe_info(file_video)
+    return vid_id, probe_info
 
 
-class TaskExtractFrames(object):
-    """
-    Frame extraction with ffmpeg
-    """
+def extract_frames_fn(
+    vid_id,
+    file_video,
+    folder_frames,
+    ffprobe_info,
+    target_w,
+    target_h,
+    target_fps,
+    qscale,
+    crop_method="scaled_crop",
+    smart_crop_ratio=0.5,
+    smart_resize_min=1.1,
+    smart_resize_max=1.25,
+    verbose=False,
+    frames_per_video: Optional[int] = None,
+):
+    # frames_per_video: this overrides fps such that there is a fixed amount of frames per video
+    # get width and height from ffprobe info
+    w, h, fps, duration = get_video_info_from_ffprobe_result(ffprobe_info)
 
-    def __init__(
-        self,
-        vid_id,
-        file_video,
-        folder_frames,
-        ffprobe_info,
-        tw,
-        th,
-        fps,
-        qscale,
-        crop_method="scaled_crop",
-        smart_crop_ratio=0.5,
-        smart_resize_min=1.1,
-        smart_resize_max=1.25,
-        assume_done=False,
-        verbose=False,
-        frames_per_video: Optional[int] = None,
-    ):
-        """
+    # prepare empty frame directory
+    shutil.rmtree(str(folder_frames), ignore_errors=True)
+    os.makedirs(str(folder_frames))
 
-        Args:
-            vid_id:
-            file_video:
-            folder_frames:
-            ffprobe_info:
-            tw:
-            th:
-            fps:
-            qscale:
-            crop_method:
-            smart_crop_ratio:
-            smart_resize_min:
-            smart_resize_max:
-            assume_done:
-            verbose:
-            frames_per_video: this overrides fps such that there is a fixed amount of frames per video
-        """
-        self.vid_id = vid_id
-        self.file_video = file_video
-        self.folder_frames = folder_frames
-        self.ffprobe_info = ffprobe_info
-        self.target_w = tw
-        self.target_h = th
-        self.target_fps = fps
-        self.qscale = qscale
-        self.crop_method = crop_method
-        self.smart_crop_ratio = smart_crop_ratio
-        self.smart_resize_min = smart_resize_min
-        self.smart_resize_max = smart_resize_max
-        self.assume_done = assume_done
-        self.verbose = verbose
-        self.frames_per_video = frames_per_video
-
-    def __call__(self):
-        # get width and height from ffprobe info
-        w, h, fps, duration = get_video_info_from_ffprobe_result(self.ffprobe_info)
-        target_w, target_h = self.target_w, self.target_h
-
-        # prepare empty frame directory
-        shutil.rmtree(str(self.folder_frames), ignore_errors=True)
-        os.makedirs(str(self.folder_frames))
-
-        if self.crop_method == "scaled_crop":
-            # get scaled crop
-            crop_y, crop_x, crop_h, crop_w = get_scaled_crop(h, w, target_h, target_w)
-            ffmpeg_filter = "crop={:d}:{:d}:{:d}:{:d},scale={:d}:{:d}".format(
-                crop_w, crop_h, crop_x, crop_y, target_w, target_h
-            )
-            # print(f"Scaled crop filter: {ffmpeg_filter}")
-        elif self.crop_method == "center_crop":
-            # get center crop
-            crop_x, crop_y, crop_w, crop_h = get_center_crop(h, w, target_h, target_w)
-            ffmpeg_filter = "crop={:d}:{:d}:{:d}:{:d},".format(crop_w, crop_h, crop_x, crop_y)
-        elif self.crop_method == "smart_crop":
-            # get smart crop actions
-            actions = get_smart_crop_resize_actions(
-                h,
-                w,
-                target_h,
-                target_w,
-                self.smart_crop_ratio,
-                self.smart_resize_min,
-                self.smart_resize_max,
-                verbose=self.verbose,
-            )
-            ffmpeg_filter = convert_actions_to_ffmpeg_filter(actions)
-        elif self.crop_method == "scale_shorter_side":
-            assert (
-                target_w == target_h
-            ), f"For scale_shorter_side, x and y must be same but are {target_w} and {target_h}"
-            target_scale = target_w
-            if h <= target_scale or w <= target_scale:
-                # the shorter side is already small enough
-                ffmpeg_filter = None
-            elif w < h:
-                # width is the shorter side, scale that to target
-                ffmpeg_filter = f"scale={target_scale}:-1"
-            else:
-                # height is the shorter side, scale that to target
-                ffmpeg_filter = f"scale=-1:{target_scale}"
-        else:
-            raise ValueError("crop method not found: {}".format(self.crop_method))
-
-        target_fps = self.target_fps
-        if self.frames_per_video is not None:
-            # without fps
-            target_fps = self.frames_per_video / self.ffprobe_info["duration"]
-
-        # define the ffmpeg command with filters
-        file_frames = str(self.folder_frames / FRAME_FILE)
-        if ffmpeg_filter is not None:
-            filter_string = f'-vf "{ffmpeg_filter:s},fps={target_fps:f}"'
-        else:
-            filter_string = f'-vf "fps={target_fps:f}"'
-
-        cmd = (
-            f"ffmpeg -i {self.file_video:s} -hide_banner {filter_string} "
-            f"-qscale:v {self.qscale:d} {file_frames:s}"
+    if crop_method == "scaled_crop":
+        # get scaled crop
+        crop_y, crop_x, crop_h, crop_w = get_scaled_crop(h, w, target_h, target_w)
+        ffmpeg_filter = "crop={:d}:{:d}:{:d}:{:d},scale={:d}:{:d}".format(
+            crop_w, crop_h, crop_x, crop_y, target_w, target_h
         )
+        # print(f"Scaled crop filter: {ffmpeg_filter}")
+    elif crop_method == "center_crop":
+        # get center crop
+        crop_x, crop_y, crop_w, crop_h = get_center_crop(h, w, target_h, target_w)
+        ffmpeg_filter = "crop={:d}:{:d}:{:d}:{:d},".format(crop_w, crop_h, crop_x, crop_y)
+    elif crop_method == "smart_crop":
+        # get smart crop actions
+        actions = get_smart_crop_resize_actions(
+            h,
+            w,
+            target_h,
+            target_w,
+            smart_crop_ratio,
+            smart_resize_min,
+            smart_resize_max,
+            verbose=verbose,
+        )
+        ffmpeg_filter = convert_actions_to_ffmpeg_filter(actions)
+    elif crop_method == "scale_shorter_side":
+        assert (
+            target_w == target_h
+        ), f"For scale_shorter_side, x and y must be same but are {target_w} and {target_h}"
+        target_scale = target_w
+        if h <= target_scale or w <= target_scale:
+            # the shorter side is already small enough
+            ffmpeg_filter = None
+        elif w < h:
+            # width is the shorter side, scale that to target
+            ffmpeg_filter = f"scale={target_scale}:-1"
+        else:
+            # height is the shorter side, scale that to target
+            ffmpeg_filter = f"scale=-1:{target_scale}"
+    else:
+        raise ValueError("crop method not found: {}".format(crop_method))
 
-        if self.verbose:
-            print("command:", cmd)
+    target_fps = target_fps
+    if frames_per_video is not None:
+        # without fps
+        target_fps = frames_per_video / ffprobe_info["duration"]
 
-        # run command
-        out, err, retcode = systemcall(cmd)
-        if retcode != 0:
-            print()
-            print("WARNING: video {} failed with return code {}".format(self.vid_id, retcode))
-            print("command was: {}".format(cmd))
-            print("stdout:", out)
-            print("stderr:", err)
-            raise RuntimeError("video processing for {} failed, see stdout".format(self.vid_id))
+    # define the ffmpeg command with filters
+    file_frames = str(folder_frames / FRAME_FILE)
+    if ffmpeg_filter is not None:
+        filter_string = f'-vf "{ffmpeg_filter:s},fps={target_fps:f}"'
+    else:
+        filter_string = f'-vf "fps={target_fps:f}"'
 
-        # check how many frames where created
-        num_frames = len(os.listdir(str(self.folder_frames)))
+    cmd = (
+        f"ffmpeg -i {file_video:s} -hide_banner {filter_string} "
+        f"-qscale:v {qscale:d} {file_frames:s}"
+    )
 
-        return self.vid_id, retcode, w, h, fps, num_frames
+    if verbose:
+        print("command:", cmd)
+
+    # run command
+    out, err, retcode = systemcall(cmd)
+    if retcode != 0:
+        print()
+        print("WARNING: video {} failed with return code {}".format(vid_id, retcode))
+        print("command was: {}".format(cmd))
+        print("stdout:", out)
+        print("stderr:", err)
+        raise RuntimeError("video processing for {} failed, see stdout".format(vid_id))
+
+    # check how many frames where created
+    num_frames = len(os.listdir(str(folder_frames)))
+
+    return vid_id, retcode, w, h, fps, num_frames
 
 
 if __name__ == "__main__":

@@ -1,14 +1,15 @@
+import ffmpeg
 import multiprocessing
+import numpy as np
 import subprocess
 import time
+import tqdm
 import traceback
 from pathlib import Path
 from timeit import default_timer as timer
 from typing import Tuple, List, Sequence, Union
 
-import ffmpeg
-import numpy as np
-import tqdm
+from packg import format_exception
 
 
 def systemcall(call: Union[str, Sequence[str]]):
@@ -386,7 +387,12 @@ def get_video_ffprobe_info(file_video: Union[str, Path]):
 
     """
     # regular probe
-    probe_info = ffmpeg.probe(str(file_video))
+    try:
+        probe_info = ffmpeg.probe(str(file_video))
+    except ffmpeg.Error as e:
+        # ffmpeg custom errors can lead to problems in multiprocessing so just format them
+        raise RuntimeError(f"ffprobe failed with {format_exception(e)} for file {file_video}\n"
+                           f"stderr: {e.stderr}")
     # additional duration probe, otherwise duration is missing for some videos
     duration_call = (
         "ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 -i "

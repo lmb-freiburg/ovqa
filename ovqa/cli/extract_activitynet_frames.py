@@ -20,11 +20,12 @@ def main():
         default=0,
         help="how many processes to spawn, 0 means use cpu_count.",
     )
+    parser.add_argument("--reload", action="store_true", help="reload ffprobe")
     args = parser.parse_args()
     data_dir = get_data_dir()
     print(f"Data source dir: {data_dir}")
     attr_dict = dict(
-        input_path=data_dir / "activitynet" / "raw/videos",
+        input_path=data_dir / "activitynet" / "videos",
         output_path=data_dir / "activitynet" / "frames_uncropped_all",
         input_list=get_ovqa_annotations_dir() / "activitynet" / "activitynet_val_video_ids.txt",
         width=480,
@@ -32,6 +33,7 @@ def main():
         crop_method="scale_shorter_side",
         write=True,
         num_workers=args.num_workers,
+        reload=args.reload,
     )
     print(f"Script arguments:")
     pprint(attr_dict)
