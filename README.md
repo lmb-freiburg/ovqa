@@ -14,20 +14,31 @@ accepted to ICLR 2024.
 
 <!--TOC-->
 
-- [News](#news)
-- [Setup](#setup)
-  - [Python environment](#python-environment)
-  - [Notes](#notes)
-  - [Setup the paths](#setup-the-paths)
-  - [Setup datasets](#setup-datasets)
-  - [Setup model outputs](#setup-model-outputs)
-  - [Setup model checkpoints](#setup-model-checkpoints)
-  - [Setup metrics](#setup-metrics)
-- [Running](#running)
-- [Dev commands](#dev-commands)
-- [Licenses](#licenses)
-- [Acknowledgements](#acknowledgements)
-- [Citation](#citation)
+- [oVQA: Open-ended Visual Question Answering](#ovqa-open-ended-visual-question-answering)
+  - [News](#news)
+  - [Setup](#setup)
+    - [Python environment](#python-environment)
+    - [Notes](#notes)
+    - [Setup the paths](#setup-the-paths)
+    - [Setup datasets](#setup-datasets)
+      - [Imagenet](#imagenet)
+      - [ActivityNet](#activitynet)
+      - [COCO](#coco)
+      - [OVAD](#ovad)
+      - [VQAv2](#vqav2)
+      - [GQA](#gqa)
+    - [Setup model outputs](#setup-model-outputs)
+    - [Setup model checkpoints](#setup-model-checkpoints)
+      - [LLaVA-7B-v0](#llava-7b-v0)
+      - [X2VLM](#x2vlm)
+      - [Test model setup](#test-model-setup)
+    - [Setup metrics](#setup-metrics)
+      - [Installing and running BEM metric](#installing-and-running-bem-metric)
+  - [Running](#running)
+  - [Dev commands](#dev-commands)
+  - [Licenses](#licenses)
+  - [Acknowledgements](#acknowledgements)
+  - [Citation](#citation)
 
 <!--TOC-->
 
@@ -188,12 +199,18 @@ python -m ovqa.cli.check_missing_activitynet
 # request the missing videos from the author's (see homepage)
 # and copy them to data/activitynet/videos
 # now the folder should contain 4926 videos.
+ls data/activitynet/videos | wc -l
+
 # run the frame extraction again, to extract the frames for the missing videos.
-python -m ovqa.cli.extract_activitynet_frames --num_workers 4
+python -m ovqa.cli.extract_activitynet_frames --num_workers 4 --reload
 
-# TBD copy required frames, and delete frames that are not needed
+# copy required frames
+python -m ovqa.cli.copy_activitynet_frames
 
-# # TBD frames as tar
+# uncropped_frames/ now holds all frames necessary to run ActivityNet-oVQA.
+# the dirs videos/ and uncropped_frames_all/ can now safely deleted
+
+ # TBD frames as tar
 # mkdir -p frames_uncropped
 # cd frames_uncropped
 # tar -xf middleframes_val.tar
