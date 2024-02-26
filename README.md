@@ -210,12 +210,7 @@ python -m ovqa.cli.copy_activitynet_frames
 # uncropped_frames/ now holds all frames necessary to run ActivityNet-oVQA.
 # the dirs videos/ and uncropped_frames_all/ can now safely deleted
 
- # TBD frames as tar
-# mkdir -p frames_uncropped
-# cd frames_uncropped
-# tar -xf middleframes_val.tar
-
-# # final structure should be
+# # final structure required to run the benchmark:
 # data/activitynet
 #     activity_net.v1-3.min.json
 #     frames_uncropped/
