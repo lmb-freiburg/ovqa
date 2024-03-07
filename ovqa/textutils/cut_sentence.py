@@ -1,6 +1,6 @@
 from nltk import word_tokenize
 
-from visiontext.nlp import (
+from visiontext.nlp.nltktools import (
     tokenize_sentences_and_connectors,
     tokenize_words_and_connectors,
     ensure_setup_nltk,

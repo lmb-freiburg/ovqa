@@ -21,7 +21,7 @@ from ovqa.common.lavis.dist_utils import download_cached_file
 from ovqa.common.lavis.registry import registry
 from ovqa.models.lavis.base_model import BaseModel
 from ovqa.models.lavis.blip_models.blip_image_text_matching import compute_gradcam
-from visiontext.nlp import maybe_download_spacy_model
+from visiontext.nlp.spacytools import maybe_download_spacy_model
 
 open_pos = ["NOUN", "VERB", "ADJ", "ADV", "NUM"]
 
