@@ -17,7 +17,7 @@ from pycocoevalcap.rouge.rouge import Rouge
 from pycocoevalcap.spice.spice import Spice
 from torchmetrics import Metric
 
-from packg import Const
+from packg.constclass import Const
 from ovqa.metrics.preprocessing import PrepC, get_preprocessing_fn
 
 

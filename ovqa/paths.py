@@ -2,7 +2,7 @@ import os
 from getpass import getuser
 from pathlib import Path
 
-from packg import Const
+from packg.constclass import Const
 from packg.paths import setup_environ, EnvKeys, get_cache_dir
 
 

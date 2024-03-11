@@ -20,7 +20,7 @@ from tqdm import tqdm
 from transformers import AutoConfig, AutoTokenizer
 from typing import Optional, Dict, Any, List, Union
 
-from packg import Const, format_exception
+from packg.constclass import Const, format_exception
 from packg.paths import get_data_dir
 from packg.strings import quote_with_urlparse
 from packg.typext import PathType

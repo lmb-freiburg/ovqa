@@ -4,7 +4,7 @@ from loguru import logger
 from pathlib import Path
 from typing import Dict, Any, Optional, List
 
-from packg import Const
+from packg.constclass import Const
 from packg.iotools import make_git_pathspec
 from packg.iotools.jsonext import load_json
 from packg.typext import PathType

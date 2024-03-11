@@ -3,7 +3,7 @@ from __future__ import annotations
 import re
 
 from ovqa.common.lavis.vqa_tools.vqa_eval import VQAEval
-from packg import Const
+from packg.constclass import Const
 from visiontext.nlp.lemmatizer import get_lemmatizer
 
 
