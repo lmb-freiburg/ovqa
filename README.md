@@ -1,10 +1,16 @@
-![Computer Vision, University of Freiburg](assets/cv_logo.png)
+![Computer Vision, University of Freiburg](assets/logo_cv_freiburg.png)
 
 <p align="center">
 <a href="https://github.com/lmb-freiburg/ovqa/actions/workflows/build-py310-cpu.yml">
   <img alt="build 3.10 status" title="build 3.10 status" src="https://img.shields.io/github/actions/workflow/status/lmb-freiburg/ovqa/build-py310-cpu.yml?branch=main&label=build%203.10%20cpu" />
 </a>
 </p>
+
+<div align="center">
+<a href="https://arxiv.org/abs/2402.07270">Paper</a>,
+<a href="https://iclr.cc/virtual/2024/poster/19102">Poster Session</a>,
+<a href="/assets/ovqa_slides_iclr_2024.pdf">Slides</a>,
+</div>
 
 # oVQA: Open-ended Visual Question Answering
 
@@ -83,7 +89,6 @@ You have following options to change those paths (1 or 2 are the recommended way
 4. The actual loading of the paths happens in `ovqa/paths.py` and external package `packg/paths.py`
    so you can also change the path logic there.
 
-
 ### Setup datasets
 
 #### Imagenet
@@ -115,7 +120,7 @@ cd ../../..
 # ILSVRC2012_devkit_t3/
 # unsorted_val/
 # bboxes/val/
-    
+
 # move the images using the first script:
 python imagenet_load_dataset.py
 # result:
@@ -126,7 +131,6 @@ rm -r data/imagenet1k/unsorted_val
 
 # create the squared crop
 python imagenet_convert_bbox_data.py 
-
 ```
 
 Note: In the label space we renamed two classes to avoid duplicate labels:
@@ -188,13 +192,11 @@ python -m ovqa.cli.copy_activitynet_frames
 #             v_-zZJmRT9udU/frame_0000001394.jpg
 ```
 
-
-
 #### COCO
 
 [Homepage](https://cocodataset.org/)
 
-```bash     
+```bash
 mkdir -p data/coco
 cd data/coco
 
@@ -215,7 +217,6 @@ cd ../../..
 #         val2017/
 #             000000000139.jpg
 #            ...
-  
 ```
 
 #### OVAD
@@ -276,10 +277,7 @@ wget https://lmb.informatik.uni-freiburg.de/projects/ovqa/results/retrieval~imag
 wget https://lmb.informatik.uni-freiburg.de/projects/ovqa/results/vqav2~val.tar.gz
 for f in $(ls); do echo $f; tar -xzf $f; done
 cd ..
-
 ```
-
-
 
 ### Setup model checkpoints
 
@@ -397,7 +395,6 @@ python -c "from tensorflow.python.client import device_lib; print(device_lib.lis
 python -m ovqa.metrics.bem.bem_server
 # run example queries
 python -m ovqa.metrics.bem.bem_query
-
 ```
 
 ## Running
@@ -411,7 +408,6 @@ pip install -U pytest black[jupyter] md-toc
 python -m pytest
 black -l 100 ovqa tests *.py
 python update_toc.py
-
 ```
 
 ## Licenses
