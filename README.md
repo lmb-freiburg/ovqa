@@ -20,6 +20,8 @@ accepted to ICLR 2024.
 
 ## News
 
+May 2024: Upload slides and poster to prepare for the [ICLR poster session](https://iclr.cc/virtual/2024/poster/19102). Release paper v2 on arxiv with minor fixes.
+
 February 2024: Code release.
 
 - Reproduce oVQA, classical VQA and Retrieval results from our paper.
