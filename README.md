@@ -16,9 +16,11 @@
 
 This repository contains the official implementation of our [paper](https://arxiv.org/abs/2402.07270)
 **"Open-ended VQA benchmarking of Vision-Language models by exploiting Classification datasets and their semantic hierarchy"**
-accepted to ICLR 2024.
+accepted to ICLR 2024 as Spotlight paper.
 
 ## News
+
+May 2024: Upload slides and poster to prepare for the [ICLR poster session](https://iclr.cc/virtual/2024/poster/19102). Release paper v2 on arxiv with minor fixes.
 
 February 2024: Code release.
 
