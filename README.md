@@ -414,8 +414,8 @@ python update_toc.py
 
 This repository is heavily based on
 [LAVIS](https://github.com/salesforce/LAVIS).
-Files from lavis are under BSD-3 as noted in the file header.
-Our own files are under Apache-2.0.
+Files from lavis are licensed under BSD-3 as noted in the file header.
+Our own files are licensed under Apache-2.0.
 Other files are licensed as described in either the file header itself,
 or in the respective folder or parent folder in a `README.md`, `LICENSE` or `__init__.py` file.
 
