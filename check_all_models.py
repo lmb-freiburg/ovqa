@@ -25,6 +25,7 @@ from visiontext.mathutils import torch_stable_softmax
 class Args(VerboseQuietArgs):
     all_models: bool = add_argument(shortcut="-a", action="store_true", help="Check all models")
     run_inference: bool = add_argument(shortcut="-r", action="store_true", help="Run VQA example")
+    model_name: str | None = add_argument(shortcut="-m", default=None)
 
 
 @torch.inference_mode()
@@ -56,6 +57,15 @@ def main():
     check_models = vqa_models + retrieval_models
     if args.all_models:
         check_models = all_combinations
+
+    if args.model_name is not None:
+        for model_name, model_type in all_combinations:
+            if args.model_name == model_name:
+                check_models = [(model_name, model_type)]
+                print(f"Wil check model {args.model_name=}")
+                break
+        else:
+            raise ValueError(f"{args.model_name=} not found in {[k for k, v in all_combinations]}")
 
     example_image = Image.open(get_ovqa_repo_root() / "assets/example.png").convert("RGB")
     print(f"Got example input image: {example_image}")
@@ -93,7 +103,7 @@ def main():
             gc.collect()
             torch.cuda.empty_cache()
             continue
-        if args.run_inference and (model_name, model_type) in retrieval_models:
+        elif args.run_inference and (model_name, model_type) in retrieval_models:
             print(f"Run retrieval inference for {model_name} / {model_type}")
 
             classnames = ["kiwi", "apple", "dog", "cat", "nothing"]
@@ -115,6 +125,8 @@ def main():
             gc.collect()
             torch.cuda.empty_cache()
             continue
+        else:
+            print(f"ERROR: No inference example found for {model_name} {model_type}")
 
 
 if __name__ == "__main__":
