@@ -450,10 +450,11 @@ Additionally we would like to acknowledge:
 
 ```bibtex
 @inproceedings{gingbravo2024ovqa,
-title={Open-ended {VQA} benchmarking of Vision-Language models by exploiting Classification datasets and their semantic hierarchy},
-author={Simon Ging and Maria Alejandra Bravo and Thomas Brox},
-booktitle={The Twelfth International Conference on Learning Representations},
-year={2024},
-url={https://arxiv.org/abs/2402.07270}
+  title={Open-ended {VQA} benchmarking of Vision-Language models by exploiting Classification datasets and their semantic hierarchy},
+  author={Simon Ging and Maria Alejandra Bravo and Thomas Brox},
+  booktitle={The Twelfth International Conference on Learning Representations},
+  year={2024},
+  url={https://arxiv.org/abs/2402.07270}
 }
 ```
+
