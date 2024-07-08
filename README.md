@@ -405,7 +405,11 @@ python -m ovqa.metrics.bem.bem_query
 
 ## Running
 
-See `run_scripts/` for running the model evaluation and computing the metrics. See `assets/tables` for the numbers to expect.
+* See `run_scripts/` for running the model evaluation.
+* Either run the evaluation yourself or download the model outputs as described 
+  in "Setup model outputs" above, then run `run_scripts/eval_results.sh` to compute the metrics. 
+* See `assets/tables` for the final numbers to expect.
+* Check `load_*.py` if you want to only load the dataset.
 
 ## Dev commands
 
