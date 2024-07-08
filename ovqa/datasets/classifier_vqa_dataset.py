@@ -134,7 +134,10 @@ class ClassifierVQADataset(BaseDataset):
         if self.return_visual:
             image_path = Path(self.vis_root) / ann["image"]
             image_pil = Image.open(image_path).convert("RGB")
-            image = self.vis_processor(image_pil)
+            if self.vis_processor is not None:
+                image = self.vis_processor(image_pil)
+            else:
+                image = image_pil
             sample["image"] = image
 
         # add object to ask followup questions about in case it is in the annotation

@@ -172,7 +172,10 @@ class ActivityNetVQADataset(ClassifierVQADataset):
         if self.return_visual:
             image_path = Path(self.vis_root) / ann["file_name"]
             image_pil = Image.open(image_path).convert("RGB")
-            image = self.vis_processor(image_pil)
+            if self.vis_processor is not None:
+                image = self.vis_processor(image_pil)
+            else:
+                image = image_pil
             sample["image"] = image
 
         question = self.config.get("question_type", "none")

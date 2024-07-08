@@ -411,7 +411,10 @@ class COCOObjectsVQADataset(ClassifierVQADataset):
                 self.config.get("min_side", 40.0),
                 self.config.get("square_box", False),
             )
-            image = self.vis_processor(image_pil)
+            if self.vis_processor is not None:
+                image = self.vis_processor(image_pil)
+            else:
+                image = image_pil
             sample["image"] = image
 
         question = self.config.get("question_type", "none")
@@ -497,7 +500,10 @@ class OVADAttributesVQADataset(ClassifierVQADataset):
                 self.config.get("min_side", 40.0),
                 self.config.get("square_box", False),
             )
-            image = self.vis_processor(image_pil)
+            if self.vis_processor is not None:
+                image = self.vis_processor(image_pil)
+            else:
+                image = image_pil
             sample["image"] = image
 
         # debug_loading(self.config.get("debug_dir", ""), original_image, crop_image, sample, annotation)
