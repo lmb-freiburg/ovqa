@@ -20,6 +20,8 @@ accepted to ICLR 2024 as Spotlight paper.
 
 ## News
 
+July 2024: Add example `load_*.py` scripts to enable easier usage of the proposed datasets.
+
 May 2024: Upload slides and poster to prepare for the [ICLR poster session](https://iclr.cc/virtual/2024/poster/19102). Release paper v2 on arxiv with minor fixes.
 
 February 2024: Code release.
@@ -92,6 +94,8 @@ You have following options to change those paths (1 or 2 are the recommended way
    so you can also change the path logic there.
 
 ### Setup datasets
+
+Use the respective `load_*.py` script in the root directory to test and check out the dataset after setting it up.
 
 #### Imagenet
 
