@@ -18,6 +18,8 @@ This repository contains the official implementation of our [paper](https://arxi
 **"Open-ended VQA benchmarking of Vision-Language models by exploiting Classification datasets and their semantic hierarchy"**
 accepted to ICLR 2024 as Spotlight paper.
 
+Check the [video] (https://youtu.be/15bA1WK20tM)
+
 ## News
 
 July 2024: Add example `load_*.py` scripts to enable easier usage of the proposed datasets.
