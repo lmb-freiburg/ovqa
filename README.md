@@ -9,7 +9,7 @@
 <div align="center">
 <a href="https://arxiv.org/abs/2402.07270">Paper</a>,
 <a href="https://iclr.cc/virtual/2024/poster/19102">Poster Session</a>,
-<a href="/assets/ovqa_slides_iclr_2024.pdf">Slides</a>
+<a href="/assets/ovqa_slides_iclr_2024.pdf">Slides</a>,
 <a href="https://youtu.be/15bA1WK20tM">Video</a>
 </div>
 
