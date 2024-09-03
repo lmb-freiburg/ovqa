@@ -10,6 +10,7 @@
 <a href="https://arxiv.org/abs/2402.07270">Paper</a>,
 <a href="https://iclr.cc/virtual/2024/poster/19102">Poster Session</a>,
 <a href="/assets/ovqa_slides_iclr_2024.pdf">Slides</a>
+<a href="https://youtu.be/15bA1WK20tM">Video</a>
 </div>
 
 # oVQA: Open-ended Visual Question Answering
@@ -17,8 +18,6 @@
 This repository contains the official implementation of our [paper](https://arxiv.org/abs/2402.07270)
 **"Open-ended VQA benchmarking of Vision-Language models by exploiting Classification datasets and their semantic hierarchy"**
 accepted to ICLR 2024 as Spotlight paper.
-
-Check the [video] (https://youtu.be/15bA1WK20tM)
 
 ## News
 
