@@ -31,7 +31,7 @@ from ovqa.textutils.cut_sentence import cut_too_long_text
 from packg.debugging import connect_to_pycharm_debug_server
 from packg.iotools import dumps_yaml
 from packg.log import configure_logger, get_logger_level_from_args, SHORTER_FORMAT
-from packg.paths import print_all_environment_variables
+from ovqa.paths import print_all_environment_variables
 from packg.tqdmext import tqdm_max_ncols
 from typedparser import TypedParser
 

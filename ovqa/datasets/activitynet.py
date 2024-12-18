@@ -4,7 +4,7 @@ import os
 from ovqa.annotations.activitynet.activitynet_synonyms import ACTIVITYNET_CLS
 from ovqa.datasets.interface_metadata import ClsMetadataInterface
 from packg.iotools.jsonext import load_json
-from packg.paths import get_data_dir
+from ovqa.paths import get_data_dir
 
 
 class ActivityNet(ClsMetadataInterface):

@@ -13,7 +13,7 @@ from torch.utils.data import DataLoader, Dataset
 from typing import Optional
 
 from packg import format_exception
-from packg.paths import get_cache_dir
+from ovqa.paths import get_cache_dir
 from packg.tqdmext import tqdm_max_ncols
 from packg.typext import PathType
 from ovqa.metrics.llm.metric_prompts import MODES

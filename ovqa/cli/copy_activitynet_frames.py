@@ -8,7 +8,7 @@ import shutil
 
 from ovqa.paths import get_ovqa_annotations_dir
 from packg.iotools import yield_lines_from_file
-from packg.paths import get_data_dir
+from ovqa.paths import get_data_dir
 from packg.tqdmext import tqdm_max_ncols
 
 

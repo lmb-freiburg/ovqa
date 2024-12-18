@@ -46,7 +46,7 @@ from packg import format_exception
 from packg.iotools.jsonext import load_json, dump_json, loads_json, dumps_json
 from packg.log import configure_logger
 from packg.magic import reload_recursive
-from packg.paths import (
+from ovqa.paths import (
     get_cache_dir,
     get_data_dir,
 )

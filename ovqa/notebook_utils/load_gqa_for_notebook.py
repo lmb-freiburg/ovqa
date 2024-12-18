@@ -61,7 +61,7 @@ def load_gqa_for_notebook(dataset_name="gqa", dataset_split="balanced_testdev"):
         # assert crop is None, f"No crops defined for this dataset {dataset_name}"
         # item = meta.annotations[t_key]
         # t_class_idx = targets[t_key]
-        from packg.paths import get_data_dir
+        from ovqa.paths import get_data_dir
 
         image_file = get_data_dir() / f"gqa/images/{ann_dict[t_key]['image']}"
         image = Image.open(image_file).convert("RGB")

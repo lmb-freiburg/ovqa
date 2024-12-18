@@ -3,7 +3,7 @@ from ovqa.datasets.imagenet import ImagenetClsMetadata
 from ovqa.datasets.interface_metadata import ClsMetadataInterface
 from ovqa.datasets.ovad2000 import OVAD2000
 from packg.constclass import Const
-from packg.paths import get_data_dir
+from ovqa.paths import get_data_dir
 
 
 class DatasetConst(Const):

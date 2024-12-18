@@ -6,7 +6,7 @@ from attr import define
 from loguru import logger
 
 from packg.log import SHORTEST_FORMAT, configure_logger, get_logger_level_from_args
-from packg.paths import get_data_dir
+from ovqa.paths import get_data_dir
 from typedparser import VerboseQuietArgs, TypedParser, add_argument
 from ovqa.datasets.imagenet import ImagenetClsMetadata
 from ovqa.datasets.interface_metadata import ClsMetadataInterface

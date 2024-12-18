@@ -13,7 +13,7 @@ from ovqa.datasets.interface_metadata import ClsMetadataInterface
 from ovqa.datasets.ovad_synonyms import OVAD_ATTS_CLS
 from ovqa.paths import get_ovqa_annotations_dir
 from packg.iotools.jsonext import load_json
-from packg.paths import get_data_dir
+from ovqa.paths import get_data_dir
 
 available_class_names = ["object", "attribute"]
 

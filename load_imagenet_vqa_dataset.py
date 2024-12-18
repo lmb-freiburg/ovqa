@@ -4,7 +4,7 @@ Example script on how to load this dataset without depending on the entire frame
 
 from pprint import pprint
 
-from packg.paths import get_data_dir
+from ovqa.paths import get_data_dir
 from torch.utils.data import DataLoader
 
 from ovqa.datasets.classifier_vqa_dataset import ClassifierVQADataset

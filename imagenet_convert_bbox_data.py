@@ -55,7 +55,7 @@ from ovqa.datasets.meta_loading import meta_loader
 from ovqa.paths import get_ovqa_annotations_dir
 from packg.iotools.jsonext import dump_json, load_json
 from packg.log import SHORTEST_FORMAT, configure_logger, get_logger_level_from_args
-from packg.paths import get_data_dir
+from ovqa.paths import get_data_dir
 from typedparser import VerboseQuietArgs, TypedParser, add_argument
 from visiontext.bboxes import convert_bbox_abs_to_rel, convert_bbox_rel_to_abs, get_bbox_bounds
 

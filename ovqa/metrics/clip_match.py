@@ -14,7 +14,7 @@ from ovqa.textutils.embeddings import (
     EmbeddingsPackageConst,
     SentenceEmbedderInterface,
 )
-from packg.paths import get_cache_dir
+from ovqa.paths import get_cache_dir
 
 EOS = "."
 

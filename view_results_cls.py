@@ -34,7 +34,7 @@ from packg.log import (
     get_logger_level_from_args,
     SHORTER_FORMAT,
 )
-from packg.paths import print_all_environment_variables
+from ovqa.paths import print_all_environment_variables
 from typedparser import TypedParser
 
 

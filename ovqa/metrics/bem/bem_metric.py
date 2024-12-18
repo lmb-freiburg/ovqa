@@ -1,7 +1,7 @@
 import torch
 from tqdm import tqdm
 
-from packg.paths import get_from_environ
+from ovqa.paths import get_from_environ
 from visiontext.cacheutils import CachePlugin
 from ovqa.metrics.preprocessing import PrepC, get_preprocessing_fn
 from ovqa.metrics.bem.bem_query import query_bem

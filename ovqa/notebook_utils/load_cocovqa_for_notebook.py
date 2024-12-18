@@ -33,7 +33,7 @@ def load_cocovqa_for_notebook(dataset_name="coco_vqa", dataset_split="minival"):
         # assert crop is None, f"No crops defined for this dataset {dataset_name}"
         # item = meta.annotations[t_key]
         # t_class_idx = targets[t_key]
-        from packg.paths import get_data_dir
+        from ovqa.paths import get_data_dir
 
         image_file = get_data_dir() / f"coco/images/{ann_dict[t_key]['image']}"
         image = Image.open(image_file).convert("RGB")

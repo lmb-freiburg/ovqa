@@ -36,7 +36,7 @@ from ovqa.datasets.interface_metadata import ClsMetadataInterface
 from ovqa.paths import get_ovqa_annotations_dir
 from packg.iotools import yield_lines_from_file
 from packg.iotools.jsonext import load_json, dump_json
-from packg.paths import get_data_dir
+from ovqa.paths import get_data_dir
 from visiontext.bboxes import convert_bbox_abs_to_rel, convert_bbox_rel_to_abs
 
 IMGNET_DEFAULT_LABEL = "clip_bench_label"

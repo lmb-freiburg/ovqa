@@ -8,7 +8,7 @@ from pprint import pprint
 
 from ovqa.cli.convert_videos_to_frames import extract_frames, Args as ExtractFramesArgs
 from ovqa.paths import get_ovqa_annotations_dir
-from packg.paths import get_data_dir
+from ovqa.paths import get_data_dir
 from typedparser import attrs_from_dict
 
 

@@ -12,7 +12,7 @@ from attr import define
 from loguru import logger
 
 from packg.iotools.jsonext import load_json
-from packg.paths import get_data_dir
+from ovqa.paths import get_data_dir
 from ovqa.paths import get_ovqa_annotations_dir
 
 from ovqa.datasets.interface_hierarchy import HierarchyInterface

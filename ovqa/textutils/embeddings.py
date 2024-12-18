@@ -23,7 +23,7 @@ from transformers import AutoConfig, AutoTokenizer
 from typing import Optional, Dict, Any, List, Union
 
 from packg.constclass import Const
-from packg.paths import get_data_dir
+from ovqa.paths import get_data_dir
 from packg.strings import quote_with_urlparse
 from packg.typext import PathType
 from ovqa.torchutils import count_params

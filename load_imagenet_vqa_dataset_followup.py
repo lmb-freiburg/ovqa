@@ -10,7 +10,7 @@ from copy import deepcopy
 from pprint import pprint
 
 from packg.iotools import load_yaml
-from packg.paths import get_data_dir
+from ovqa.paths import get_data_dir
 from torch.utils.data import DataLoader
 
 from ovqa.datasets.classifier_vqa_dataset import ClassifierVQADataset

@@ -20,7 +20,7 @@ from ovqa.common.lavis.registry import registry
 from ovqa.tasks.base_task import BaseTask
 from ovqa.annotations.cls_templates import CLASSIFICATION_TEMPLATES
 from packg.iotools import load_json, dump_json
-from packg.paths import get_cache_dir
+from ovqa.paths import get_cache_dir
 
 
 def get_classifier_cache_file(classnames, templates, model) -> Path:

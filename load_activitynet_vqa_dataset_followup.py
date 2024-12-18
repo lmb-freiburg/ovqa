@@ -11,7 +11,7 @@ from pprint import pprint
 
 from packg.debugging import connect_to_pycharm_debug_server
 from packg.iotools import load_yaml
-from packg.paths import get_data_dir
+from ovqa.paths import get_data_dir
 from torch.utils.data import DataLoader
 
 from ovqa.datasets.activitynet_vqa_dataset import ActivityNetVQADataset
