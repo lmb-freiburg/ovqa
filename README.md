@@ -151,11 +151,14 @@ Note: In the label space we renamed two classes to avoid duplicate labels:
 
 [Homepage](http://activity-net.org/index.html)
 
+Contact the original authors for access to the videos, or contact the oVQA author Simon Ging for access to the validation set middle frames used in ActivityNet-oVQA.
+
 ```bash
 mkdir -p data/activitynet
 cd data/activitynet
 # download the activitynet annotations
-wget http://ec2-52-25-205-214.us-west-2.compute.amazonaws.com/files/activity_net.v1-3.min.json
+wget https://github.com/activitynet/ActivityNet/raw/refs/heads/master/Evaluation/data/activity_net.v1-3.min.json
+# old dead link  # wget http://ec2-52-25-205-214.us-west-2.compute.amazonaws.com/files/activity_net.v1-3.min.json
 cd ../..
 
 # install ffmpeg system-wide or via conda-forge
