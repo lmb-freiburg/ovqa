@@ -34,9 +34,9 @@ jobs:
       uses: conda-incubator/setup-miniconda@v3
       with:
         activate-environment: ${{ env.W_ENV_NAME }}
-        miniforge-variant: Mambaforge
         miniforge-version: latest
-        use-mamba: true
+        channels: conda-forge
+        conda-remove-defaults: true
 #
     - name: Collect information
       id: collect-info
@@ -95,7 +95,7 @@ jobs:
 #
     - name: Conda install packages
       run: |
-        mamba env update -q -n ${{ env.W_ENV_NAME }} -f ${{ env.W_REQ_CONDA }}
+        conda env update -q -n ${{ env.W_ENV_NAME }} -f ${{ env.W_REQ_CONDA }}
       if: steps.cache-conda-restore.outputs.cache-matched-key == ''
       id: conda-install
 #
