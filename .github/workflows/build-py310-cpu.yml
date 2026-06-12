@@ -1,4 +1,4 @@
-name: build for python 3.10 on CPU
+name: build for python 3.12 on CPU
 
 on:
   workflow_dispatch:
@@ -20,7 +20,7 @@ jobs:
         shell: bash -el {0}  # required otherwise conda will not be activated for "run" steps
     env:
       W_ENV_NAME: buildenv
-      W_REQ_CONDA: .github/workflow-env-py310-cpu.yml
+      W_REQ_CONDA: .github/workflow-env-py312-cpu.yml
       W_REQ_PIP: requirements.txt
       W_CACHE_NUMBER: 0  # increase to reset cache
       SEGMENT_DOWNLOAD_TIMEOUT_MINS: 2  # stuck cache download should stop after X minutes

@@ -1,8 +1,9 @@
-# # install torch and torchvision first:
-# # conda install -y pytorch torchvision pytorch-cuda=12.1 -c pytorch -c nvidia
 typedparser
 packg
 visiontext
+
+torch
+torchvision
 
 auto-gptq  # auto-gptq for llama2 4bit model
 einops
