@@ -66,7 +66,7 @@ def preprocess_vqa_answer(answer: str) -> str:
     return answer
 
 
-RE_ALNUM = re.compile(r"[^a-zA-Z0-9 ]+")
+RE_ALNUM = re.compile(r"[^a-zA-Z0-9äöüÄÖÜß ]+")
 
 
 def preprocess_text_simple(in_str: str) -> str:
