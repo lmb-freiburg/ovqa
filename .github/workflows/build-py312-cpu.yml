@@ -134,7 +134,7 @@ jobs:
 #
     - name: Run pytest
       run: |
-        python -m pytest tests --cov
+        python -m pytest tests -m "not local" --cov
 #
     - name: Run pylint
       continue-on-error: true

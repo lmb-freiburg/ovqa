@@ -12,7 +12,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.utils.checkpoint as checkpoint
 from functools import partial
-from timm.models.layers import drop_path, to_2tuple, trunc_normal_
+from timm.layers import drop_path, to_2tuple, trunc_normal_
 
 from ovqa.common.lavis.dist_utils import download_cached_file
 

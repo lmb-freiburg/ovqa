@@ -16,7 +16,7 @@ sentences = [
 too_long_sentence = "a sentence that is way too long " * 100
 
 
-@pytest.mark.slow
+@pytest.mark.local
 def test_embedder_simple():
     ember = get_sentence_embedder(
         model_name="all-MiniLM-L6-v2",
@@ -34,7 +34,7 @@ def test_embedder_simple():
     ember.encode([too_long_sentence])
 
 
-@pytest.mark.slow
+@pytest.mark.local
 def test_embedder_db():
     ember = get_sentence_embedder(
         model_name="all-MiniLM-L6-v2",

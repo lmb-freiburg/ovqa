@@ -14,7 +14,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from functools import partial
 from timm.models import adapt_input_conv
-from timm.models.layers import trunc_normal_, DropPath
+from timm.layers import trunc_normal_, DropPath
 from timm.models.vision_transformer import PatchEmbed  # noqa
 
 from ovqa.models.lavis.base_model import BaseEncoder

@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from functools import partial
-from timm.models.layers import trunc_normal_, DropPath
+from timm.layers import trunc_normal_, DropPath
 from timm.models.vision_transformer import PatchEmbed
 
 
