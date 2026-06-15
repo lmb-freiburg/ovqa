@@ -1,11 +1,9 @@
+# install torch torchvision first
 typedparser
 packg
 visiontext
 
-torch
-torchvision
-
-auto-gptq  # auto-gptq for llama2 4bit model
+# auto-gptq  # auto-gptq for llama2 4bit model if needed
 einops
 iopath
 omegaconf

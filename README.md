@@ -42,9 +42,9 @@ Tested with `python=3.10 pytorch=2.1 cuda=12.1`.
 
 ```bash
 # git clone
-conda create -y -n ovqa python=3.10
+conda create -y -n ovqa python=3.12
 conda activate ovqa
-conda install -y pytorch torchvision pytorch-cuda=12.1 -c pytorch -c nvidia
+pip install torch torchvision
 pip install -U -r requirements.txt
 
 # Metrics SPICE and METEOR require java 11. Either install system-wide or with conda:
@@ -53,6 +53,7 @@ conda install -y -c conda-forge openjdk=11
 # optionally install editable
 pip install -e .
 
+# pip install auto-gptq  # if needed
 # # note: for other cuda versions than 12.1 you need a different version of AutoGPTQ, e.g. for 11.8:
 # pip install auto-gptq --extra-index-url https://huggingface.github.io/autogptq-index/whl/cu118/
 ```
