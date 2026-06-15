@@ -46,6 +46,7 @@ deepdiff
 torchmetrics
 transformers<5
 sentence-transformers
+sentencepiece
 einops-exts
 cached_path
 dill
