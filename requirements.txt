@@ -1,4 +1,5 @@
-# install torch torchvision first
+# install torch torchvision first, e.g. for cuda 12.1:
+# pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu121
 typedparser
 packg
 visiontext
@@ -43,7 +44,7 @@ lmdb
 msgpack
 deepdiff
 torchmetrics
-transformers
+transformers<5
 sentence-transformers
 einops-exts
 cached_path

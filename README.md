@@ -38,13 +38,14 @@ The following document assumes you clone the repository and run all commands in 
 
 Note: The correct pytorch-cuda version depends on your GPU. 
 See [pytorch.org](https://pytorch.org/).
-Tested with `python=3.10 pytorch=2.1 cuda=12.1`.
+Originally tested with `python=3.10 pytorch=2.1 cuda=12.1`.
+See the `etc/frozen*` files to reproduce the original environment.
 
 ```bash
 # git clone
 conda create -y -n ovqa python=3.12
 conda activate ovqa
-pip install torch torchvision
+pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu121
 pip install -U -r requirements.txt
 
 # Metrics SPICE and METEOR require java 11. Either install system-wide or with conda:
