@@ -1,6 +1,3 @@
-from auto_gptq.modeling import LlamaGPTQForCausalLM
-from transformers import LlamaForCausalLM
-
 # define gpu settings as min_memory_per_gpu_in_gb -> settings
 
 gpu_settings_1x24 = {0: {"max_memory": {0: f"{999*1024:.0f}MiB"}, "device_map": "auto"}}
@@ -8,9 +5,6 @@ gpu_settings_2x24 = {
     0: {"max_memory": {0: f"{17*1024:.0f}MiB", 1: f"{19*1024:.0f}MiB"}, "device_map": "auto"},
     26: {"max_memory": {0: f"{999*1024:.0f}MiB"}, "device_map": "auto"},
 }
-
-
-_llama_refs = LlamaGPTQForCausalLM, LlamaForCausalLM
 
 
 llama_defaults = {

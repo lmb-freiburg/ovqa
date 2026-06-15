@@ -6,9 +6,7 @@ from argparse import ArgumentParser, Namespace
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 
 
-import tensorflow.compat.v1 as tf  # noqa: E402
 import torch  # noqa: E402
-from bleurt import score as bleurt_score  # noqa: E402
 
 from ovqa.metrics.bleurt_pytorch import (
     BleurtConfig,
@@ -34,6 +32,7 @@ logger.setLevel(logging.INFO)
 
 def build_pytorch_state_dict(tensorflow_model_path: str):
     r"""Build PT state dict from TF checkpoint."""
+    import tensorflow.compat.v1 as tf
 
     imported = tf.saved_model.load_v2(tensorflow_model_path)
     state_dict = {}
@@ -79,6 +78,7 @@ def build_pytorch_state_dict(tensorflow_model_path: str):
 
 
 def main(args: Namespace):
+    from bleurt import score as bleurt_score
 
     logger.info(f"Processing folder {args.input}...")
     logger.info("Loading original TF model...")

@@ -45,6 +45,7 @@ msgpack
 deepdiff
 torchmetrics
 transformers<5
+accelerate
 sentence-transformers
 sentencepiece
 einops-exts
@@ -52,6 +53,7 @@ cached_path
 dill
 base58
 more-itertools
+tabulate
 
 # dev
 pytest
