@@ -5,7 +5,7 @@ from IPython.display import Image, display
 from PIL import Image
 from pprint import pprint
 
-from lavis import tasks, VQATask
+from ovqa.models.lavis import tasks, VQATask
 from ovqa.common.lavis.config import Config
 from ovqa.datasets.lavis.vqav2_datasets import VQAv2EvalDataset
 from visiontext.htmltools import NotebookHTMLPrinter
