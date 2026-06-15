@@ -88,7 +88,9 @@ disable = [
     'redefined-outer-name',
     'use-implicit-booleaness-not-comparison',
     'attribute-defined-outside-init', 'consider-using-with', 'global-statement',
-    'import-outside-toplevel', 'super-init-not-called', 'broad-exception-caught']
+    'import-outside-toplevel', 'super-init-not-called', 'broad-exception-caught',
+    'use-implicit-booleaness-not-comparison-to-zero'
+]
 
 [tool.pylint.format]
 max-line-length = 99999
@@ -104,6 +106,7 @@ max-nested-blocks = 9999
 
 [tool.pylint.design]
 max-args = 9999 # Maximum number of arguments for function / method
+max-positional-arguments = 9999 # Maximum number of positional arguments (see R0917).
 max-attributes = 9999 # Maximum number of attributes for a class (see R0902).
 max-bool-expr = 9999 # Maximum number of boolean expressions in an if statement (see R0916).
 max-branches = 9999 # Maximum number of branch for function / method body.
