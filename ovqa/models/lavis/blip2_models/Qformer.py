@@ -20,11 +20,10 @@ from transformers.modeling_outputs import (
     CausalLMOutputWithCrossAttentions,
     MaskedLMOutput,
 )
+from transformers import apply_chunking_to_forward
+from transformers.pytorch_utils import find_pruneable_heads_and_indices, prune_linear_layer
 from transformers.modeling_utils import (
     PreTrainedModel,
-    apply_chunking_to_forward,
-    find_pruneable_heads_and_indices,
-    prune_linear_layer,
 )
 from transformers.models.bert.configuration_bert import BertConfig
 from transformers.utils import logging
