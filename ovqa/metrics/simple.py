@@ -1,10 +1,11 @@
 from __future__ import annotations
 
+import collections
 from typing import Optional
 
 import numpy as np
 import torch
-from transformers.data.metrics.squad_metrics import compute_f1
+from transformers.data.metrics.squad_metrics import compute_f1, get_tokens
 
 from ovqa.metrics.preprocessing import PrepC, get_preprocessing_fn
 from ovqa.metrics.torchmetrics_ext import MetricExt
@@ -50,6 +51,14 @@ def get_f1_score_default_prep():
     )
 
 
+def get_metric_recall_default_prep():
+    return TextComparison(
+        comparison_fn=compare_recall,
+        preproc_cand=PrepC.SIMPLE,
+        preproc_ref=PrepC.SIMPLE,
+    )
+
+
 def compare_is_equal(cand: str, ref: str):
     if cand == ref:
         return 1.0
@@ -67,6 +76,24 @@ def compare_is_contained(cand: str, ref: str):
 def compare_f1(cand: str, ref: str):
     """Switch argument order to match all other comparison functions and ensure float."""
     return float(compute_f1(ref, cand))
+
+
+def compare_recall(cand: str, ref: str):
+    """Token-level recall of the candidate against the reference.
+
+    Mirrors squad_metrics.compute_f1 but returns only the recall component
+    (fraction of reference tokens that also appear in the candidate).
+    """
+    gold_toks = get_tokens(ref)
+    pred_toks = get_tokens(cand)
+    common = collections.Counter(gold_toks) & collections.Counter(pred_toks)
+    num_same = sum(common.values())
+    if len(gold_toks) == 0:
+        # If the reference is empty, recall is 1.0 iff the candidate is also empty.
+        return float(gold_toks == pred_toks)
+    if num_same == 0:
+        return 0.0
+    return num_same / len(gold_toks)
 
 
 def check_length_of_cand(cand: str, ref: str):
