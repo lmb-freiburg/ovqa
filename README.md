@@ -1,12 +1,12 @@
 ![Computer Vision, University of Freiburg](assets/logo_cv_freiburg.png)
 
-<p align="center">
+<div align="center">
+<br/>
 <a href="https://github.com/lmb-freiburg/ovqa/actions/workflows/build-py312-cpu.yml">
   <img alt="build 3.12 status" title="build 3.12 status" src="https://img.shields.io/github/actions/workflow/status/lmb-freiburg/ovqa/build-py312-cpu.yml?branch=main&label=build%203.12%20cpu" />
 </a>
-</p>
-
-<div align="center">
+<br/>
+<br/>
 <a href="https://arxiv.org/abs/2402.07270">Paper</a>,
 <a href="https://iclr.cc/virtual/2024/poster/19102">Poster Session</a>,
 <a href="/assets/ovqa_slides_iclr_2024.pdf">Slides</a>,
