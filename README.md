@@ -1,8 +1,8 @@
 ![Computer Vision, University of Freiburg](assets/logo_cv_freiburg.png)
 
 <p align="center">
-<a href="https://github.com/lmb-freiburg/ovqa/actions/workflows/build-py310-cpu.yml">
-  <img alt="build 3.10 status" title="build 3.10 status" src="https://img.shields.io/github/actions/workflow/status/lmb-freiburg/ovqa/build-py310-cpu.yml?branch=main&label=build%203.10%20cpu" />
+<a href="https://github.com/lmb-freiburg/ovqa/actions/workflows/build-py312-cpu.yml">
+  <img alt="build 3.12 status" title="build 3.12 status" src="https://img.shields.io/github/actions/workflow/status/lmb-freiburg/ovqa/build-py312-cpu.yml?branch=main&label=build%203.12%20cpu" />
 </a>
 </p>
 
