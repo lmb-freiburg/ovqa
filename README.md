@@ -1,7 +1,8 @@
 ![Computer Vision, University of Freiburg](assets/logo_cv_freiburg.png)
 
 <div align="center">
-<a href="https://arxiv.org/abs/2402.07270">Paper</a>,
+<a href="https://openreview.net/forum?id=EXitynZhYn">Paper</a>,
+<a href="https://arxiv.org/abs/2402.07270">arXiv</a>,
 <a href="https://iclr.cc/virtual/2024/poster/19102">Poster Session</a>,
 <a href="/assets/ovqa_slides_iclr_2024.pdf">Slides</a>,
 <a href="https://youtu.be/15bA1WK20tM">Video</a>
@@ -463,10 +464,11 @@ Additionally we would like to acknowledge:
 ```bibtex
 @inproceedings{gingbravo2024ovqa,
   title={Open-ended {VQA} benchmarking of Vision-Language models by exploiting Classification datasets and their semantic hierarchy},
-  author={Simon Ging and Maria Alejandra Bravo and Thomas Brox},
-  booktitle={The Twelfth International Conference on Learning Representations},
+  author={Simon Ging and Mar{\'{\i}}a Alejandra Bravo and Thomas Brox},
+  booktitle={The Twelfth International Conference on Learning Representations, {ICLR} 2024, Vienna, Austria, May 7-11, 2024},
+  publisher={OpenReview.net},
   year={2024},
-  url={https://arxiv.org/abs/2402.07270}
+  url={https://openreview.net/forum?id=EXitynZhYn}
 }
 ```
 
