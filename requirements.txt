@@ -1,8 +1,8 @@
 # install torch torchvision first, e.g. for cuda 12.1:
 # pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu121
-typedparser
-packg
-visiontext
+packg<1
+typedparser<1
+visiontext<1
 
 # auto-gptq  # auto-gptq for llama2 4bit model if needed
 einops
